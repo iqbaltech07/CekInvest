@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Next.js Build Output
+.next/
+out/
+dist/
+build/
+
+# IDE / System files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Sensitive Environment Files (CRITICAL for safe push)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.example.local
+.env.*.local
+.env.backup
+*.env
+
+# Custom exclusions
+backend/app/config.pyc
+backend/.env
+frontend/.env
+*.log

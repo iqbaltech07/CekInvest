@@ -1,0 +1,330 @@
+// CekInvest — Prisma Schema v2.1
+// Database: Prisma Postgres
+// AI Engine: SENTRA (Gemini 2.5 Flash)
+// PRD Version: 2.1 — Zero Budget Edition
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider             = "prisma-client-py"
+  interface            = "asyncio"
+  recursive_type_depth = 5
+}
+
+// ── Enums ────────────────────────────────────────────────────────────────────
+
+enum InputType {
+  CHAT
+  SCREENSHOT
+  URL
+}
+
+enum RiskLevel {
+  SAFE
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum FlagSeverity {
+  LOW
+  MEDIUM
+  HIGH
+}
+
+enum EmotionSignalType {
+  URGENCY
+  FAKE_SCARCITY
+  FAKE_AUTHORITY
+  UNREALISTIC_RETURN
+  EMOTIONAL_PRESSURE
+  SOCIAL_PROOF_MANIPULATION
+}
+
+enum OjkStatus {
+  TERDAFTAR
+  TIDAK_TERDAFTAR
+  TERINDIKASI_ILEGAL
+  TIDAK_DITEMUKAN
+}
+
+enum MessageRole {
+  USER
+  ASSISTANT
+}
+
+// ── Models ───────────────────────────────────────────────────────────────────
+
+/// Core scam analysis record — created per request, fully anonymous
+model Analysis {
+  id            String     @id @default(cuid())
+  inputType     InputType
+  rawInput      String     @db.Text
+  extractedText String?    @db.Text
+
+  // SENTRA AI output
+  riskScore     Int        @default(0)
+  riskLevel     RiskLevel  @default(SAFE)
+  summary       String?    @db.Text
+  safeToInvest  Boolean    @default(true)
+
+  // PRD v2.1 additions
+  explanation   String?    @db.Text        // SENTRA's step-by-step reasoning
+  trapQuestions String[]                   // 3–5 questions to ask the offerer (PRD 5.1)
+  ojkStatus     OjkStatus? @default(TIDAK_DITEMUKAN)  // OJK registry check result (PRD Check #01)
+  ojkEntityName String?                    // Name matched in OJK database
+  shareSlug     String?    @unique         // Public shareable URL slug (PRD 5.5)
+
+  // Intelligence metadata (from parallel orchestrator)
+  domainAgeDays Int?                       // Domain age in days (PRD Check #15)
+  domainCountry String?                    // Hosting country (PRD Check #16)
+  mediaHitCount Int?       @default(0)     // Number of negative news mentions (PRD Check #20)
+
+  // Deduplication (SHA-256 hash of normalized input — for cache key)
+  inputHash     String?
+
+  createdAt     DateTime   @default(now())
+
+  // Relations
+  redFlags      RedFlag[]
+  emotionSignals EmotionSignal[]
+  chatSessions  ChatSession[]
+
+  @@index([inputHash])
+  @@map("analyses")
+}
+
+/// Individual scam indicators detected by SENTRA
+model RedFlag {
+  id          String       @id @default(cuid())
+  analysisId  String
+  category    String
+  description String       @db.Text
+  severity    FlagSeverity
+  confidence  Float
+  excerpt     String?      @db.Text
+
+  analysis    Analysis     @relation(fields: [analysisId], references: [id], onDelete: Cascade)
+
+  @@map("red_flags")
+}
+
+/// Psychological manipulation patterns detected by SENTRA (PRD 5.2 — 6 emotion types)
+model EmotionSignal {
+  id          String            @id @default(cuid())
+  analysisId  String
+  signalType  EmotionSignalType
+  detected    Boolean           @default(false)
+  description String?           @db.Text
+  examples    String[]
+
+  analysis    Analysis          @relation(fields: [analysisId], references: [id], onDelete: Cascade)
+
+  @@map("emotion_signals")
+}
+
+/// SENTRA's intelligence database — known Indonesian scam patterns
+model ScamPattern {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  category    String
+  description String   @db.Text
+  keywords    String[]
+  riskWeight  Float    @default(1.0)
+  reportCount Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("scam_patterns")
+}
+
+/// Anonymous community scam reports — feeds the Intelligence Flywheel (PRD 13)
+model UserReport {
+  id            String    @id @default(cuid())
+  inputType     InputType
+  rawInput      String    @db.Text
+  isScam        Boolean
+  notes         String?   @db.Text
+
+  // Structured data for the clustering engine
+  scamCategory  String?               // e.g. "Robot Trading Scam"
+  bankName      String?               // e.g. "BCA"
+  bankAccount   String?               // e.g. "1234567890"
+  phoneNumber   String?               // e.g. "081234567890"
+  domain        String?               // e.g. "cuanrobot.vip"
+  city          String?               // e.g. "Bandung"
+  province      String?               // e.g. "Jawa Barat"
+
+  createdAt     DateTime  @default(now())
+
+  clusterMemberships ClusterMembership[]
+
+  @@map("user_reports")
+}
+
+/// OJK entity registry cache — refreshed every 1 hour (PRD Check #01-02)
+/// Avoids hitting ojk.go.id on every request
+model OjkEntityCache {
+  id         String   @id @default(cuid())
+  entityName String   @unique
+  status     String   // "LEGAL" | "ILLEGAL" | "WARNING"
+  detail     String?  @db.Text
+  sourceUrl  String?
+  cachedAt   DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("ojk_entity_cache")
+}
+
+/// AI Scam Guardian Chat sessions — linked to an analysis (PRD 5.4)
+model ChatSession {
+  id         String        @id @default(cuid())
+  analysisId String
+  createdAt  DateTime      @default(now())
+  updatedAt  DateTime      @updatedAt
+
+  messages   ChatMessage[]
+  analysis   Analysis      @relation(fields: [analysisId], references: [id], onDelete: Cascade)
+
+  @@map("chat_sessions")
+}
+
+/// Individual messages within a chat session
+model ChatMessage {
+  id        String      @id @default(cuid())
+  sessionId String
+  role      MessageRole
+  content   String      @db.Text
+  createdAt DateTime    @default(now())
+
+  session   ChatSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  @@map("chat_messages")
+}
+
+/// Community phone number scam database — Check #22 (PRD 5.3 — Category D)
+model PhoneReport {
+  id          String   @id @default(cuid())
+  phoneNumber String   @unique
+  reportCount Int      @default(1)
+  lastSeen    DateTime @default(now())
+  notes       String?  @db.Text
+
+  @@map("phone_reports")
+}
+
+/// Community bank account scam database — Check #21 (PRD 5.3 — Category D)
+model BankAccountReport {
+  id            String   @id @default(cuid())
+  bankName      String
+  accountNumber String
+  reportCount   Int      @default(1)
+  lastSeen      DateTime @default(now())
+  notes         String?  @db.Text
+
+  @@unique([bankName, accountNumber])
+  @@map("bank_account_reports")
+}
+
+// ── Non-AI Clustering Engine ──────────────────────────────────────────────────
+
+enum ClusterRiskLevel {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum RegionalTrend {
+  STABLE
+  RISING
+  SPIKING
+  VIRAL
+}
+
+enum SpreadLevel {
+  LOW
+  MEDIUM
+  HIGH
+  NATIONAL
+}
+
+/// Scam cluster formed by the rule-based clustering engine (zero AI calls)
+model ScamCluster {
+  id               String           @id @default(cuid())
+  groupName        String           // e.g. "Robot Trading Return Tinggi — Bandung"
+  category         String           // e.g. "Robot Trading Scam"
+  riskLevel        ClusterRiskLevel @default(LOW)
+  totalReports     Int              @default(1)
+  similarityScore  Float            @default(0)   // avg cosine similarity across members
+
+  // Matched signal identifiers (bank_account, phone, domain, keyword pattern, etc.)
+  matchedSignals   String[]
+
+  // Dominant contact/account identifiers for dedup matching
+  bankAccounts     String[]
+  phoneNumbers     String[]
+  domains          String[]
+
+  // Region context
+  dominantRegion   String?
+  regionalStatus   RegionalTrend    @default(STABLE)
+
+  // Representative text from the first/highest-score report
+  representativeText String?        @db.Text
+
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+
+  // Back-reference: which analyses belong to this cluster
+  analyses         ClusterMembership[]
+
+  @@index([riskLevel])
+  @@index([dominantRegion])
+  @@map("scam_clusters")
+}
+
+/// Join table linking a UserReport to a ScamCluster (many-to-many)
+model ClusterMembership {
+  id         String      @id @default(cuid())
+  clusterId  String
+  reportId   String
+  similarity Float       @default(0)
+  joinedAt   DateTime    @default(now())
+
+  cluster    ScamCluster @relation(fields: [clusterId], references: [id], onDelete: Cascade)
+  report     UserReport  @relation(fields: [reportId], references: [id], onDelete: Cascade)
+
+  @@unique([clusterId, reportId])
+  @@map("cluster_memberships")
+}
+
+/// Regional monitoring snapshot — updated after every clustering run
+model RegionalMonitoring {
+  id                    String        @id @default(cuid())
+  region                String        // city name
+  province              String?
+
+  // Report counts
+  totalReports          Int           @default(0)
+  currentWeekReports    Int           @default(0)
+  previousWeekReports   Int           @default(0)
+
+  // Computed metrics
+  growthPercentage      Float         @default(0)
+  trend                 RegionalTrend @default(STABLE)
+  spreadLevel           SpreadLevel   @default(LOW)
+
+  // Dominant scam type in this region
+  dominantScamCategory  String?
+
+  updatedAt             DateTime      @updatedAt
+
+  @@unique([region])
+  @@index([trend])
+  @@map("regional_monitoring")
+}
