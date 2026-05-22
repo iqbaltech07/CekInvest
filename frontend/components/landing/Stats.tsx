@@ -50,9 +50,9 @@ export default function Stats() {
   const titleInView = useInView(titleRef, { once: true, margin: "-60px" });
 
   return (
-    <section id="statistik" className="section px-6 relative">
+    <section id="statistik" className="section px-4 sm:px-6 relative">
       {/* Separator glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
       <div className="max-w-6xl mx-auto">
         {/* Header */}
@@ -61,12 +61,12 @@ export default function Stats() {
           initial={{ opacity: 0, y: 24 }}
           animate={titleInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+          className="text-center mb-10 sm:mb-14"
         >
           <p className="text-[13px] font-semibold tracking-[0.15em] uppercase text-primary mb-4">
             Dampak Nyata
           </p>
-          <h2 className="text-[clamp(2rem,4vw,3.25rem)] font-bold tracking-tight leading-tight">
+          <h2 className="text-[clamp(1.75rem,4vw,3.25rem)] font-bold tracking-tight leading-tight">
             Dipercaya ribuan pengguna
             <br />
             <span className="text-muted-foreground font-normal">di seluruh Indonesia</span>
@@ -74,19 +74,19 @@ export default function Stats() {
         </motion.div>
 
         {/* Stats grid */}
-        <div ref={ref} className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div ref={ref} className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
           {stats.map((stat, i) => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="glass glass-hover rounded-[2rem] p-8 flex flex-col gap-3 text-center items-center relative overflow-hidden group"
+              className="glass glass-hover rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 flex flex-col gap-2 sm:gap-3 text-center items-center relative overflow-hidden group"
               id={`stat-${i}`}
             >
               {/* Glow */}
               <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2rem] pointer-events-none"
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl sm:rounded-[2rem] pointer-events-none"
                 style={{
                   background: `radial-gradient(circle at 50% 50%, ${stat.accent}08, transparent 70%)`,
                 }}
@@ -110,7 +110,7 @@ export default function Stats() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-center mt-14"
+          className="text-center mt-10 sm:mt-14"
         >
           <p className="text-sm text-muted-foreground mb-6">
             Bergabung bersama pengguna yang sudah terlindungi dari scam finansial

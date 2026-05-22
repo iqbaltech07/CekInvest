@@ -57,7 +57,7 @@ function StepCard({
       transition={{ duration: 0.6, delay: index * 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
       className="relative flex flex-col"
     >
-      {/* Connector line (desktop) */}
+      {/* Connector line (desktop xl+) */}
       {index < steps.length - 1 && (
         <div className="absolute top-14 left-full w-full h-px hidden xl:block">
           <motion.div
@@ -73,20 +73,20 @@ function StepCard({
       )}
 
       {/* Card */}
-      <div className="glass glass-hover rounded-[2rem] p-8 flex flex-col gap-6 h-full">
+      <div className="glass glass-hover rounded-2xl sm:rounded-[2rem] p-6 sm:p-8 flex flex-col gap-5 sm:gap-6 h-full">
         {/* Step number + icon */}
         <div className="flex items-start justify-between">
           <div
-            className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-md"
+            className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center shadow-md"
             style={{
               background: `${step.accent}20`,
               border: `1px solid ${step.accent}40`,
             }}
           >
-            <Icon className="w-7 h-7" style={{ color: step.accent }} strokeWidth={1.8} />
+            <Icon className="w-6 h-6 sm:w-7 sm:h-7" style={{ color: step.accent }} strokeWidth={1.8} />
           </div>
           <span
-            className="text-5xl font-black tabular-nums leading-none"
+            className="text-4xl sm:text-5xl font-black tabular-nums leading-none"
             style={{ color: `${step.accent}20` }}
           >
             {step.number}
@@ -95,7 +95,7 @@ function StepCard({
 
         {/* Text */}
         <div>
-          <h3 className="text-lg font-semibold mb-2 tracking-tight">{step.title}</h3>
+          <h3 className="text-base sm:text-lg font-semibold mb-2 tracking-tight">{step.title}</h3>
           <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
         </div>
 
@@ -121,7 +121,7 @@ export default function HowItWorks() {
   const titleInView = useInView(titleRef, { once: true, margin: "-60px" });
 
   return (
-    <section id="cara-kerja" className="section relative px-6">
+    <section id="cara-kerja" className="section relative px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <motion.div
@@ -129,12 +129,12 @@ export default function HowItWorks() {
           initial={{ opacity: 0, y: 24 }}
           animate={titleInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <p className="text-[13px] font-semibold tracking-[0.15em] uppercase text-primary mb-4">
             Cara Kerja
           </p>
-          <h2 className="text-[clamp(2rem,4vw,3.25rem)] font-bold tracking-tight mb-5 leading-tight">
+          <h2 className="text-[clamp(1.75rem,4vw,3.25rem)] font-bold tracking-tight mb-5 leading-tight">
             Tiga langkah, satu keputusan
             <br />
             <span className="text-muted-foreground font-normal">yang lebih aman</span>
@@ -146,7 +146,7 @@ export default function HowItWorks() {
         </motion.div>
 
         {/* Steps grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 xl:gap-8 relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 xl:gap-8 relative">
           {steps.map((step, i) => (
             <StepCard key={step.number} step={step} index={i} />
           ))}

@@ -287,16 +287,16 @@ async def _check_ojk_with_gemini(
 
     # TAHAP 1: AI Name Formatting
     prompt = f"""
-Tugasmu adalah mengekstrak dan memformat nama perusahaan investasi dari input berikut.
+Tugasmu adalah mengekstrak dan memformat nama perusahaan investasi dari input berikut untuk dicocokkan dengan database OJK.
 Input: "{entity_name}"
 
 Aturan:
-1. Ekstrak HANYA nama utama perusahaan.
-2. Buang awalan seperti "PT", "CV", "Firma", atau akhiran "Tbk".
-3. Ubah formatnya menjadi lowercase kebab-case (menggunakan tanda hubung).
+1. Identifikasi nama LEGAL LENGKAP perusahaan tersebut di Indonesia (misalnya jika input "JP Morgan" atau "JPMorgan", nama legalnya adalah "Jp Morgan Sekuritas Indonesia").
+2. Buang awalan seperti "PT", "PT.", "CV", "Firma", atau akhiran "Tbk", "Tbk.".
+3. Ubah nama legal yang sudah dibersihkan tersebut menjadi lowercase kebab-case (menggunakan tanda hubung).
 Contoh 1: "PT. Stockbit Sekuritas Digital" -> "stockbit-sekuritas-digital"
-Contoh 2: "https://stockbit.com" -> "stockbit-sekuritas-digital"
-Contoh 3: "Aplikasi Ajaib" -> "ajaib-sekuritas-asia" (jika kamu tahu nama PT-nya, jangan gunakan nama PT-nya dalam kebab-case)
+Contoh 2: "https://www.jpmorgan.co.id/" -> "jp-morgan-sekuritas-indonesia"
+Contoh 3: "Aplikasi Ajaib" -> "ajaib-sekuritas-asia" (selalu gunakan nama legal perusahaan lengkapnya tanpa awalan PT jika kamu mengetahuinya)
 
 Kembalikan HANYA string kebab-case tersebut tanpa tanda kutip, tanpa penjelasan apapun.
 """

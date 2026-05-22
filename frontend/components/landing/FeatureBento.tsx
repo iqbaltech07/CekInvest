@@ -97,7 +97,7 @@ function FeatureCard({ feature, index }: { feature: (typeof features)[0]; index:
       initial={{ opacity: 0, scale: 0.98 }}
       animate={inView ? { opacity: 1, scale: 1 } : {}}
       transition={{ duration: 0.4, delay: index * 0.05, ease: [0.25, 0.46, 0.45, 0.94] }}
-      className={`${sizeClasses[feature.size as FeatureSize]} glass glass-hover rounded-[1.75rem] p-6 md:p-7 flex flex-col gap-4 relative overflow-hidden group`}
+      className={`${sizeClasses[feature.size as FeatureSize]} glass glass-hover rounded-2xl sm:rounded-[1.75rem] p-5 sm:p-6 md:p-7 flex flex-col gap-4 relative overflow-hidden group`}
       id={`feature-${feature.id}`}
     >
       {/* Background accent glow */}
@@ -282,7 +282,7 @@ export default function FeatureBento() {
   const titleInView = useInView(titleRef, { once: true, margin: "-60px" });
 
   return (
-    <section id="fitur" className="section px-6 relative bg-secondary/20">
+    <section id="fitur" className="section px-4 sm:px-6 relative bg-secondary/20">
       {/* Ambient orb */}
       <div
         className="orb w-[600px] h-[600px] opacity-5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -301,10 +301,10 @@ export default function FeatureBento() {
           <p className="text-xs font-bold tracking-[0.25em] uppercase text-primary mb-3">
             Fitur Pintar Sentra
           </p>
-          <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-extrabold tracking-tight mb-4 leading-tight">
+          <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] font-extrabold tracking-tight mb-4 leading-tight">
             Fitur Praktis yang Menjaga
             <br />
-            <span className="text-muted-foreground font-medium italic">Tabungan & Masa Depan Keluarga Anda</span>
+            <span className="text-muted-foreground font-medium italic">Tabungan &amp; Masa Depan Keluarga Anda</span>
           </h2>
         </motion.div>
 

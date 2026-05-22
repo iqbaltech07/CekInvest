@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <>
       <Navbar />
-      <main className="flex flex-col flex-1">
+      <main className="flex flex-col flex-1 overflow-hidden" >
         <Hero />
         <HowItWorks />
         <FeatureBento />

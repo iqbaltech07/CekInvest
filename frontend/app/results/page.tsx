@@ -12,6 +12,7 @@ import {
   Building2, Globe, Newspaper, HelpCircle,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { FormattedText } from "@/components/ui/formatted-text";
 import Navbar from "@/components/Navbar";
 import type { AnalysisResult, EmotionSignal, OjkStatus, RiskLevel } from "@/lib/types";
 import { sendChatMessage } from "@/lib/api";
@@ -318,7 +319,7 @@ function GuardianChat({ analysisId }: { analysisId: string }) {
                 <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
                   <div className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-xs leading-relaxed ${m.role === "user"
                     ? "bg-primary text-primary-foreground" : "bg-black/5 text-foreground"}`}>
-                    {m.content}
+                    <FormattedText text={m.content} />
                   </div>
                 </div>
               ))}
@@ -423,7 +424,7 @@ export default function ResultsPage() {
                     {result.riskLevel}
                   </Badge>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">{result.summary}</p>
+                <FormattedText text={result.summary} className="text-sm text-muted-foreground leading-relaxed" />
 
                 {/* OJK Status badge */}
                 {ojkCfg && (
@@ -463,11 +464,11 @@ export default function ResultsPage() {
                 </button>
                 <AnimatePresence>
                   {showExplanation && (
-                    <motion.p initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }}
+                    <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="mt-3 text-xs text-muted-foreground leading-relaxed overflow-hidden whitespace-pre-wrap">
-                      {result.explanation}
-                    </motion.p>
+                      className="mt-3 text-xs text-muted-foreground leading-relaxed overflow-hidden">
+                      <FormattedText text={result.explanation} />
+                    </motion.div>
                   )}
                 </AnimatePresence>
               </div>

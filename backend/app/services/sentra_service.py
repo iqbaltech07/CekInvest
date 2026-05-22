@@ -237,8 +237,9 @@ class SentraService:
         """
         prompt = f"""
 Tugasmu adalah mencari maksimal 3 nama perusahaan/platform/aplikasi investasi utama yang ditawarkan dalam teks berikut.
+PENTING: Selalu prioritaskan nama perusahaan/entitas legal resmi (contoh yang mengandung kata PT, CV, Sekuritas, Asset Management, dsb) jika ditemukan dalam teks, di atas nama aplikasinya.
 Hanya ekstrak nama brand atau perusahaannya saja.
-Jika ada, kembalikan hanya namanya dalam format JSON list of strings. Contoh: ["Ajaib"] atau ["PT. Cuan Sukses"].
+Jika ada, kembalikan hanya namanya dalam format JSON list of strings. Contoh: ["PT. Cuan Sukses", "Ajaib"].
 Jika tidak ada nama perusahaan spesifik, kembalikan list kosong [].
 Abaikan nama orang, abaikan nama bank (seperti BCA, BRI), abaikan regulator (seperti OJK, Bappebti).
 Jangan beri penjelasan apapun, murni JSON array.

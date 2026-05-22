@@ -10,6 +10,7 @@ import {
   AlertTriangle, Copy, Check, ArrowRight,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { FormattedText } from "@/components/ui/formatted-text";
 import Navbar from "@/components/Navbar";
 import { getSharedReport, getShareMeta } from "@/lib/api";
 import type { AnalysisResult, RiskLevel, OjkStatus, ShareMeta } from "@/lib/types";
@@ -117,7 +118,7 @@ export default function SharePage() {
                   {result.riskLevel}
                 </Badge>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed max-w-lg">{result.summary}</p>
+              <FormattedText text={result.summary} className="text-sm text-muted-foreground leading-relaxed max-w-lg" />
             </div>
 
             {/* Intelligence findings */}

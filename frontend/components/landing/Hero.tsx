@@ -71,13 +71,13 @@ function FloatingBadge({
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useTransform(scrollYProgress, [0, 1], [0, 80]);
+  // const y = useTransform(scrollYProgress, [0, 1], [0, 80]);
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   return (
     <section
       ref={ref}
-      className="relative flex flex-col items-center justify-center sm:min-h-screen pb-16 overflow-hidden noise"
+      className="relative flex flex-col items-center justify-center h-screen min-h-full pb-16 sm:pt-10 overflow-hidden noise"
     >
       {/* Ambient orbs */}
       <Orb size={500} x="10%" y="-15%" color="oklch(0.62 0.22 275 / 18%)" delay={0} />
@@ -96,17 +96,17 @@ export default function Hero() {
       />
 
       <motion.div
-        style={{ y, opacity }}
-        className="relative z-10 flex flex-col items-center text-center px-6 max-w-5xl mx-auto  mt-30 sm:-mt-20"
+        style={{ opacity }}
+        className="relative z-10 flex flex-col items-center text-center px-4 sm:px-6 max-w-5xl mx-auto w-full"
       >
         {/* Tag pill */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mb-8 inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs font-semibold text-primary border border-primary/20"
+          className="mb-6 sm:mb-8 inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs font-semibold text-primary border border-primary/20"
         >
-          <Sparkles className="w-3.5 h-3.5" />
+          <Sparkles className="w-3.5 h-3.5 flex-shrink-0" />
           <span>Pelindung Pintar dari Penipuan Keuangan — Indonesia</span>
         </motion.div>
 
@@ -115,7 +115,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="text-[clamp(2.5rem,7vw,5.5rem)] font-extrabold leading-[1.02] tracking-[-0.04em] mb-6"
+          className="text-[clamp(2.25rem,7vw,5.5rem)] font-extrabold leading-[1.05] tracking-[-0.04em] mb-5 sm:mb-6"
         >
           Lindungi Investasimu
           <br />
@@ -127,9 +127,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.35 }}
-          className="text-[clamp(1.05rem,2vw,1.25rem)] text-muted-foreground max-w-[640px] leading-[1.6] mb-10 tracking-tight"
+          className="text-[clamp(1rem,2vw,1.2rem)] text-muted-foreground max-w-[600px] leading-[1.65] mb-8 sm:mb-10 tracking-tight"
         >
-          Tempel obrolan WhatsApp, unggah gambar tangkapan layar, atau cek alamat website investasi. 
+          Tempel obrolan WhatsApp, unggah gambar tangkapan layar, atau cek alamat website investasi.
           Sistem kami akan memeriksa{" "}
           <span className="text-foreground font-medium">
             rayuan manis, janji untung palsu, dan ciri penipuan
@@ -142,20 +142,20 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="flex flex-col sm:flex-row items-center gap-3"
+          className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto"
         >
           <Link
             href="/analyze"
             id="hero-cta-primary"
-            className="group inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-[15px] font-semibold bg-primary text-primary-foreground shadow-[0_4px_14px_oklch(0.55_0.22_275/25%)] hover:shadow-[0_6px_20px_oklch(0.55_0.22_275/40%)] hover:-translate-y-0.5 transition-all duration-300"
+            className="group inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3.5 rounded-full text-[15px] font-semibold bg-primary text-primary-foreground shadow-[0_4px_14px_oklch(0.55_0.22_275/25%)] hover:shadow-[0_6px_20px_oklch(0.55_0.22_275/40%)] hover:-translate-y-0.5 transition-all duration-300"
           >
             Cek Sekarang (Gratis)
-            <ArrowRight className="w-4.5 h-4.5 group-hover:translate-x-1 transition-transform duration-200" />
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
           </Link>
           <Link
             href="/scam-radar"
             id="hero-cta-secondary"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-[15px] font-medium text-muted-foreground hover:text-foreground glass glass-hover"
+            className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-3.5 rounded-full text-[15px] font-medium text-muted-foreground hover:text-foreground glass glass-hover"
           >
             Pantau Peta Rawan Penipuan
           </Link>
@@ -166,15 +166,15 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-8 flex items-center gap-2 text-xs text-muted-foreground"
+          className="mt-6 sm:mt-8 flex items-center gap-2 text-xs text-muted-foreground"
         >
-          <ShieldCheck className="w-4 h-4 text-[--brand-emerald]" />
+          <ShieldCheck className="w-4 h-4 text-[--brand-emerald] flex-shrink-0" />
           <span>Gratis · Sangat Aman · Privasi Terjaga Penuh</span>
         </motion.div>
       </motion.div>
 
-      {/* Floating stat badges */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      {/* Floating stat badges — desktop only */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden -top-10">
         <div className="absolute left-[8%] top-[38%] hidden lg:block">
           <FloatingBadge delay={0.9}>
             <div className="flex items-center gap-2">
@@ -187,7 +187,7 @@ export default function Hero() {
           <FloatingBadge delay={1.4}>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-[--brand-amber]" />
-              <span className="text-foreground/80">Sangat Cepat & Akurat</span>
+              <span className="text-foreground/80">Sangat Cepat &amp; Akurat</span>
             </div>
           </FloatingBadge>
         </div>
