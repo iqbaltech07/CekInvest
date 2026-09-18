@@ -1,8 +1,10 @@
 """
 Application configuration — loaded from environment variables via pydantic-settings.
 """
+import json
 from functools import lru_cache
 
+from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -31,11 +33,26 @@ class Settings(BaseSettings):
     SENTRA_MODEL_BACKUP_1: str | None = "gemini-2.5-flash-lite"
     SENTRA_MODEL_BACKUP_2: str | None = "gemini-3.5-flash"
     SENTRA_MODEL_BACKUP_3: str | None = "gemini-3.8-flash"
-    SENTRA_MODEL_FALLBACKS: list[str] = [
+    SENTRA_MODEL_FALLBACKS: list[str] | str = [
         "gemini-2.5-flash",
         "gemini-2.5-flash-lite",
         "gemini-3.5-flash",
     ]
+
+    @field_validator("SENTRA_MODEL_FALLBACKS", mode="after")
+    @classmethod
+    def assemble_fallbacks(cls, v: list[str] | str) -> list[str]:
+        if isinstance(v, str):
+            v = v.strip()
+            if v.startswith("[") and v.endswith("]"):
+                try:
+                    loaded = json.loads(v)
+                    if isinstance(loaded, list):
+                        return [str(item).strip() for item in loaded if str(item).strip()]
+                except Exception:
+                    v = v[1:-1]
+            return [part.strip().strip("'\"") for part in v.split(",") if part.strip()]
+        return list(v) if isinstance(v, list) else []
 
     def get_gemini_api_keys(self) -> list[str]:
         """
@@ -100,7 +117,30 @@ class Settings(BaseSettings):
     UNREALISTIC_RETURN_THRESHOLD: float = 3.0  # Return > 3%/month = red flag (PRD #14)
 
     # ── CORS ──────────────────────────────────────────────────────────────────
-    CORS_ORIGINS: list[str] = ["http://localhost:3000"]
+    # Accepts string (e.g. "*", "https://site.com", "http://a,http://b"), JSON array string, or list
+    CORS_ORIGINS: list[str] | str = ["http://localhost:3000"]
+
+    @field_validator("CORS_ORIGINS", mode="after")
+    @classmethod
+    def assemble_cors_origins(cls, v: list[str] | str) -> list[str]:
+        if isinstance(v, str):
+            v = v.strip()
+            if not v:
+                return ["*"]
+            if v.startswith("[") and v.endswith("]"):
+                try:
+                    loaded = json.loads(v)
+                    if isinstance(loaded, list):
+                        res = [str(item).strip() for item in loaded if str(item).strip()]
+                        return res or ["*"]
+                except Exception:
+                    v = v[1:-1]
+            res = [part.strip().strip("'\"") for part in v.split(",") if part.strip()]
+            return res or ["*"]
+        elif isinstance(v, list):
+            res = [str(item).strip() for item in v if str(item).strip()]
+            return res or ["*"]
+        return ["*"]
 
     # ── GNN (Graph Neural Network) ───────────────────────────────────────────
     # Default False to keep RAM below 150 MB on Render Free Plan (512 MB limit).
