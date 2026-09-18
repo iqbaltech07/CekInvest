@@ -30,7 +30,13 @@ export default function ScamRadarPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  const riskLevels = ["ALL", "CRITICAL", "HIGH", "MEDIUM", "LOW"];
+  const riskLevels = [
+    { key: "ALL", label: "Semua" },
+    { key: "CRITICAL", label: "Sangat Bahaya" },
+    { key: "HIGH", label: "Bahaya" },
+    { key: "MEDIUM", label: "Waspada" },
+    { key: "LOW", label: "Rendah" },
+  ];
 
   // Debounce search query to prevent spamming the backend API
   useEffect(() => {
@@ -140,52 +146,125 @@ export default function ScamRadarPage() {
   const getRiskFriendlyLabel = (level: string) => {
     switch (level.toUpperCase()) {
       case "CRITICAL":
-        return "Sangat Bahaya";
+        return "Sangat Berbahaya";
       case "HIGH":
-        return "Bahaya";
+        return "Tinggi";
       case "MEDIUM":
         return "Waspada";
       case "LOW":
         return "Rendah";
       default:
-        return level;
+        return "Perlu Waspada";
     }
   };
 
   const getTrendFriendlyLabel = (trend: string) => {
     switch (trend.toUpperCase()) {
       case "VIRAL":
-        return "Ramai Dilaporkan";
+        return "Melonjak Pesat";
       case "SPIKING":
         return "Meningkat Tajam";
       case "RISING":
-        return "Naik";
+        return "Mulai Naik";
       default:
-        return trend;
+        return "Terpantau Stabil";
     }
   };
 
   const getSpreadFriendlyLabel = (spread: string) => {
     switch (spread.toUpperCase()) {
       case "NASIONAL":
-        return "Luas (Nasional)";
+        return "Lintas Provinsi (Nasional)";
       case "REGIONAL":
-        return "Lokal (Daerah)";
+        return "Lokal Antar-Kota";
       default:
-        return "Satu Kota";
+        return "Satu Wilayah";
     }
   };
 
-  const signalLabel = (sig: string) => {
-    const labels: Record<string, string> = {
-      same_bank_account: "Rekening Bank Sama",
-      same_phone: "Nomor HP Sama",
-      same_domain: "Website Sama",
-      behavioral_pattern: "Tanda Kalimat Rayuan",
-      high_similarity: "Kemiripan Kalimat Tinggi",
-      young_domain: "Website Sangat Baru (<90 hari)"
+  const humanizeCategory = (cat: string | null | undefined): string => {
+    if (!cat) return "Investasi Tanpa Izin";
+    const mapping: Record<string, string> = {
+      "crypto scam": "Penipuan Berkedok Kripto",
+      "crypto scam / ponzi": "Skema Piramida Kripto",
+      "robot trading scam": "Robot Trading Palsu",
+      "affiliate scam": "Penipuan Berkedok Afiliasi",
+      "phishing finansial": "Pencurian Data Rekening (Phishing)",
+      "official banking": "Layanan Resmi Perbankan",
+      "official e-commerce receipt": "Struk Belanja Resmi",
+      "investasi bodong": "Investasi Bodong (Tanpa Izin)",
+      "hadiah palsu": "Penipuan Undian / Hadiah Palsu",
+      "investasi properti fiktif": "Investasi Properti Fiktif",
+      "investasi saham bodong": "Saham Palsu Tanpa Izin",
+      "investasi resmi ojk": "Lembaga Resmi Berizin",
+      "legal": "Layanan Terdaftar / Legal",
     };
-    return labels[sig] || sig;
+    return mapping[cat.toLowerCase().trim()] || cat;
+  };
+
+  const humanizeGroupName = (name: string): string => {
+    if (!name) return "Kelompok Penipuan";
+    return name
+      .replace(/Crypto Referral Ponzi/gi, "Skema Piramida Kripto")
+      .replace(/Crypto Scam \/ Ponzi/gi, "Skema Ponzi Kripto")
+      .replace(/Crypto Scam/gi, "Penipuan Berkedok Kripto")
+      .replace(/Fake OJK Investment/gi, "Investasi Catut Nama OJK")
+      .replace(/Robot Trading Return Tinggi/gi, "Robot Trading Janji Untung")
+      .replace(/Robot Trading Scam/gi, "Robot Trading Palsu")
+      .replace(/Affiliate Scam/gi, "Penipuan Berkedok Afiliasi")
+      .replace(/Phishing Finansial/gi, "Pencurian Data Rekening (Phishing)")
+      .replace(/Official Banking/gi, "Layanan Resmi Bank")
+      .replace(/Official E-Commerce Receipt/gi, "Struk Belanja Resmi")
+      .replace(/Klaster GNN/gi, "Jaringan Terkait")
+      .replace(/GNN Cluster/gi, "Jaringan Terkait");
+  };
+
+  const signalLabel = (sig: string): string => {
+    if (!sig) return "";
+    const cleanSig = sig.trim();
+    
+    // Explicit dictionary of internal codes to human explanations
+    const dictionary: Record<string, string> = {
+      ponzi_pattern: "Skema Piramida (Wajib Rekrut Member)",
+      high_text_similarity: "Isi Pesan / Rayuan Identik",
+      medium_text_similarity: "Isi Rayuan Sangat Mirip",
+      low_text_similarity: "Pola Kalimat Sejenis",
+      high_similarity: "Isi Pesan / Rayuan Identik",
+      behavioral_pattern: "Tanda Kalimat Rayuan",
+      fake_authority: "Catut Nama OJK / Pejabat Resmi",
+      fake_urgency: "Tekanan Waktu Tergesa-gesa",
+      guaranteed_profit: "Janji Pasti Profit / Anti Rugi",
+      suspicious_tld: "Website Abal-Abal (.xyz/.vip)",
+      young_domain: "Website Baru Dibuat (<90 Hari)",
+      same_bank_account: "Nomor Rekening Bank Sama",
+      same_phone: "Nomor Kontak / WhatsApp Sama",
+      same_domain: "Alamat Website Sama",
+      same_email: "Alamat Email Sama",
+    };
+
+    if (dictionary[cleanSig.toLowerCase()]) {
+      return dictionary[cleanSig.toLowerCase()];
+    }
+
+    // Bank Account: e.g. "BCA:8830192841" or "BCA 123456"
+    if (/^[a-zA-Z]+[:\s]\d+$/.test(cleanSig)) {
+      return `Rek. ${cleanSig.replace(":", " ")}`;
+    }
+
+    // Phone: e.g. "081298765432" or "+628..."
+    if (/^(\+62|62|08)\d+$/.test(cleanSig)) {
+      return `Kontak ${cleanSig}`;
+    }
+
+    // Domain: e.g. "cuan-autopilot.co" or "foo.xyz"
+    if (/^[a-zA-Z0-9-]+\.[a-zA-Z]{2,}/.test(cleanSig)) {
+      return `Situs ${cleanSig}`;
+    }
+
+    // Fallback: replace underscores with space & Title Case
+    return cleanSig
+      .replace(/[_-]+/g, " ")
+      .replace(/\b\w/g, (c) => c.toUpperCase());
   };
 
   return (
@@ -264,7 +343,7 @@ export default function ScamRadarPage() {
                   }`}
                 >
                   <Activity className="w-3.5 h-3.5" />
-                  Kelompok Penipu
+                  Kelompok Modus Penipuan
                 </button>
                 <button
                   onClick={() => setActiveTab("regions")}
@@ -275,7 +354,7 @@ export default function ScamRadarPage() {
                   }`}
                 >
                   <MapPin className="w-3.5 h-3.5" />
-                  Peta Rawan Wilayah
+                  Peta Sebaran Wilayah
                 </button>
               </div>
 
@@ -299,15 +378,15 @@ export default function ScamRadarPage() {
                   <div className="flex items-center gap-1 bg-black/3 rounded-2xl p-1 w-full sm:w-auto overflow-x-auto border border-black/5 shadow-inner">
                     {riskLevels.map((lvl) => (
                       <button
-                        key={lvl}
-                        onClick={() => setRiskFilter(lvl)}
+                        key={lvl.key}
+                        onClick={() => setRiskFilter(lvl.key)}
                         className={`flex-shrink-0 px-3.5 py-1.5 rounded-xl text-[10px] font-bold uppercase tracking-wider transition-all ${
-                          riskFilter === lvl
+                          riskFilter === lvl.key
                             ? "bg-white text-foreground shadow-sm font-extrabold"
                             : "text-muted-foreground hover:text-foreground"
                         }`}
                       >
-                        {lvl === "ALL" ? "Semua" : lvl}
+                        {lvl.label}
                       </button>
                     ))}
                   </div>
@@ -359,24 +438,26 @@ export default function ScamRadarPage() {
                           
                           {/* Heading badges */}
                           <div className="flex flex-wrap items-center gap-2">
-                            <span className={`px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-wider border flex items-center gap-1 ${getRiskColor(cluster.risk_level)}`}>
+                            <span className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wider border flex items-center gap-1.5 ${getRiskColor(cluster.risk_level)}`}>
                               <ShieldAlert className="w-3.5 h-3.5" />
-                              Bahaya: {getRiskFriendlyLabel(cluster.risk_level)}
+                              Tingkat Risiko: {getRiskFriendlyLabel(cluster.risk_level)}
                             </span>
-                            <span className={`px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-wider border flex items-center gap-1 ${getTrendColor(cluster.regional_status)}`}>
+                            <span className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wider border flex items-center gap-1.5 ${getTrendColor(cluster.regional_status)}`}>
                               <Flame className="w-3.5 h-3.5" />
                               Tren: {getTrendFriendlyLabel(cluster.regional_status)}
                             </span>
-                            <span className="px-3 py-1 rounded-full text-[9px] font-bold bg-primary/5 text-primary border border-primary/10">
-                              Tingkat Kemiripan: {cluster.similarity_score}%
+                            <span className="px-3 py-1 rounded-full text-[10px] font-bold bg-primary/5 text-primary border border-primary/10">
+                              Kemiripan Modus: {cluster.similarity_score}%
                             </span>
                           </div>
 
                           {/* Cluster Details */}
                           <div>
-                            <h3 className="text-xl font-extrabold text-foreground group-hover:text-primary transition-colors">{cluster.group_name}</h3>
+                            <h3 className="text-xl font-extrabold text-foreground group-hover:text-primary transition-colors">
+                              {humanizeGroupName(cluster.group_name)}
+                            </h3>
                             <p className="text-xs text-muted-foreground mt-1">
-                              Modus Utama: <span className="font-bold text-foreground/80">{cluster.category}</span>
+                              Modus Utama: <span className="font-bold text-foreground/80">{humanizeCategory(cluster.category)}</span>
                             </p>
                           </div>
 
@@ -387,7 +468,7 @@ export default function ScamRadarPage() {
                               {/* Domains */}
                               <div className="space-y-1.5">
                                 <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider flex items-center gap-1.5">
-                                  <Globe className="w-3.5 h-3.5 text-primary" /> Website Penipu
+                                  <Globe className="w-3.5 h-3.5 text-primary" /> Website Terkait
                                 </p>
                                 <div className="flex flex-wrap gap-1">
                                   {cluster.domains.length > 0 ? (
@@ -403,7 +484,7 @@ export default function ScamRadarPage() {
                               {/* Bank accounts */}
                               <div className="space-y-1.5">
                                 <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider flex items-center gap-1.5">
-                                  <CreditCard className="w-3.5 h-3.5 text-primary" /> Rekening Terkait
+                                  <CreditCard className="w-3.5 h-3.5 text-primary" /> Rekening Penampung Dana
                                 </p>
                                 <div className="flex flex-wrap gap-1">
                                   {cluster.bank_accounts.length > 0 ? (
@@ -419,7 +500,7 @@ export default function ScamRadarPage() {
                               {/* Phone Numbers */}
                               <div className="space-y-1.5">
                                 <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider flex items-center gap-1.5">
-                                  <Phone className="w-3.5 h-3.5 text-primary" /> Kontak Terkait
+                                  <Phone className="w-3.5 h-3.5 text-primary" /> Kontak Pelaku
                                 </p>
                                 <div className="flex flex-wrap gap-1">
                                   {cluster.phone_numbers.length > 0 ? (
@@ -437,7 +518,7 @@ export default function ScamRadarPage() {
 
                           {/* Matched Signal List */}
                           <div className="pt-1">
-                            <p className="text-[9px] font-extrabold text-muted-foreground uppercase tracking-wider mb-2">Tanda Kemiripan Modus</p>
+                            <p className="text-[9px] font-extrabold text-muted-foreground uppercase tracking-wider mb-2">Ciri & Tanda Kesamaan Modus</p>
                             <div className="flex flex-wrap gap-1.5">
                               {cluster.matched_signals.map((sig) => (
                                 <span key={sig} className="px-2.5 py-1 rounded-xl bg-primary/5 text-primary text-[10px] font-semibold border border-primary/10 shadow-xs flex items-center gap-1">
@@ -460,7 +541,7 @@ export default function ScamRadarPage() {
                           <div className="w-full border-t border-primary/5 hidden lg:block my-1.5" />
                           <div className="text-[9px] text-muted-foreground flex items-center gap-1 z-10 font-medium">
                             <Calendar className="w-3 h-3 text-muted-foreground/60" />
-                            <span>Masih Aktif</span>
+                            <span>Kasus Masih Beredar</span>
                           </div>
                         </div>
 
@@ -518,7 +599,7 @@ export default function ScamRadarPage() {
                           <div>
                             <h4 className="text-lg font-extrabold text-foreground">{reg.region}</h4>
                             <p className="text-xs text-muted-foreground mt-0.5">
-                              Dominasi Pola: <span className="font-bold text-foreground/80">{reg.dominant_scam || "Investasi Bodong"}</span>
+                              Modus Terbanyak: <span className="font-bold text-foreground/80">{humanizeCategory(reg.dominant_scam)}</span>
                             </p>
                           </div>
 

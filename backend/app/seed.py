@@ -102,8 +102,8 @@ SCAM_PATTERNS = [
 
 SAMPLE_CLUSTERS = [
     {
-        "groupName": "Robot Trading Return Tinggi — Bandung",
-        "category": "Robot Trading Scam",
+        "groupName": "Robot Trading Palsu — Bandung",
+        "category": "Robot Trading Palsu",
         "riskLevel": ClusterRiskLevel.CRITICAL,
         "totalReports": 184,
         "similarityScore": 0.92,
@@ -116,8 +116,8 @@ SAMPLE_CLUSTERS = [
         "representativeText": "Robot trading profit 50% per bulan dijamin anti rugi. Slot terbatas hari ini saja!",
     },
     {
-        "groupName": "Crypto Referral Ponzi — Surabaya",
-        "category": "Crypto Scam",
+        "groupName": "Skema Piramida Kripto — Surabaya",
+        "category": "Penipuan Berkedok Kripto",
         "riskLevel": ClusterRiskLevel.HIGH,
         "totalReports": 56,
         "similarityScore": 0.78,
@@ -130,8 +130,8 @@ SAMPLE_CLUSTERS = [
         "representativeText": "Bonus referral 20% setiap ajak teman join ekosistem crypto terbaru. Passive income nyata!",
     },
     {
-        "groupName": "Fake OJK Investment — Jakarta",
-        "category": "Investasi Bodong",
+        "groupName": "Investasi Catut Nama OJK — Jakarta",
+        "category": "Investasi Bodong (Tanpa Izin)",
         "riskLevel": ClusterRiskLevel.MEDIUM,
         "totalReports": 29,
         "similarityScore": 0.65,
@@ -155,7 +155,7 @@ SAMPLE_REGIONAL = [
         "growthPercentage": 242.86,
         "trend": RegionalTrend.VIRAL,
         "spreadLevel": SpreadLevel.HIGH,
-        "dominantScamCategory": "Robot Trading Scam",
+        "dominantScamCategory": "Robot Trading Palsu",
     },
     {
         "region": "Jakarta",
@@ -166,7 +166,7 @@ SAMPLE_REGIONAL = [
         "growthPercentage": 82.61,
         "trend": RegionalTrend.SPIKING,
         "spreadLevel": SpreadLevel.NATIONAL,
-        "dominantScamCategory": "Investasi Bodong",
+        "dominantScamCategory": "Investasi Bodong (Tanpa Izin)",
     },
     {
         "region": "Surabaya",
@@ -177,7 +177,7 @@ SAMPLE_REGIONAL = [
         "growthPercentage": 44.44,
         "trend": RegionalTrend.RISING,
         "spreadLevel": SpreadLevel.MEDIUM,
-        "dominantScamCategory": "Crypto Scam",
+        "dominantScamCategory": "Penipuan Berkedok Kripto",
     },
     {
         "region": "Medan",
@@ -234,6 +234,16 @@ async def seed() -> None:
     logger.info("  ✅ Regional monitoring seeded.")
 
     await db.disconnect()
+
+    # 4. GNN Training Dataset
+    logger.info("Seeding GNN training dataset (UserReports & Community DB)...")
+    try:
+        from ml.seed_gnn_data import seed_gnn_dataset
+        await seed_gnn_dataset()
+        logger.info("  ✅ GNN training dataset seeded.")
+    except Exception as exc:
+        logger.warning("  ⚠️ Could not seed GNN dataset: %s", exc)
+
     logger.info("✅ Full seed complete.")
 
 

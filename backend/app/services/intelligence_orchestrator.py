@@ -13,7 +13,7 @@ import asyncio
 import logging
 import re
 from dataclasses import dataclass, field
-from typing import NamedTuple
+from typing import Any, NamedTuple
 
 from prisma import Prisma
 
@@ -55,6 +55,9 @@ class IntelligenceCheckResult:
     # Community DB (checks #21-22)
     community: CommunityIntelResult = field(default_factory=CommunityIntelResult)
 
+    # Dense Semantic RAG (gemini-embedding-001 + pgvector)
+    rag_result: Any = None
+
     # Summary flags for risk scoring
     has_illegal_ojk_flag: bool = False
     has_young_domain_flag: bool = False
@@ -63,7 +66,7 @@ class IntelligenceCheckResult:
 
     def to_prompt_context(self) -> str:
         """Format intelligence findings for injection into SENTRA prompt."""
-        lines = ["=== DATA INTELIJEN REAL-TIME ==="]
+        lines = ["=== HASIL PEMERIKSAAN SISTEM CEKINVEST ==="]
 
         # OJK
         lines.append(f"\n[REGULASI OJK]")
@@ -103,7 +106,14 @@ class IntelligenceCheckResult:
             lines.append(f"\n[DATABASE KOMUNITAS — REKENING BANK]")
             lines.append(f"⚠️ {len(self.community.bank_accounts_found)} rekening ditemukan di database scam komunitas")
 
-        lines.append("\n=== GUNAKAN DATA DI ATAS DALAM ANALISISMU ===")
+        # Dense Semantic RAG (gemini-embedding-001 + pgvector)
+        if self.rag_result and hasattr(self.rag_result, "to_prompt_context"):
+            rag_block = self.rag_result.to_prompt_context()
+            if rag_block:
+                lines.append(f"\n{rag_block}")
+
+        lines.append("\n=== PETUNJUK PENYUSUNAN ANALISIS UNTUK MASYARAKAT AWAM ===")
+        lines.append("Gunakan temuan fakta di atas untuk menyusun penjelasan yang tenang, empati, dan sangat mudah dipahami orang awam. DILARANG menggunakan istilah teknis seperti 'data intelijen real-time', 'Semantic RAG', 'pgvector', atau sitasi kode.")
         return "\n".join(lines)
 
 
@@ -132,6 +142,10 @@ async def run_parallel_checks(
     
     if not entity_names:
         entity_names = _extract_entity_names(content)
+
+    # Sanitize and validate extracted candidates against strict stopword/grammar gatekeeper
+    from app.services.ojk_service import is_valid_entity_candidate
+    entity_names = [e for e in entity_names if is_valid_entity_candidate(e)]
 
     phones = _extract_phone_numbers(content)
     bank_accounts = _extract_bank_accounts(content)
@@ -164,6 +178,10 @@ async def run_parallel_checks(
     # Community DB checks
     tasks.append(_check_community_db(phones, bank_accounts, db))
 
+    # Task 4: Dense Semantic RAG (gemini-embedding-001 + pgvector)
+    from app.services.rag_service import rag_service
+    tasks.append(rag_service.query_rag(content, db=db))
+
     # Execute all in parallel
     try:
         check_results = await asyncio.gather(*tasks, return_exceptions=True)
@@ -176,6 +194,8 @@ async def run_parallel_checks(
     whois_result = check_results[1] if not isinstance(check_results[1], Exception) else None
     news_items = check_results[2] if not isinstance(check_results[2], Exception) else []
     community = check_results[3] if not isinstance(check_results[3], Exception) else CommunityIntelResult()
+    rag_res = check_results[4] if len(check_results) > 4 and not isinstance(check_results[4], Exception) else None
+    result.rag_result = rag_res
 
     # OJK
     if ojk_results and isinstance(ojk_results, dict):
@@ -267,24 +287,18 @@ async def _check_community_db(
 
 
 def _extract_entity_names(content: str) -> list[str]:
-    """Heuristic extraction of potential investment entity names from content."""
-    # Common Indonesian words that are NOT entity names but often follow keywords
-    # like 'investasi', 'platform', etc.
-    STOPWORDS = {
-        "yang", "adalah", "merupakan", "dengan", "secara", "untuk", "dalam",
-        "dari", "atau", "pada", "juga", "oleh", "bagi", "telah", "bisa",
-        "aman", "legal", "resmi", "palsu", "terpercaya", "cepat", "mudah",
-        "gratis", "untung", "profit", "dana", "modal", "uang", "saham",
-        "crypto", "trading", "bisnis", "usaha", "kami", "anda", "saya",
-        "nikmati", "mulai", "wujudkan", "segera", "jangan", "pastikan",
-        "investasi", "pengalaman", "tujuan", "finansial", "indonesia",
-    }
+    """
+    Heuristic contextual extraction of potential investment entity names.
+    Extracts only names with explicit corporate/platform indicators (PT, CV, platform, etc.).
+    Does NOT match generic conversation words.
+    """
+    from app.services.ojk_service import is_valid_entity_candidate
 
-    # Look for capitalized phrase patterns common in Indonesian investment texts
     patterns = [
-        r"\b([A-Z][a-zA-Z0-9]{2,}(?:\s+[A-Z][a-zA-Z0-9]+){0,4})\b",  # Capitalized words (1-5 words)
-        r"(?:PT|CV|UD|Koperasi|KOPERASI)\s+([A-Za-z0-9\s\.\-]{3,30})",
-        r"(?:perusahaan|investasi|platform|aplikasi)\s+([A-Za-z0-9\s\.\-]{3,30})",
+        # Explicit legal entities: PT / CV / UD / Koperasi with capitalized words
+        r"(?:PT\.?|CV\.?|UD\.?|Koperasi|KOPERASI)\s+([A-Z][A-Za-z0-9\.\-]*(?:\s+[A-Z][A-Za-z0-9\.\-]*)*)",
+        # Explicit platform context: aplikasi / platform / broker / sekuritas / bursa / exchange
+        r"(?:perusahaan|platform|aplikasi|broker|sekuritas|bursa|exchange)\s+([A-Z][A-Za-z0-9\.\-]*(?:\s+[A-Z][A-Za-z0-9\.\-]*)*)",
     ]
     
     found = []
@@ -292,17 +306,10 @@ def _extract_entity_names(content: str) -> list[str]:
         matches = re.findall(pattern, content)
         for m in matches:
             cleaned = m.strip().strip(".,- ")
-            # Basic validation
-            if len(cleaned) < 3:
-                continue
-            # Skip if it's a known stopword
-            if cleaned.lower() in STOPWORDS:
-                continue
-            # Skip if it's purely generic Indonesian words
-            if len(cleaned.split()) == 1 and cleaned.lower() in STOPWORDS:
-                continue
-            
-            found.append(cleaned)
+            # Strip trailing prepositions/conjunctions if any
+            cleaned = re.split(r'\b(untuk|yang|dengan|di|dan|bisa|adalah|pada|dari|resmi|terdaftar|ojk)\b', cleaned, flags=re.IGNORECASE)[0].strip()
+            if is_valid_entity_candidate(cleaned):
+                found.append(cleaned)
 
     # Deduplicate and limit
     seen = set()

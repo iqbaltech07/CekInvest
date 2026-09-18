@@ -14,8 +14,17 @@ from fastapi.responses import JSONResponse
 
 from app.config import settings
 from app.database import connect, disconnect
-from app.routers import analysis_router, intelligence_router, reports_router, share_router, chat_router, clustering_router
+from app.routers import (
+    analysis_router,
+    intelligence_router,
+    reports_router,
+    share_router,
+    chat_router,
+    clustering_router,
+    ml_router,
+)
 from app.services.sentra_service import get_sentra
+
 
 logging.basicConfig(
     level=logging.DEBUG if settings.DEBUG else logging.INFO,
@@ -26,7 +35,6 @@ logger = logging.getLogger(__name__)
 API_PREFIX = "/api/v1"
 _RATE_LIMIT_WINDOW_SECONDS = 60
 _RATE_LIMIT_MAX_REQUESTS = 60
-
 
 # ── Lifespan ──────────────────────────────────────────────────────────────────
 
@@ -43,6 +51,16 @@ async def lifespan(app: FastAPI):
     get_sentra()
     logger.info("✅ SENTRA AI engine ready (Gemini 2.5 Flash + Google Search Grounding)")
 
+    # GNN model (optional — degrade gracefully)
+    try:
+        from ml.gnn_service import gnn_service
+        if gnn_service.load_model():
+            logger.info("✅ GNN model loaded")
+        else:
+            logger.info("ℹ️ GNN model not available — running without graph boost")
+    except Exception as exc:
+        logger.warning("GNN load skipped: %s", exc)
+
     # Redis connectivity check
     from app.services.cache_service import _get_client
     redis = _get_client()
@@ -51,11 +69,19 @@ async def lifespan(app: FastAPI):
     else:
         logger.warning("⚠️  Upstash Redis not available — running without cache (degraded mode)")
 
+    # OJK Registry Engine Warm-up (live endpoints -> in-memory)
+    try:
+        import asyncio
+        from app.services.ojk_service import _registry_engine
+        asyncio.create_task(_registry_engine.ensure_loaded())
+        logger.info("✅ OJK Registry background warmup initiated")
+    except Exception as exc:
+        logger.warning("OJK Registry warmup skipped: %s", exc)
+
     yield
 
     await disconnect()
     logger.info("🛑 Prisma disconnected — CekInvest API v2.1 shut down")
-
 
 # ── App Factory ───────────────────────────────────────────────────────────────
 
@@ -144,8 +170,7 @@ def create_app() -> FastAPI:
                 "version": settings.APP_VERSION,
                 "ai_engine": "SENTRA (Gemini 2.5 Flash)",
                 "grounding": "Google Search enabled",
-                "database": "Prisma Postgres",
-                "cache": "Upstash Redis (active)" if redis_ok else "disabled (degraded)",
+                "cache": "Upstash Redis (active)" if redis_ok else "In-Memory RAM + PostgreSQL L3 Active (Local fallback)",
                 "auth_required": False,
                 "prd_version": "2.1 — Zero Budget Edition",
             },
@@ -158,9 +183,16 @@ def create_app() -> FastAPI:
     app.include_router(share_router, prefix=API_PREFIX)      # PRD 5.5 — Shareable Reports
     app.include_router(chat_router, prefix=API_PREFIX)       # PRD 5.4 — AI Scam Guardian
     app.include_router(clustering_router, prefix=API_PREFIX) # Non-AI Clustering & Regional Monitoring
+    app.include_router(ml_router, prefix=API_PREFIX)         # GNN Live Visualizer & Streaming
+
+    @app.get("/ml/dashboard", include_in_schema=False)
+    async def dashboard_shortcut():
+        from fastapi.responses import RedirectResponse
+        return RedirectResponse(url=f"{API_PREFIX}/ml/dashboard")
+
 
     logger.info(
-        "All routers registered under %s — analysis, reports, intelligence, share, chat, clustering",
+        "All routers registered under %s — analysis, reports, intelligence, share, chat, clustering, ml",
         API_PREFIX,
     )
     return app

@@ -144,8 +144,45 @@ backend/
 │   │   └── risk_scorer.py
 │   ├── utils/
 │   └── seed.py       # Intelligence DB seed
+├── ml/               # Graph Neural Network (HeteroGraphSAGE) engine
+│   ├── seed_gnn_data.py # Diverse Indonesian scam & legit dataset generator
+│   ├── export_graph.py  # PyG HeteroData graph exporter
+│   ├── train_sage.py    # HeteroGraphSAGE trainer
+│   ├── gnn_service.py   # Production inference service
+│   └── audit_db.py      # Database training readiness auditor
 └── tests/
 ```
+
+---
+
+## GNN Anti-Scam Intelligence Pipeline
+
+CekInvest utilizes a **HeteroGraphSAGE** Graph Neural Network to detect fraud syndicates and multi-entity scam operations (connected bank accounts, phone numbers, and domains).
+
+### 1. Collect & Seed GNN Training Dataset
+```bash
+# Seeds 110+ balanced Indonesian scam & legitimate reports, plus community databases
+python -m ml.seed_gnn_data
+# Or run complete intelligence seed:
+python -m app.seed
+```
+
+### 2. Audit Database Readiness
+```bash
+python -m ml.audit_db
+```
+
+### 3. Export Graph Dataset
+```bash
+python -m ml.export_graph
+```
+Generates `ml/models/gnn_dataset.pt`, `ml/models/tfidf_vectorizer.pkl`, and `ml/models/gnn_metadata.json`.
+
+### 4. Train HeteroGraphSAGE Model
+```bash
+python -m ml.train_sage
+```
+Trains the model across Train/Val/Test splits and saves the weights to `ml/models/gnn_model.pt`.
 
 ---
 
@@ -167,3 +204,32 @@ sudo apt install tesseract-ocr tesseract-ocr-ind
 # macOS
 brew install tesseract
 ```
+
+---
+
+## 🚀 Render Free Plan Deployment (512 MB RAM Optimized)
+
+CekInvest backend dirancang dengan arsitektur **Graceful Degradation & Circuit Breaker** agar dapat berjalan dengan stabil 100% pada **Render Free Plan (512 MB RAM limit)** tanpa risiko OOM (Out Of Memory) crash:
+
+### 1. Konfigurasi di Render Dashboard:
+- **Environment**: `Docker`
+- **Docker Command / Entrypoint**: Ditangani otomatis oleh `backend/entrypoint.sh` (mendukung dynamic `$PORT`).
+- **Plan**: `Free`
+- **Health Check Path**: `/api/v1/health`
+
+### 2. Environment Variables Wajib di Render:
+| Variable | Value Rekomendasi | Keterangan |
+|---|---|---|
+| `ENABLE_GNN` | `false` | **Wajib `false` di Render Free** agar RAM di bawah 150 MB (tanpa PyTorch). |
+| `DATABASE_URL` | `postgresql://...` | Connection string PostgreSQL (Supabase / Neon). |
+| `GEMINI_API_KEY` | `AIzaSy...` | API Key Google Gemini (SENTRA Engine). |
+| `FRONTEND_URL` | `https://cekinvest.vercel.app` | URL Frontend production. |
+| `CORS_ORIGINS` | `["*"]` atau domain frontend | Pengaturan CORS. |
+
+### 3. Alur Sinkronisasi GNN (Local to Production Sync):
+1. Pengguna melaporkan penipuan di web produksi Render $\rightarrow$ tersimpan ke PostgreSQL.
+2. Dari komputer lokal (laptop/PC yang memiliki RAM leluasa), jalankan sinkronisasi graf dan klaster ke database produksi:
+   ```bash
+   python -m ml.export_graph
+   ```
+3. Begitu proses lokal selesai, halaman **Scam Radar** di website produksi langsung membaca klaster penipuan terbaru dari tabel `scam_clusters` secara instan tanpa perlu merestart server Render!

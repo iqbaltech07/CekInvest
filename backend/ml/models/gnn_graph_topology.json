@@ -1,0 +1,6631 @@
+{
+  "nodes": [
+    {
+      "id": "report_0",
+      "label": "Report #1",
+      "group": "scam",
+      "title": "<b>[SCAM] Robot Trading Scam</b><br>Halo kak, investasi robot trading ini dijamin profit 15% per minggu. Deposit minimal 500 ribu. Withdraw cepat dan aman. ...",
+      "category": "Robot Trading Scam",
+      "isScam": true,
+      "rawText": "Halo kak, investasi robot trading ini dijamin profit 15% per minggu. Deposit minimal 500 ribu. Withdraw cepat dan aman. Klik link berikut untuk daftar karena kuota tinggal sedikit."
+    },
+    {
+      "id": "report_1",
+      "label": "Report #2",
+      "group": "scam",
+      "title": "<b>[SCAM] Crypto Scam / Ponzi</b><br>Om swastyastu kak \ud83d\ude4f\nKami dari tim investasi villa Bali menawarkan profit harian 8%. Banyak member dari Denpasar dan Badu...",
+      "category": "Crypto Scam / Ponzi",
+      "isScam": true,
+      "rawText": "Om swastyastu kak \ud83d\ude4f\nKami dari tim investasi villa Bali menawarkan profit harian 8%. Banyak member dari Denpasar dan Badung sudah payout. Deposit awal hanya Rp750 ribu dan bisa dicairkan kapan saja. Promo member Bali berakhir malam ini."
+    },
+    {
+      "id": "report_2",
+      "label": "Report #3",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Bodong</b><br>https://mba1995.com...",
+      "category": "Investasi Bodong",
+      "isScam": true,
+      "rawText": "https://mba1995.com"
+    },
+    {
+      "id": "report_3",
+      "label": "Report #4",
+      "group": "scam",
+      "title": "<b>[SCAM] Robot Trading Scam</b><br>Selamat siang kak, akun trading AI Robot kami sedang membuka slot investor baru. Deposit minimal Rp500.000 dan dijamin p...",
+      "category": "Robot Trading Scam",
+      "isScam": true,
+      "rawText": "Selamat siang kak, akun trading AI Robot kami sedang membuka slot investor baru. Deposit minimal Rp500.000 dan dijamin profit 8% per hari. Jika deposit hari ini akan mendapatkan bonus 50%. Dana bisa dicairkan kapan saja. Kuota tersisa 5 ora"
+    },
+    {
+      "id": "report_4",
+      "label": "Report #5",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Saham Bodong</b><br>https://mba1995.com...",
+      "category": "Investasi Saham Bodong",
+      "isScam": true,
+      "rawText": "https://mba1995.com"
+    },
+    {
+      "id": "report_5",
+      "label": "Report #6",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Saham Bodong</b><br>https://mba1995.com...",
+      "category": "Investasi Saham Bodong",
+      "isScam": true,
+      "rawText": "https://mba1995.com"
+    },
+    {
+      "id": "report_6",
+      "label": "Report #7",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Bodong</b><br>\ud83d\udcc8 ProfitMax App\n\nJika Anda membaca pesan ini, mungkin ini adalah kesempatan yang akan mengubah hidup Anda.\n\nBayangkan ba...",
+      "category": "Investasi Bodong",
+      "isScam": true,
+      "rawText": "\ud83d\udcc8 ProfitMax App\n\nJika Anda membaca pesan ini, mungkin ini adalah kesempatan yang akan mengubah hidup Anda.\n\nBayangkan bangun tidur dan melihat saldo Anda bertambah setiap hari.\n\nItulah yang dirasakan ribuan pengguna ProfitMax.\n\n\"Awalnya say"
+    },
+    {
+      "id": "report_7",
+      "label": "Report #8",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Bodong</b><br>\ud83d\udcc8 ProfitMax App\n\nJika Anda membaca pesan ini, mungkin ini adalah kesempatan yang akan mengubah hidup Anda.\n\nBayangkan ba...",
+      "category": "Investasi Bodong",
+      "isScam": true,
+      "rawText": "\ud83d\udcc8 ProfitMax App\n\nJika Anda membaca pesan ini, mungkin ini adalah kesempatan yang akan mengubah hidup Anda.\n\nBayangkan bangun tidur dan melihat saldo Anda bertambah setiap hari.\n\nItulah yang dirasakan ribuan pengguna ProfitMax.\n\n\"Awalnya say"
+    },
+    {
+      "id": "report_8",
+      "label": "Report #9",
+      "group": "scam",
+      "title": "<b>[SCAM] Hadiah Palsu</b><br>Halo Kak, saya dari tim Customer Care Marketplace Nusantara. Akun Kakak terdeteksi memenangkan program loyalitas pelangg...",
+      "category": "Hadiah Palsu",
+      "isScam": true,
+      "rawText": "Halo Kak, saya dari tim Customer Care Marketplace Nusantara. Akun Kakak terdeteksi memenangkan program loyalitas pelanggan senilai Rp5.000.000. Untuk proses pencairan hadiah, silakan transfer biaya administrasi sebesar Rp150.000 terlebih da"
+    },
+    {
+      "id": "report_9",
+      "label": "Report #10",
+      "group": "scam",
+      "title": "<b>[SCAM] Hadiah Palsu</b><br>Halo Kak, saya dari tim Customer Care Marketplace Nusantara. Akun Kakak terdeteksi memenangkan program loyalitas pelangg...",
+      "category": "Hadiah Palsu",
+      "isScam": true,
+      "rawText": "Halo Kak, saya dari tim Customer Care Marketplace Nusantara. Akun Kakak terdeteksi memenangkan program loyalitas pelanggan senilai Rp5.000.000. Untuk proses pencairan hadiah, silakan transfer biaya administrasi sebesar Rp150.000 terlebih da"
+    },
+    {
+      "id": "report_10",
+      "label": "Report #11",
+      "group": "scam",
+      "title": "<b>[SCAM] Hadiah Palsu</b><br>Halo Kak, saya dari tim Customer Care Marketplace Nusantara. Akun Kakak terdeteksi memenangkan program loyalitas pelangg...",
+      "category": "Hadiah Palsu",
+      "isScam": true,
+      "rawText": "Halo Kak, saya dari tim Customer Care Marketplace Nusantara. Akun Kakak terdeteksi memenangkan program loyalitas pelanggan senilai Rp5.000.000. Untuk proses pencairan hadiah, silakan transfer biaya administrasi sebesar Rp150.000 terlebih da"
+    },
+    {
+      "id": "report_11",
+      "label": "Report #12",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Properti Fiktif</b><br>Kami membuka kesempatan investasi pembangunan villa premium di Bali. Investor akan mendapatkan bagi hasil 20% setiap bul...",
+      "category": "Investasi Properti Fiktif",
+      "isScam": true,
+      "rawText": "Kami membuka kesempatan investasi pembangunan villa premium di Bali. Investor akan mendapatkan bagi hasil 20% setiap bulan. Unit hampir habis dan hanya tersedia untuk 30 investor pertama."
+    },
+    {
+      "id": "report_12",
+      "label": "Report #13",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Properti Fiktif</b><br>Kami membuka kesempatan investasi pembangunan villa premium di Bali. Investor akan mendapatkan bagi hasil 20% setiap bul...",
+      "category": "Investasi Properti Fiktif",
+      "isScam": true,
+      "rawText": "Kami membuka kesempatan investasi pembangunan villa premium di Bali. Investor akan mendapatkan bagi hasil 20% setiap bulan. Unit hampir habis dan hanya tersedia untuk 30 investor pertama."
+    },
+    {
+      "id": "report_13",
+      "label": "Report #14",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Properti Fiktif</b><br>Kami membuka kesempatan investasi pembangunan villa premium di Bali. Investor akan mendapatkan bagi hasil 20% setiap bul...",
+      "category": "Investasi Properti Fiktif",
+      "isScam": true,
+      "rawText": "Kami membuka kesempatan investasi pembangunan villa premium di Bali. Investor akan mendapatkan bagi hasil 20% setiap bulan. Unit hampir habis dan hanya tersedia untuk 30 investor pertama."
+    },
+    {
+      "id": "report_14",
+      "label": "Report #15",
+      "group": "scam",
+      "title": "<b>[SCAM] Robot Trading Palsu</b><br>Selamat siang, slot VIP robot trading tinggal 3 orang saja hari ini! Bukti withdraw sudah ribuan member. Transfer segera...",
+      "category": "Robot Trading Palsu",
+      "isScam": true,
+      "rawText": "Selamat siang, slot VIP robot trading tinggal 3 orang saja hari ini! Bukti withdraw sudah ribuan member. Transfer segera deposit awal Rp 1.000.000 ke BCA 8830192841 an PT Cuan Digital Makmur, konfirmasi via WA 081298765432. Cek dashboard ki"
+    },
+    {
+      "id": "report_15",
+      "label": "Report #16",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Banking</b><br>BNI Mobile Banking: Pembayaran QRIS sebesar Rp 75.000 ke KOPI KENANGAN berhasil pada 15/09/2026 12:30. Sisa saldo rekeni...",
+      "category": "Official Banking",
+      "isScam": false,
+      "rawText": "BNI Mobile Banking: Pembayaran QRIS sebesar Rp 75.000 ke KOPI KENANGAN berhasil pada 15/09/2026 12:30. Sisa saldo rekening BNI 0451234567 Anda adalah Rp 3.420.000. BNI Call 1500046. https://bni.co.id"
+    },
+    {
+      "id": "report_16",
+      "label": "Report #17",
+      "group": "scam",
+      "title": "<b>[SCAM] Robot Trading Palsu</b><br>Program titip dana trading terpercaya amanah. Paket Bronze 1jt dapat 3jt dalam 3 hari, Paket Silver 5jt dapat 15jt dalam...",
+      "category": "Robot Trading Palsu",
+      "isScam": true,
+      "rawText": "Program titip dana trading terpercaya amanah. Paket Bronze 1jt dapat 3jt dalam 3 hari, Paket Silver 5jt dapat 15jt dalam 7 hari. Tanpa resiko loss karena ada insurance fund. Hubungi CS di 085712345678 atau transfer Mandiri 1370019284711 an "
+    },
+    {
+      "id": "report_17",
+      "label": "Report #18",
+      "group": "scam",
+      "title": "<b>[SCAM] Robot Trading Palsu</b><br>Investasi bot trading emas anti-margin call. Dikelola trader berpengalaman. Cukup deposit ke Mandiri 1370019284711 an Re...",
+      "category": "Robot Trading Palsu",
+      "isScam": true,
+      "rawText": "Investasi bot trading emas anti-margin call. Dikelola trader berpengalaman. Cukup deposit ke Mandiri 1370019284711 an Rendy dan kirim bukti transfer ke WA 087899887766. Profit dibagikan setiap jam 8 malam langsung masuk rekening anda."
+    },
+    {
+      "id": "report_18",
+      "label": "Report #19",
+      "group": "scam",
+      "title": "<b>[SCAM] Ponzi</b><br>Komunitas Sahabat Finansial Sejahtera! Bonus referral 20% setiap rekrut downline baru. Cukup ajak 5 orang passive income...",
+      "category": "Ponzi",
+      "isScam": true,
+      "rawText": "Komunitas Sahabat Finansial Sejahtera! Bonus referral 20% setiap rekrut downline baru. Cukup ajak 5 orang passive income mengalir tiap bulan tanpa kerja. Biaya member Rp 250.000 ke BSI 7192837465 an Komunitas Berkah. Info WA 087899887766."
+    },
+    {
+      "id": "report_19",
+      "label": "Report #20",
+      "group": "scam",
+      "title": "<b>[SCAM] Ponzi</b><br>Arisan online get duar kelipatan 5x lipat! Bayar 500rb get 2.500.000 dalam 10 hari. Sudah berbadan hukum legal. Kuota kl...",
+      "category": "Ponzi",
+      "isScam": true,
+      "rawText": "Arisan online get duar kelipatan 5x lipat! Bayar 500rb get 2.500.000 dalam 10 hari. Sudah berbadan hukum legal. Kuota kloter 12 tinggal 2 nama. Minat chat admin 087899887766 atau transfer slot ke BSI 7192837465 sekarang juga!"
+    },
+    {
+      "id": "report_20",
+      "label": "Report #21",
+      "group": "scam",
+      "title": "<b>[SCAM] Ponzi</b><br>Bisnis affiliate revolusioner sistem binary. Bonus pasangan 100rb per pasang, reward mobil Avanza setelah capai 50 downl...",
+      "category": "Ponzi",
+      "isScam": true,
+      "rawText": "Bisnis affiliate revolusioner sistem binary. Bonus pasangan 100rb per pasang, reward mobil Avanza setelah capai 50 downline aktif. Pendaftaran kirim ke BSI 7192837465 dan aktivasi akun di https://profit-harian-vip.com/member"
+    },
+    {
+      "id": "report_21",
+      "label": "Report #22",
+      "group": "scam",
+      "title": "<b>[SCAM] Scam Kripto</b><br>Presale token $GARUDA gem 100x moonshot! Listing di Indodax & Binance minggu depan. Harga presale hanya Rp 10 per koin. ...",
+      "category": "Scam Kripto",
+      "isScam": true,
+      "rawText": "Presale token $GARUDA gem 100x moonshot! Listing di Indodax & Binance minggu depan. Harga presale hanya Rp 10 per koin. Beli sekarang sebelum harga terbang di https://token-presale-cuan.xyz atau kirim dana ke Mandiri 1370019284711. Konsulta"
+    },
+    {
+      "id": "report_22",
+      "label": "Report #23",
+      "group": "scam",
+      "title": "<b>[SCAM] Scam Kripto</b><br>Airdrop gratis 1.000 USDT dari Binance Indonesia! Cukup hubungkan dompet Trust Wallet atau MetaMask anda dan masukkan 12...",
+      "category": "Scam Kripto",
+      "isScam": true,
+      "rawText": "Airdrop gratis 1.000 USDT dari Binance Indonesia! Cukup hubungkan dompet Trust Wallet atau MetaMask anda dan masukkan 12 kata kunci (seed phrase) pemulihan di https://token-presale-cuan.xyz/claim. Kuota terbatas 500 wallet tercepat."
+    },
+    {
+      "id": "report_23",
+      "label": "Report #24",
+      "group": "scam",
+      "title": "<b>[SCAM] Scam Kripto</b><br>Mining bitcoin cloud hash rate tinggi tanpa alat. Profit harian 0.05 BTC langsung cair. Modal sewa mesin slot 1jt kirim ...",
+      "category": "Scam Kripto",
+      "isScam": true,
+      "rawText": "Mining bitcoin cloud hash rate tinggi tanpa alat. Profit harian 0.05 BTC langsung cair. Modal sewa mesin slot 1jt kirim ke Mandiri 1370019284711. Kontak admin kripto di Telegram @cuan_btc atau WA 087899887766."
+    },
+    {
+      "id": "report_24",
+      "label": "Report #25",
+      "group": "scam",
+      "title": "<b>[SCAM] Lowongan Kerja Palsu</b><br>Lowongan kerja paruh waktu online dari rumah (WFH). Tugas hanya like dan follow akun video Shopee & TikTok. Komisi Rp 15...",
+      "category": "Lowongan Kerja Palsu",
+      "isScam": true,
+      "rawText": "Lowongan kerja paruh waktu online dari rumah (WFH). Tugas hanya like dan follow akun video Shopee & TikTok. Komisi Rp 15.000 - Rp 50.000 per tugas. Gaji harian Rp 300.000 - Rp 800.000. Hubungi admin HRD di WhatsApp 085712345678 atau daftar "
+    },
+    {
+      "id": "report_25",
+      "label": "Report #26",
+      "group": "scam",
+      "title": "<b>[SCAM] Lowongan Kerja Palsu</b><br>Selamat! Anda telah menyelesaikan 3 tugas percobaan dan berhak naik ke level VIP. Untuk mencairkan reward Rp 2.400.000, ...",
+      "category": "Lowongan Kerja Palsu",
+      "isScam": true,
+      "rawText": "Selamat! Anda telah menyelesaikan 3 tugas percobaan dan berhak naik ke level VIP. Untuk mencairkan reward Rp 2.400.000, silakan top up deposit saldo tugas sebesar Rp 750.000 ke BNI 0819283746 an PT Kreasi Media Digital. Kirim bukti ke WA 08"
+    },
+    {
+      "id": "report_26",
+      "label": "Report #27",
+      "group": "scam",
+      "title": "<b>[SCAM] Lowongan Kerja Palsu</b><br>Dibutuhkan 15 staf review produk e-commerce. Gaji harian Rp 500.000 dibayar langsung. Tanpa pengalaman dan tanpa wawanca...",
+      "category": "Lowongan Kerja Palsu",
+      "isScam": true,
+      "rawText": "Dibutuhkan 15 staf review produk e-commerce. Gaji harian Rp 500.000 dibayar langsung. Tanpa pengalaman dan tanpa wawancara. Daftar sekarang melalui situs mitra kami https://shopee-freelance-task.vip/join atau hubungi 085712345678."
+    },
+    {
+      "id": "report_27",
+      "label": "Report #28",
+      "group": "scam",
+      "title": "<b>[SCAM] Phishing Finansial</b><br>PEMBERITAHUAN RESMI BANK BCA: Nasabah Yth, per 1 Juni akan diberlakukan kenaikan tarif transaksi antar bank menjadi Rp 1...",
+      "category": "Phishing Finansial",
+      "isScam": true,
+      "rawText": "PEMBERITAHUAN RESMI BANK BCA: Nasabah Yth, per 1 Juni akan diberlakukan kenaikan tarif transaksi antar bank menjadi Rp 150.000/bulan. Jika Anda setuju dengan tarif lama Rp 6.500, segera konfirmasi pembatalan tarif baru melalui tautan resmi "
+    },
+    {
+      "id": "report_28",
+      "label": "Report #29",
+      "group": "scam",
+      "title": "<b>[SCAM] Phishing Finansial</b><br>Akun Rekening Anda Terindikasi Mencurigakan! Demi keamanan saldo, akun dibekukan sementara. Segera lakukan verifikasi ul...",
+      "category": "Phishing Finansial",
+      "isScam": true,
+      "rawText": "Akun Rekening Anda Terindikasi Mencurigakan! Demi keamanan saldo, akun dibekukan sementara. Segera lakukan verifikasi ulang identitas dan nomor kartu debit anda di portal pemulihan https://bca-tarif-baru.info/auth atau hubungi customer serv"
+    },
+    {
+      "id": "report_29",
+      "label": "Report #30",
+      "group": "scam",
+      "title": "<b>[SCAM] Phishing Finansial</b><br>Kepada Yth Bapak/Ibu, Kami mengundang untuk hadir pada pesta pernikahan kami. Mohon doa restu dan kehadiran. Surat Undan...",
+      "category": "Phishing Finansial",
+      "isScam": true,
+      "rawText": "Kepada Yth Bapak/Ibu, Kami mengundang untuk hadir pada pesta pernikahan kami. Mohon doa restu dan kehadiran. Surat Undangan Pernikahan Digital kami kirimkan dalam format aplikasi, silakan unduh di https://undangan-pernikahan-digital.apk-dow"
+    },
+    {
+      "id": "report_30",
+      "label": "Report #31",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Banking</b><br>Bank Syariah Indonesia: Pembelian pulsa Telkomsel Rp 100.000 berhasil didebit dari rekening BSI 7012345678. Saldo akhir ...",
+      "category": "Official Banking",
+      "isScam": false,
+      "rawText": "Bank Syariah Indonesia: Pembelian pulsa Telkomsel Rp 100.000 berhasil didebit dari rekening BSI 7012345678. Saldo akhir Rp 1.850.000. Hubungi BSI Call 14040 atau kunjungi https://bankbsi.co.id"
+    },
+    {
+      "id": "report_31",
+      "label": "Report #32",
+      "group": "scam",
+      "title": "<b>[SCAM] Phishing Finansial</b><br>Paket J&T Express Anda tertahan di gudang pusat karena nomor resi tidak terbaca. Mohon cek foto paket dan verifikasi ala...",
+      "category": "Phishing Finansial",
+      "isScam": true,
+      "rawText": "Paket J&T Express Anda tertahan di gudang pusat karena nomor resi tidak terbaca. Mohon cek foto paket dan verifikasi alamat penerima pada aplikasi resi resmi kami: https://undangan-pernikahan-digital.apk-download.biz/LihatFotoPaket.apk. Kon"
+    },
+    {
+      "id": "report_32",
+      "label": "Report #33",
+      "group": "scam",
+      "title": "<b>[SCAM] Pinjol Ilegal</b><br>Dana Cepat Kilat langsung cair 5 menit tanpa jaminan! Pinjaman dana 5 juta sampai 100 juta bunga 0% tenor hingga 3 tahun...",
+      "category": "Pinjol Ilegal",
+      "isScam": true,
+      "rawText": "Dana Cepat Kilat langsung cair 5 menit tanpa jaminan! Pinjaman dana 5 juta sampai 100 juta bunga 0% tenor hingga 3 tahun. Cukup KTP saja tanpa BI checking. Hubungi admin pencairan di WhatsApp 089655443322 sekarang juga!"
+    },
+    {
+      "id": "report_33",
+      "label": "Report #34",
+      "group": "scam",
+      "title": "<b>[SCAM] Pinjol Ilegal</b><br>Pengajuan pinjaman Anda disetujui Rp 20.000.000! Untuk proses aktivasi pencairan dana ke rekening Anda, diwajibkan memba...",
+      "category": "Pinjol Ilegal",
+      "isScam": true,
+      "rawText": "Pengajuan pinjaman Anda disetujui Rp 20.000.000! Untuk proses aktivasi pencairan dana ke rekening Anda, diwajibkan membayar biaya provisi dan administrasi sebesar Rp 450.000 ke BRI 020601002948501 an Hendra Saputra. Hubungi debt collector /"
+    },
+    {
+      "id": "report_34",
+      "label": "Report #35",
+      "group": "scam",
+      "title": "<b>[SCAM] Pinjol Ilegal</b><br>Jasa Gestun Paylater & Kartu Kredit aman dan terpercaya. Cairkan limit Spaylater, Akulaku, Kredivo, Gopaylater rate term...",
+      "category": "Pinjol Ilegal",
+      "isScam": true,
+      "rawText": "Jasa Gestun Paylater & Kartu Kredit aman dan terpercaya. Cairkan limit Spaylater, Akulaku, Kredivo, Gopaylater rate termurah 5%. Uang cair ke rekening dalam 10 menit. Fee admin ditransfer ke BRI 020601002948501 an Hendra Saputra. Chat WA 08"
+    },
+    {
+      "id": "report_35",
+      "label": "Report #36",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Bodong Berlisensi Palsu</b><br>Investasi Aman Terpercaya 100% Legal diawasi OJK dan Bappebti. Dapatkan bagi hasil dividen syariah 25% setiap minggu. Mo...",
+      "category": "Investasi Bodong Berlisensi Palsu",
+      "isScam": true,
+      "rawText": "Investasi Aman Terpercaya 100% Legal diawasi OJK dan Bappebti. Dapatkan bagi hasil dividen syariah 25% setiap minggu. Modal minimal Rp 500.000. Cek sertifikat izin kami di https://ojk-verifikasi-dana.net. Konfirmasi ke WA 081298765432 atau "
+    },
+    {
+      "id": "report_36",
+      "label": "Report #37",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Bodong Berlisensi Palsu</b><br>Layanan Bantuan Pengembalian Dana Korban Investasi Bodong! Satgas Waspada Investasi bekerjasama dengan kepolisian memban...",
+      "category": "Investasi Bodong Berlisensi Palsu",
+      "isScam": true,
+      "rawText": "Layanan Bantuan Pengembalian Dana Korban Investasi Bodong! Satgas Waspada Investasi bekerjasama dengan kepolisian membantu mencairkan aset Anda yang tertahan. Biaya administrasi verifikasi berkas Rp 600.000 ditransfer ke BRI 020601002948501"
+    },
+    {
+      "id": "report_37",
+      "label": "Report #38",
+      "group": "scam",
+      "title": "<b>[SCAM] Phishing Finansial</b><br>Hadiah Gebyar Undian Simpedes BRI! Selamat nomor rekening anda terpilih memenangkan Mobil Honda Brio. Biaya pengurusan B...",
+      "category": "Phishing Finansial",
+      "isScam": true,
+      "rawText": "Hadiah Gebyar Undian Simpedes BRI! Selamat nomor rekening anda terpilih memenangkan Mobil Honda Brio. Biaya pengurusan BPKB & STNK sebesar Rp 1.750.000 dikirim ke BRI 020601002948501 an Hendra Saputra. Hubungi panitia undian di 089655443322"
+    },
+    {
+      "id": "report_38",
+      "label": "Report #39",
+      "group": "scam",
+      "title": "<b>[SCAM] Scam Kripto</b><br>Trading sinyal VIP crypto akurasi 98%. Profit puluhan persen tiap open posisi. Biaya membership seumur hidup 1.5 juta ke...",
+      "category": "Scam Kripto",
+      "isScam": true,
+      "rawText": "Trading sinyal VIP crypto akurasi 98%. Profit puluhan persen tiap open posisi. Biaya membership seumur hidup 1.5 juta ke Mandiri 1370019284711 an Rendy. Bergabung sekarang di channel https://profit-harian-vip.com/crypto atau chat admin 0878"
+    },
+    {
+      "id": "report_39",
+      "label": "Report #40",
+      "group": "scam",
+      "title": "<b>[SCAM] Robot Trading Palsu</b><br>Pensiun dini dengan passive income robot trading emas gold. Garansi anti loss, profit 10% per minggu. Gabung segera depo...",
+      "category": "Robot Trading Palsu",
+      "isScam": true,
+      "rawText": "Pensiun dini dengan passive income robot trading emas gold. Garansi anti loss, profit 10% per minggu. Gabung segera deposit awal transfer ke BCA 8830192841 an PT Cuan Digital Makmur. Hubungi leader di 081298765432."
+    },
+    {
+      "id": "report_40",
+      "label": "Report #41",
+      "group": "scam",
+      "title": "<b>[SCAM] Lowongan Kerja Palsu</b><br>Kerja sampingan tekan like video youtube! 1 like dibayar Rp 10.000. Hari ini butuh 20 orang. Uang langsung masuk rekenin...",
+      "category": "Lowongan Kerja Palsu",
+      "isScam": true,
+      "rawText": "Kerja sampingan tekan like video youtube! 1 like dibayar Rp 10.000. Hari ini butuh 20 orang. Uang langsung masuk rekening. Daftar sekarang ke admin WA 085712345678 atau kunjungi https://shopee-freelance-task.vip."
+    },
+    {
+      "id": "report_41",
+      "label": "Report #42",
+      "group": "scam",
+      "title": "<b>[SCAM] Phishing Finansial</b><br>Info Bank BRI: Segera perbarui aplikasi BRImo anda ke versi 3.0 untuk menghindari pemblokiran transaksi. Unduh update re...",
+      "category": "Phishing Finansial",
+      "isScam": true,
+      "rawText": "Info Bank BRI: Segera perbarui aplikasi BRImo anda ke versi 3.0 untuk menghindari pemblokiran transaksi. Unduh update resmi melalui https://bca-tarif-baru.info/brimo-update.apk atau hubungi call center 081388776655."
+    },
+    {
+      "id": "report_42",
+      "label": "Report #43",
+      "group": "scam",
+      "title": "<b>[SCAM] Ponzi</b><br>Investasi ternak lele modern sistem syariah. Modal Rp 1.000.000 bagi hasil Rp 300.000 tiap bulan selama 1 tahun. Modal k...",
+      "category": "Ponzi",
+      "isScam": true,
+      "rawText": "Investasi ternak lele modern sistem syariah. Modal Rp 1.000.000 bagi hasil Rp 300.000 tiap bulan selama 1 tahun. Modal kembali 100% saat panen. Setoran dana kirim ke BSI 7192837465 an Komunitas Berkah. Info: 087899887766."
+    },
+    {
+      "id": "report_43",
+      "label": "Report #44",
+      "group": "scam",
+      "title": "<b>[SCAM] Phishing Finansial</b><br>Peringatan Bank Jago: Transaksi transfer keluar Rp 3.500.000 terdeteksi dari akun Anda. Jika bukan Anda yang melakukan, ...",
+      "category": "Phishing Finansial",
+      "isScam": true,
+      "rawText": "Peringatan Bank Jago: Transaksi transfer keluar Rp 3.500.000 terdeteksi dari akun Anda. Jika bukan Anda yang melakukan, batalkan segera di tautan https://bca-tarif-baru.info/jago atau kontak petugas di 081388776655."
+    },
+    {
+      "id": "report_44",
+      "label": "Report #45",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Banking</b><br>M-TRANSFER: BERHASIL. Tgl: 15/09 10:24:12. Transfer ke BCA 5220394812 an AHMAD FAUZI sebesar Rp 500.000,00. No Ref: 2026...",
+      "category": "Official Banking",
+      "isScam": false,
+      "rawText": "M-TRANSFER: BERHASIL. Tgl: 15/09 10:24:12. Transfer ke BCA 5220394812 an AHMAD FAUZI sebesar Rp 500.000,00. No Ref: 202609151024128912. Hubungi HaloBCA 1500888 jika butuh bantuan. Simpan bukti transfer ini sebagai referensi sah."
+    },
+    {
+      "id": "report_45",
+      "label": "Report #46",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Banking</b><br>LIVIN' BY MANDIRI: Transaksi BI-FAST berhasil. Sumber: Tabungan Mandiri 1230009876543. Tujuan: BRI 011101002345501 an SI...",
+      "category": "Official Banking",
+      "isScam": false,
+      "rawText": "LIVIN' BY MANDIRI: Transaksi BI-FAST berhasil. Sumber: Tabungan Mandiri 1230009876543. Tujuan: BRI 011101002345501 an SITI RAHMAWATI. Nominal: Rp 1.250.000,00. Biaya admin: Rp 2.500. ID Transaksi: MBF20260915091244. Mandiri Call 14000."
+    },
+    {
+      "id": "report_46",
+      "label": "Report #47",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Banking</b><br>BRIMO NOTIFIKASI: Transfer sesama BRI berhasil pada 15/09/2026 14:05 WIB. Dari Rekening 020601009876509 ke 0341010045675...",
+      "category": "Official Banking",
+      "isScam": false,
+      "rawText": "BRIMO NOTIFIKASI: Transfer sesama BRI berhasil pada 15/09/2026 14:05 WIB. Dari Rekening 020601009876509 ke 034101004567503 an BUDI SANTOSO. Jumlah: Rp 2.000.000. Ref: TRF98124019284. Call BRI 1500017."
+    },
+    {
+      "id": "report_47",
+      "label": "Report #48",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Bodong</b><br>Test investasi bodong bunga 50% transfer BCA 9911223344 hub 081288776655 web c-test.xyz...",
+      "category": "Investasi Bodong",
+      "isScam": true,
+      "rawText": "Test investasi bodong bunga 50% transfer BCA 9911223344 hub 081288776655 web c-test.xyz"
+    },
+    {
+      "id": "report_48",
+      "label": "Report #49",
+      "group": "legit",
+      "title": "<b>[LEGIT] Legal</b><br>Pengumuman rapat umum pemegang saham tahunan PT Astra International Tbk resmi OJK...",
+      "category": "Legal",
+      "isScam": false,
+      "rawText": "Pengumuman rapat umum pemegang saham tahunan PT Astra International Tbk resmi OJK"
+    },
+    {
+      "id": "report_49",
+      "label": "Report #50",
+      "group": "scam",
+      "title": "<b>[SCAM] Robot Trading Palsu</b><br>Halo kak! Kami dari tim Autopilot Trading Gold. Modal mulai Rp 500.000 profit konsisten 15% per hari tanpa ribet analisa...",
+      "category": "Robot Trading Palsu",
+      "isScam": true,
+      "rawText": "Halo kak! Kami dari tim Autopilot Trading Gold. Modal mulai Rp 500.000 profit konsisten 15% per hari tanpa ribet analisa. Dana dijamin garansi modal 100%. Silakan transfer ke BCA 8830192841 an PT Cuan Digital Makmur dan hubungi admin di 081"
+    },
+    {
+      "id": "report_50",
+      "label": "Report #51",
+      "group": "scam",
+      "title": "<b>[SCAM] Robot Trading Palsu</b><br>Peluang passive income dari rumah! Bot AI Trading Forex otomatis cuan tiap minggu 50%. Titip dana mulai 2 juta langsung ...",
+      "category": "Robot Trading Palsu",
+      "isScam": true,
+      "rawText": "Peluang passive income dari rumah! Bot AI Trading Forex otomatis cuan tiap minggu 50%. Titip dana mulai 2 juta langsung terima profit harian. Kontak konsultan kami di WA 081298765432. Kunjungi situs resmi https://profit-harian-vip.com"
+    },
+    {
+      "id": "report_51",
+      "label": "Report #52",
+      "group": "scam",
+      "title": "<b>[SCAM] Lowongan Kerja Palsu</b><br>Tugas akhir order pesanan merchant Lazada! Dana deposit sebelumnya Rp 1.500.000 tertahan di sistem karena salah input ko...",
+      "category": "Lowongan Kerja Palsu",
+      "isScam": true,
+      "rawText": "Tugas akhir order pesanan merchant Lazada! Dana deposit sebelumnya Rp 1.500.000 tertahan di sistem karena salah input kode pesanan. Agar saldo bisa ditarik total Rp 6.000.000, wajib transfer penalti Rp 1.500.000 lagi ke BNI 0819283746 an PT"
+    },
+    {
+      "id": "report_52",
+      "label": "Report #53",
+      "group": "scam",
+      "title": "<b>[SCAM] Phishing Finansial</b><br>Peringatan Pemutusan Listrik PLN! Tagihan listrik anda tertunggak 2 bulan sebesar Rp 450.000. Untuk pembatalan pemutusan...",
+      "category": "Phishing Finansial",
+      "isScam": true,
+      "rawText": "Peringatan Pemutusan Listrik PLN! Tagihan listrik anda tertunggak 2 bulan sebesar Rp 450.000. Untuk pembatalan pemutusan segera transfer ke rekening Jago 10928374619 an Petugas Penagihan PLN atau unduh rincian surat tugas di https://undanga"
+    },
+    {
+      "id": "report_53",
+      "label": "Report #54",
+      "group": "scam",
+      "title": "<b>[SCAM] Jastip Tiket Konser Palsu</b><br>Jastip tiket konser Coldplay CAT 1 ready 2 tiket! Butuh cepat karena ga jadi nonton. Harga normal tanpa markup. Minat la...",
+      "category": "Jastip Tiket Konser Palsu",
+      "isScam": true,
+      "rawText": "Jastip tiket konser Coldplay CAT 1 ready 2 tiket! Butuh cepat karena ga jadi nonton. Harga normal tanpa markup. Minat langsung transfer DP 50% ke BCA 8830192841 an PT Cuan Digital Makmur dan hubungi WA 081298765432. Bukti e-ticket dikirim v"
+    },
+    {
+      "id": "report_54",
+      "label": "Report #55",
+      "group": "scam",
+      "title": "<b>[SCAM] Giveaway Palsu</b><br>SELAMAT! Nomor WhatsApp Anda terpilih mendapatkan Hadiah Uang Tunai Rp 50.000.000 dari Giveaway Baim Wong & Paula. Untuk...",
+      "category": "Giveaway Palsu",
+      "isScam": true,
+      "rawText": "SELAMAT! Nomor WhatsApp Anda terpilih mendapatkan Hadiah Uang Tunai Rp 50.000.000 dari Giveaway Baim Wong & Paula. Untuk klaim hadiah silakan bayar biaya administrasi pencairan dan pajak pemenang sebesar Rp 350.000 ke BRI 020601002948501 an"
+    },
+    {
+      "id": "report_55",
+      "label": "Report #56",
+      "group": "legit",
+      "title": "<b>[LEGIT] Investasi Resmi OJK</b><br>Bibit: Pembelian Reksa Dana Pasar Uang Sucorinvest Money Market Fund sebesar Rp 1.000.000 telah berhasil diverifikasi ol...",
+      "category": "Investasi Resmi OJK",
+      "isScam": false,
+      "rawText": "Bibit: Pembelian Reksa Dana Pasar Uang Sucorinvest Money Market Fund sebesar Rp 1.000.000 telah berhasil diverifikasi oleh Bank Kustodian. Portofolio Anda kini tercatat di KSEI. PT Bibit Tumbuh Bersama berizin dan diawasi OJK. Cek rincian d"
+    },
+    {
+      "id": "report_56",
+      "label": "Report #57",
+      "group": "legit",
+      "title": "<b>[LEGIT] Investasi Resmi OJK</b><br>Bareksa: Investasi Surat Berharga Negara (SBN) seri ORI025 telah terbit. Imbal hasil kupon 6.25% p.a dijamin penuh oleh ...",
+      "category": "Investasi Resmi OJK",
+      "isScam": false,
+      "rawText": "Bareksa: Investasi Surat Berharga Negara (SBN) seri ORI025 telah terbit. Imbal hasil kupon 6.25% p.a dijamin penuh oleh Undang-Undang Republik Indonesia. PT Bareksa Portal Investasi adalah mitra distribusi resmi Kementerian Keuangan dan dia"
+    },
+    {
+      "id": "report_57",
+      "label": "Report #58",
+      "group": "legit",
+      "title": "<b>[LEGIT] Investasi Resmi OJK</b><br>Stockbit Sekuritas: Order BELI 10 lot saham BBCA pada harga Rp 10.200 telah match (terpenuhi). RDN BCA Anda terdebit Rp ...",
+      "category": "Investasi Resmi OJK",
+      "isScam": false,
+      "rawText": "Stockbit Sekuritas: Order BELI 10 lot saham BBCA pada harga Rp 10.200 telah match (terpenuhi). RDN BCA Anda terdebit Rp 10.215.300 termasuk fee broker. Laporan konfirmasi perdagangan (Trade Confirmation) telah dikirim ke email terdaftar. PT"
+    },
+    {
+      "id": "report_58",
+      "label": "Report #59",
+      "group": "legit",
+      "title": "<b>[LEGIT] Investasi Resmi OJK</b><br>IPOT Indo Premier: Dividen tunai dari emiten TLKM sebesar Rp 150.000 telah efektif masuk ke Rekening Dana Nasabah (RDN) ...",
+      "category": "Investasi Resmi OJK",
+      "isScam": false,
+      "rawText": "IPOT Indo Premier: Dividen tunai dari emiten TLKM sebesar Rp 150.000 telah efektif masuk ke Rekening Dana Nasabah (RDN) Mandiri Anda. Tidak ada potongan biaya tambahan selain pajak dividen 10%. Layanan nasabah IPOT: 02150887200. Web: https:"
+    },
+    {
+      "id": "report_59",
+      "label": "Report #60",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Security Alert</b><br>WASPADA PENIPUAN DARI BANK MANDIRI: Bank Mandiri TIDAK PERNAH meminta nomor OTP, PIN, password, nomor CVV/CVC kartu kred...",
+      "category": "Official Security Alert",
+      "isScam": false,
+      "rawText": "WASPADA PENIPUAN DARI BANK MANDIRI: Bank Mandiri TIDAK PERNAH meminta nomor OTP, PIN, password, nomor CVV/CVC kartu kredit, atau meminta nasabah mengklik tautan tidak resmi melalui WhatsApp/SMS. Jangan pernah membagikan kode OTP kepada siap"
+    },
+    {
+      "id": "report_60",
+      "label": "Report #61",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Security Alert</b><br>KODE OTP BCA Anda adalah 849201 untuk otorisasi pendaftaran fitur debit online. RAHASIA! JANGAN BERIKAN KODE INI KEPADA ...",
+      "category": "Official Security Alert",
+      "isScam": false,
+      "rawText": "KODE OTP BCA Anda adalah 849201 untuk otorisasi pendaftaran fitur debit online. RAHASIA! JANGAN BERIKAN KODE INI KEPADA SIAPAPUN TERMASUK PIHAK BCA. Waspadai modus penipuan undian atau pembaharuan tarif. HaloBCA 1500888."
+    },
+    {
+      "id": "report_61",
+      "label": "Report #62",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Security Alert</b><br>PERINGATAN RESMI OTORITAS JASA KEUANGAN (OJK): Masyarakat diimbau untuk selalu memeriksa legalitas entitas penawaran inv...",
+      "category": "Official Security Alert",
+      "isScam": false,
+      "rawText": "PERINGATAN RESMI OTORITAS JASA KEUANGAN (OJK): Masyarakat diimbau untuk selalu memeriksa legalitas entitas penawaran investasi sebelum menempatkan dana melalui Kontak OJK 157, WhatsApp resmi OJK 081157157157, atau email konsumen@ojk.go.id. "
+    },
+    {
+      "id": "report_62",
+      "label": "Report #63",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Banking</b><br>Halo Kak, terima kasih telah menghubungi Customer Care Bank BCA melalui Halo BCA resmi. Mengenai keluhan kartu debit And...",
+      "category": "Official Banking",
+      "isScam": false,
+      "rawText": "Halo Kak, terima kasih telah menghubungi Customer Care Bank BCA melalui Halo BCA resmi. Mengenai keluhan kartu debit Anda yang tertelan di mesin ATM, pemblokiran darurat telah berhasil kami proses. Silakan kunjungi kantor cabang BCA terdeka"
+    },
+    {
+      "id": "report_63",
+      "label": "Report #64",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Banking</b><br>Tagihan Kartu Kredit CIMB Niaga Anda untuk periode September 2026 telah terbit dengan total Rp 1.450.000. Tanggal jatuh ...",
+      "category": "Official Banking",
+      "isScam": false,
+      "rawText": "Tagihan Kartu Kredit CIMB Niaga Anda untuk periode September 2026 telah terbit dengan total Rp 1.450.000. Tanggal jatuh tempo 28 September 2026. Pembayaran dapat dilakukan melalui OCTO Mobile atau transfer antar bank. CIMB 14041. Web: https"
+    },
+    {
+      "id": "report_64",
+      "label": "Report #65",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Bodong</b><br>Test investasi bodong bunga 50% transfer BCA 9911223344 hub 081288776655 web c-test.xyz...",
+      "category": "Investasi Bodong",
+      "isScam": true,
+      "rawText": "Test investasi bodong bunga 50% transfer BCA 9911223344 hub 081288776655 web c-test.xyz"
+    },
+    {
+      "id": "report_65",
+      "label": "Report #66",
+      "group": "legit",
+      "title": "<b>[LEGIT] Legal</b><br>Pengumuman rapat umum pemegang saham tahunan PT Astra International Tbk resmi OJK...",
+      "category": "Legal",
+      "isScam": false,
+      "rawText": "Pengumuman rapat umum pemegang saham tahunan PT Astra International Tbk resmi OJK"
+    },
+    {
+      "id": "report_66",
+      "label": "Report #67",
+      "group": "scam",
+      "title": "<b>[SCAM] Love Scam / Catfishing</b><br>Sayang, koper dan hadiah jam tangan mewah yang kukirim dari London saat ini tertahan di Bea Cukai Bandara Soekarno Hatta...",
+      "category": "Love Scam / Catfishing",
+      "isScam": true,
+      "rawText": "Sayang, koper dan hadiah jam tangan mewah yang kukirim dari London saat ini tertahan di Bea Cukai Bandara Soekarno Hatta. Petugas meminta pembayaran bea masuk darurat Rp 2.500.000 ke Mandiri 1370019284711 an Rendy. Tolong bayarkan dulu ya, "
+    },
+    {
+      "id": "report_67",
+      "label": "Report #68",
+      "group": "scam",
+      "title": "<b>[SCAM] Lelang Pegadaian Palsu</b><br>LELANG TERTUTUP PEGADAIAN SYARIAH: iPhone 15 Pro Max 256GB barang sitaan lelang resmi negara harga Rp 4.500.000 kondisi ...",
+      "category": "Lelang Pegadaian Palsu",
+      "isScam": true,
+      "rawText": "LELANG TERTUTUP PEGADAIAN SYARIAH: iPhone 15 Pro Max 256GB barang sitaan lelang resmi negara harga Rp 4.500.000 kondisi segel. Hanya untuk 5 pemenang pertama. Uang jaminan lelang ditransfer ke BSI 7192837465 an Komunitas Berkah. Info paniti"
+    },
+    {
+      "id": "report_68",
+      "label": "Report #69",
+      "group": "scam",
+      "title": "<b>[SCAM] Phishing Finansial</b><br>KEPOLISIAN NEGARA REPUBLIK INDONESIA: Pemberitahuan Surat Tilang Elektronik (ETLE). Kendaraan Anda tertangkap kamera mel...",
+      "category": "Phishing Finansial",
+      "isScam": true,
+      "rawText": "KEPOLISIAN NEGARA REPUBLIK INDONESIA: Pemberitahuan Surat Tilang Elektronik (ETLE). Kendaraan Anda tertangkap kamera melanggar marka jalan. Silakan buka dan instal dokumen surat tilang resmi berikut di https://undangan-pernikahan-digital.ap"
+    },
+    {
+      "id": "report_69",
+      "label": "Report #70",
+      "group": "scam",
+      "title": "<b>[SCAM] Mama Minta Pulsa</b><br>Halo nak, ini nomor baru mama. Hp mama yang lama rusak. Tolong transferkan uang belanja 750 ribu ke rekening teman mama ...",
+      "category": "Mama Minta Pulsa",
+      "isScam": true,
+      "rawText": "Halo nak, ini nomor baru mama. Hp mama yang lama rusak. Tolong transferkan uang belanja 750 ribu ke rekening teman mama di BCA 8830192841 an PT Cuan Digital Makmur sekarang ya, mama lagi di pasar. Nanti mama telpon balik ke 081298765432."
+    },
+    {
+      "id": "report_70",
+      "label": "Report #71",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Bodong</b><br>Peluang investasi sektor migas bagi hasil mingguan 30%. Dikelola tim ahli perminyakan. Modal 5 juta hasil 1.5 juta per m...",
+      "category": "Investasi Bodong",
+      "isScam": true,
+      "rawText": "Peluang investasi sektor migas bagi hasil mingguan 30%. Dikelola tim ahli perminyakan. Modal 5 juta hasil 1.5 juta per minggu. Transfer pendaftaran ke Mandiri 1370019284711 an Rendy. Website: https://profit-harian-vip.com/oil."
+    },
+    {
+      "id": "report_71",
+      "label": "Report #72",
+      "group": "scam",
+      "title": "<b>[SCAM] Lowongan Kerja Palsu</b><br>Komisi harian like & komentar video TikTok artis! 1 tugas Rp 20.000. Cukup sediakan waktu 15 menit sehari. Pendaftaran g...",
+      "category": "Lowongan Kerja Palsu",
+      "isScam": true,
+      "rawText": "Komisi harian like & komentar video TikTok artis! 1 tugas Rp 20.000. Cukup sediakan waktu 15 menit sehari. Pendaftaran gratis dan langsung dapat bonus saldo Rp 50.000. Gabung grup tugas telegram di https://shopee-freelance-task.vip/tiktok a"
+    },
+    {
+      "id": "report_72",
+      "label": "Report #73",
+      "group": "scam",
+      "title": "<b>[SCAM] Scam Kripto</b><br>Bot mining crypto otomatis menghasilkan 50 DOGE per jam. Withdraw instan tanpa deposit awal untuk tier standar. Upgrade ...",
+      "category": "Scam Kripto",
+      "isScam": true,
+      "rawText": "Bot mining crypto otomatis menghasilkan 50 DOGE per jam. Withdraw instan tanpa deposit awal untuk tier standar. Upgrade ke VIP bot hanya Rp 500.000 ke BNI 0819283746 an PT Kreasi Media. Hubungi developer di 085712345678 atau kunjungi https:"
+    },
+    {
+      "id": "report_73",
+      "label": "Report #74",
+      "group": "scam",
+      "title": "<b>[SCAM] Phishing Finansial</b><br>Akun DANA Anda terpilih mendapatkan upgrade DANA Kaget Rp 2.000.000. Klik tautan verifikasi akun https://bca-tarif-baru....",
+      "category": "Phishing Finansial",
+      "isScam": true,
+      "rawText": "Akun DANA Anda terpilih mendapatkan upgrade DANA Kaget Rp 2.000.000. Klik tautan verifikasi akun https://bca-tarif-baru.info/dana dan masukkan nomor HP serta PIN akun dompet digital Anda. Kontak support WA 081388776655."
+    },
+    {
+      "id": "report_74",
+      "label": "Report #75",
+      "group": "scam",
+      "title": "<b>[SCAM] Pinjol Ilegal</b><br>Cairkan limit Paylater Shopee, Kredivo, Indodana, Akulaku langsung cair ke rekening bank Anda. Fee hanya 4%. Proses 5 me...",
+      "category": "Pinjol Ilegal",
+      "isScam": true,
+      "rawText": "Cairkan limit Paylater Shopee, Kredivo, Indodana, Akulaku langsung cair ke rekening bank Anda. Fee hanya 4%. Proses 5 menit. Hubungi agen pencairan cepat di WA 089655443322. Biaya admin kirim ke BRI 020601002948501 an Hendra Saputra."
+    },
+    {
+      "id": "report_75",
+      "label": "Report #76",
+      "group": "scam",
+      "title": "<b>[SCAM] Franchise Bodong</b><br>Franchise Kopi Kekinian modal 3 juta jaminan omset 15 juta per bulan tanpa repot kelola gerai (sistem autopilot bagi has...",
+      "category": "Franchise Bodong",
+      "isScam": true,
+      "rawText": "Franchise Kopi Kekinian modal 3 juta jaminan omset 15 juta per bulan tanpa repot kelola gerai (sistem autopilot bagi hasil). Dana investasi ditampung di BCA 8830192841 an PT Cuan Digital Makmur. Brosur lengkap hubungi 081298765432."
+    },
+    {
+      "id": "report_76",
+      "label": "Report #77",
+      "group": "scam",
+      "title": "<b>[SCAM] Phishing Game</b><br>Promo topup diamond Mobile Legends 5000 diamond hanya Rp 100.000. Legal 100% via login moonton. Masukkan email dan passw...",
+      "category": "Phishing Game",
+      "isScam": true,
+      "rawText": "Promo topup diamond Mobile Legends 5000 diamond hanya Rp 100.000. Legal 100% via login moonton. Masukkan email dan password akun game anda di https://shopee-freelance-task.vip/topup atau transfer ke BNI 0819283746. Admin WA 085712345678."
+    },
+    {
+      "id": "report_77",
+      "label": "Report #78",
+      "group": "scam",
+      "title": "<b>[SCAM] Sewa Villa Palsu</b><br>Sewa Villa Private Pool Seminyak Bali promo weekend hanya 1.5 juta/malam (harga normal 5 juta). Booking tanggal sekarang...",
+      "category": "Sewa Villa Palsu",
+      "isScam": true,
+      "rawText": "Sewa Villa Private Pool Seminyak Bali promo weekend hanya 1.5 juta/malam (harga normal 5 juta). Booking tanggal sekarang DP 50% kirim ke Mandiri 1370019284711 an Rendy. Kontak marketing via WA 087899887766."
+    },
+    {
+      "id": "report_78",
+      "label": "Report #79",
+      "group": "scam",
+      "title": "<b>[SCAM] Lowongan Kerja Palsu BUMN</b><br>Panggilan Tes Wawancara Kerja PT Pertamina (Persero) di Jakarta. Seluruh akomodasi tiket pesawat dan hotel wajib dipesan...",
+      "category": "Lowongan Kerja Palsu BUMN",
+      "isScam": true,
+      "rawText": "Panggilan Tes Wawancara Kerja PT Pertamina (Persero) di Jakarta. Seluruh akomodasi tiket pesawat dan hotel wajib dipesan melalui biro travel rekanan. Transfer biaya reservasi tiket Rp 1.850.000 ke BRI 020601002948501 an Hendra Saputra. Info"
+    },
+    {
+      "id": "report_79",
+      "label": "Report #80",
+      "group": "scam",
+      "title": "<b>[SCAM] Saham Pre-IPO Palsu</b><br>Penawaran eksklusif saham pre-IPO perusahaan unicorn teknologi sebelum melantai di Bursa Efek Indonesia. Target return 3...",
+      "category": "Saham Pre-IPO Palsu",
+      "isScam": true,
+      "rawText": "Penawaran eksklusif saham pre-IPO perusahaan unicorn teknologi sebelum melantai di Bursa Efek Indonesia. Target return 300% saat listing. Minimal investasi 10 juta ke rekening penampung BSI 7192837465 an Komunitas Berkah. Info broker: 08789"
+    },
+    {
+      "id": "report_80",
+      "label": "Report #81",
+      "group": "scam",
+      "title": "<b>[SCAM] Lowongan Kerja Luar Negeri Palsu</b><br>Kerja di perkebunan Australia gaji 40 juta per bulan. Biaya visa dan paspor kerja disubsidi, cukup bayar biaya medical c...",
+      "category": "Lowongan Kerja Luar Negeri Palsu",
+      "isScam": true,
+      "rawText": "Kerja di perkebunan Australia gaji 40 juta per bulan. Biaya visa dan paspor kerja disubsidi, cukup bayar biaya medical check up Rp 850.000 ke Jago 10928374619. Kontak agensi di 081388776655."
+    },
+    {
+      "id": "report_81",
+      "label": "Report #82",
+      "group": "scam",
+      "title": "<b>[SCAM] Phishing Akun E-Commerce</b><br>Tokopedia Security Alert: Akun Anda sedang login di perangkat tidak dikenal dari Singapura. Segera amankan akun dan gant...",
+      "category": "Phishing Akun E-Commerce",
+      "isScam": true,
+      "rawText": "Tokopedia Security Alert: Akun Anda sedang login di perangkat tidak dikenal dari Singapura. Segera amankan akun dan ganti kata sandi di https://bca-tarif-baru.info/tokopedia atau hubungi tim keamanan di 081388776655."
+    },
+    {
+      "id": "report_82",
+      "label": "Report #83",
+      "group": "scam",
+      "title": "<b>[SCAM] Modus Salah Transfer</b><br>Selamat siang, saya tidak sengaja salah transfer uang Rp 3.000.000 ke rekening Anda. Mohon kerjasamanya tolong segera ke...",
+      "category": "Modus Salah Transfer",
+      "isScam": true,
+      "rawText": "Selamat siang, saya tidak sengaja salah transfer uang Rp 3.000.000 ke rekening Anda. Mohon kerjasamanya tolong segera kembalikan dana tersebut ke rekening BRI 020601002948501 an Hendra Saputra. Konfirmasi di 089655443322."
+    },
+    {
+      "id": "report_83",
+      "label": "Report #84",
+      "group": "scam",
+      "title": "<b>[SCAM] Lelang Mobil Tarikan Leasing</b><br>Lelang kilat tarikan leasing Toyota Innova Reborn tahun 2022 harga Rp 110.000.000 surat lengkap STNK BPKB. Tanda jadi bo...",
+      "category": "Lelang Mobil Tarikan Leasing",
+      "isScam": true,
+      "rawText": "Lelang kilat tarikan leasing Toyota Innova Reborn tahun 2022 harga Rp 110.000.000 surat lengkap STNK BPKB. Tanda jadi booking unit 5 juta transfer ke BCA 8830192841 an PT Cuan Digital Makmur. Hubungi sales leasing di 081298765432."
+    },
+    {
+      "id": "report_84",
+      "label": "Report #85",
+      "group": "scam",
+      "title": "<b>[SCAM] Arisan Bodong</b><br>Arisan emas batangan Antam 10 gram kocokan tiap tanggal 1. Iuran per bulan hanya 250 ribu. Tersedia 10 slot. Pembayaran ...",
+      "category": "Arisan Bodong",
+      "isScam": true,
+      "rawText": "Arisan emas batangan Antam 10 gram kocokan tiap tanggal 1. Iuran per bulan hanya 250 ribu. Tersedia 10 slot. Pembayaran iuran ke BSI 7192837465 an Komunitas Berkah. Hubungi ketua arisan di 087899887766."
+    },
+    {
+      "id": "report_85",
+      "label": "Report #86",
+      "group": "scam",
+      "title": "<b>[SCAM] Jasa Pembersihan BI Checking</b><br>Biro jasa pembersihan nama blacklist BI Checking dan SLIK OJK kilat 1 hari bersih. Melayani skor kredit macet agar bisa ...",
+      "category": "Jasa Pembersihan BI Checking",
+      "isScam": true,
+      "rawText": "Biro jasa pembersihan nama blacklist BI Checking dan SLIK OJK kilat 1 hari bersih. Melayani skor kredit macet agar bisa ajukan KPR dan pinjaman bank. Biaya jasa Rp 1.200.000 ke Mandiri 1370019284711 an Rendy. Konsultasi WA: 087899887766."
+    },
+    {
+      "id": "report_86",
+      "label": "Report #87",
+      "group": "scam",
+      "title": "<b>[SCAM] Trading Kripto Arbitrase</b><br>Platform arbitrase kripto otomatis membeli di harga rendah dan menjual di harga tinggi lintas exchange. Profit bersih 3%...",
+      "category": "Trading Kripto Arbitrase",
+      "isScam": true,
+      "rawText": "Platform arbitrase kripto otomatis membeli di harga rendah dan menjual di harga tinggi lintas exchange. Profit bersih 3% per transaksi. Join pool dana di https://cuan-autopilot.pro/arbitrage atau hubungi WA 081298765432."
+    },
+    {
+      "id": "report_87",
+      "label": "Report #88",
+      "group": "scam",
+      "title": "<b>[SCAM] Undian Belanja Palsu</b><br>Selamat Anda mendapatkan Voucher Belanja Gratis Alfamart Rp 1.500.000 dalam rangka HUT ke-25. Untuk aktivasi kode vouche...",
+      "category": "Undian Belanja Palsu",
+      "isScam": true,
+      "rawText": "Selamat Anda mendapatkan Voucher Belanja Gratis Alfamart Rp 1.500.000 dalam rangka HUT ke-25. Untuk aktivasi kode voucher kirim pulsa 50rb ke 089655443322 atau verifikasi data di https://bca-tarif-baru.info/alfamart."
+    },
+    {
+      "id": "report_88",
+      "label": "Report #89",
+      "group": "scam",
+      "title": "<b>[SCAM] Jasa Medsos Palsu</b><br>Jasa centang biru verified Instagram dan tambah 50.000 followers aktif Indonesia hanya Rp 750.000. Bayar DP ke BNI 08192...",
+      "category": "Jasa Medsos Palsu",
+      "isScam": true,
+      "rawText": "Jasa centang biru verified Instagram dan tambah 50.000 followers aktif Indonesia hanya Rp 750.000. Bayar DP ke BNI 0819283746 an PT Kreasi Media. Hubungi CS di 085712345678."
+    },
+    {
+      "id": "report_89",
+      "label": "Report #90",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Banking</b><br>Bank Jago: Anda menerima transfer dana masuk sebesar Rp 350.000 dari KANTOOR DIGITAL ke Kantong Utama Jago 10123456789. ...",
+      "category": "Official Banking",
+      "isScam": false,
+      "rawText": "Bank Jago: Anda menerima transfer dana masuk sebesar Rp 350.000 dari KANTOOR DIGITAL ke Kantong Utama Jago 10123456789. Saldo Anda telah diperbarui. Info lebih lanjut buka aplikasi Jago atau kunjungi https://jago.com"
+    },
+    {
+      "id": "report_90",
+      "label": "Report #91",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official E-Commerce Receipt</b><br>Pembayaran Tokopedia Berhasil: Transaksi pesanan #INV/20260915/MPL/39201928 senilai Rp 342.000 menggunakan Saldo GoPay t...",
+      "category": "Official E-Commerce Receipt",
+      "isScam": false,
+      "rawText": "Pembayaran Tokopedia Berhasil: Transaksi pesanan #INV/20260915/MPL/39201928 senilai Rp 342.000 menggunakan Saldo GoPay telah selesai. Rincian pesanan dapat dilihat di aplikasi Tokopedia atau https://tokopedia.com. Terima kasih telah berbela"
+    },
+    {
+      "id": "report_91",
+      "label": "Report #92",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official E-Commerce Receipt</b><br>Pesanan 260915A89JK20 telah berhasil dibayar via ShopeePay sebesar Rp 189.500. Penjual telah diberitahukan untuk segera ...",
+      "category": "Official E-Commerce Receipt",
+      "isScam": false,
+      "rawText": "Pesanan 260915A89JK20 telah berhasil dibayar via ShopeePay sebesar Rp 189.500. Penjual telah diberitahukan untuk segera mengirimkan pesanan Anda. Lacak pengiriman di aplikasi Shopee atau https://shopee.co.id."
+    },
+    {
+      "id": "report_92",
+      "label": "Report #93",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Payroll</b><br>KREDIT OTOMATIS: Rekening BCA 5220394812 Anda menerima dana penggajian (Payroll) dari PT TEKNOLOGI NUSANTARA sebesar Rp ...",
+      "category": "Official Payroll",
+      "isScam": false,
+      "rawText": "KREDIT OTOMATIS: Rekening BCA 5220394812 Anda menerima dana penggajian (Payroll) dari PT TEKNOLOGI NUSANTARA sebesar Rp 8.750.000. Keterangan: Gaji September 2026. Saldo efektif telah bertambah. Info resmi: https://bca.co.id."
+    },
+    {
+      "id": "report_93",
+      "label": "Report #94",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Payroll</b><br>Kredit Payroll: Gaji bulanan sebesar Rp 9.200.000 dari PT SUMBER MAKMUR ABADI telah masuk ke rekening Tabungan Mandiri 1...",
+      "category": "Official Payroll",
+      "isScam": false,
+      "rawText": "Kredit Payroll: Gaji bulanan sebesar Rp 9.200.000 dari PT SUMBER MAKMUR ABADI telah masuk ke rekening Tabungan Mandiri 1230009876543. Cek mutasi dan kelola keuangan di aplikasi Livin' by Mandiri. Mandiri Call 14000."
+    },
+    {
+      "id": "report_94",
+      "label": "Report #95",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Utility Receipt</b><br>PLN MOBILE: Pembayaran tagihan listrik pascabayar untuk ID Pelanggan 532100982341 sebesar Rp 385.200 telah berhasil diba...",
+      "category": "Official Utility Receipt",
+      "isScam": false,
+      "rawText": "PLN MOBILE: Pembayaran tagihan listrik pascabayar untuk ID Pelanggan 532100982341 sebesar Rp 385.200 telah berhasil dibayar lunas melalui Virtual Account BCA pada 15/09/2026. Strum listrik dan nomor referensi tersimpan di aplikasi PLN Mobil"
+    },
+    {
+      "id": "report_95",
+      "label": "Report #96",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Utility Receipt</b><br>Autodebit BPJS Kesehatan berhasil didebit dari rekening BRI 020601009876509 untuk 3 anggota keluarga sebesar Rp 105.000 ...",
+      "category": "Official Utility Receipt",
+      "isScam": false,
+      "rawText": "Autodebit BPJS Kesehatan berhasil didebit dari rekening BRI 020601009876509 untuk 3 anggota keluarga sebesar Rp 105.000 (Kelas 3). Status kepesertaan Anda aktif. Cek status di aplikasi Mobile JKN atau Call Center BPJS 165."
+    },
+    {
+      "id": "report_96",
+      "label": "Report #97",
+      "group": "legit",
+      "title": "<b>[LEGIT] Investasi Resmi OJK</b><br>Bareksa: Transaksi subscription Reksa Dana Pendapatan Tetap Syariah Manulife senilai Rp 2.500.000 berhasil dialokasikan ...",
+      "category": "Investasi Resmi OJK",
+      "isScam": false,
+      "rawText": "Bareksa: Transaksi subscription Reksa Dana Pendapatan Tetap Syariah Manulife senilai Rp 2.500.000 berhasil dialokasikan pada NAB 1.420,15. Unit penyertaan: 1.760,3774 unit. PT Bareksa Portal Investasi berizin dan diawasi OJK. Rincian: https"
+    },
+    {
+      "id": "report_97",
+      "label": "Report #98",
+      "group": "legit",
+      "title": "<b>[LEGIT] Investasi Resmi OJK</b><br>Bibit: Pembelian Obligasi Negara Ritel SR020 senilai Rp 5.000.000 telah terverifikasi Kemenkeu. Kupon tetap 6.40% p.a ak...",
+      "category": "Investasi Resmi OJK",
+      "isScam": false,
+      "rawText": "Bibit: Pembelian Obligasi Negara Ritel SR020 senilai Rp 5.000.000 telah terverifikasi Kemenkeu. Kupon tetap 6.40% p.a akan ditransfer setiap bulan ke rekening RDN Anda. Bibit diawasi OJK. Rincian di https://bibit.id."
+    },
+    {
+      "id": "report_98",
+      "label": "Report #99",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Telco Receipt</b><br>Telkom Indonesia: Pembayaran tagihan IndiHome internet nomor pelanggan 122409182390 sebesar Rp 415.000 melalui autodebit...",
+      "category": "Official Telco Receipt",
+      "isScam": false,
+      "rawText": "Telkom Indonesia: Pembayaran tagihan IndiHome internet nomor pelanggan 122409182390 sebesar Rp 415.000 melalui autodebit Bank BNI 0451234567 telah berhasil. Terima kasih atas kepercayaan Anda. https://telkom.co.id."
+    },
+    {
+      "id": "report_99",
+      "label": "Report #100",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Investment Receipt</b><br>Tabungan Emas Pegadaian: Pembelian saldo emas seberat 1.0000 gram senilai Rp 1.250.000 di Galeri 24 berhasil diproses. S...",
+      "category": "Official Investment Receipt",
+      "isScam": false,
+      "rawText": "Tabungan Emas Pegadaian: Pembelian saldo emas seberat 1.0000 gram senilai Rp 1.250.000 di Galeri 24 berhasil diproses. Saldo emas Anda kini 5.4200 gram. Pegadaian berizin dan diawasi OJK. Unduh aplikasi Pegadaian Digital di https://pegadaia"
+    },
+    {
+      "id": "report_100",
+      "label": "Report #101",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Fintech Transfer</b><br>Flip: Transaksi transfer dana Rp 1.500.000 ke Bank Mandiri an RINA KUSUMA telah sukses diproses tanpa biaya admin (grati...",
+      "category": "Official Fintech Transfer",
+      "isScam": false,
+      "rawText": "Flip: Transaksi transfer dana Rp 1.500.000 ke Bank Mandiri an RINA KUSUMA telah sukses diproses tanpa biaya admin (gratis). ID Transaksi: FLP92019482. PT Fliptech Lentera Inspirasi Pertiwi berizin Bank Indonesia. Cek di https://flip.id."
+    },
+    {
+      "id": "report_101",
+      "label": "Report #102",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Fintech Transfer</b><br>OY! Indonesia: Transfer dana Rp 750.000 ke rekening BCA 5220394812 sukses terkirim. Waktu proses: 15/09/2026 11:20 WIB. ...",
+      "category": "Official Fintech Transfer",
+      "isScam": false,
+      "rawText": "OY! Indonesia: Transfer dana Rp 750.000 ke rekening BCA 5220394812 sukses terkirim. Waktu proses: 15/09/2026 11:20 WIB. OY! berlisensi resmi Bank Indonesia sebagai Penyelenggara Transfer Dana. Web: https://oyindonesia.com."
+    },
+    {
+      "id": "report_102",
+      "label": "Report #103",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Fuel Receipt</b><br>MyPertamina: Pembayaran BBM Pertamax senilai Rp 150.000 di SPBU 31.12401 menggunakan LinkAja berhasil. Poin MyPertamina ...",
+      "category": "Official Fuel Receipt",
+      "isScam": false,
+      "rawText": "MyPertamina: Pembayaran BBM Pertamax senilai Rp 150.000 di SPBU 31.12401 menggunakan LinkAja berhasil. Poin MyPertamina Anda bertambah 15 poin. Kunjungi https://mypertamina.id."
+    },
+    {
+      "id": "report_103",
+      "label": "Report #104",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Insurance Receipt</b><br>Prudential Indonesia: Pembayaran premi asuransi polis nomor 09283741 sebesar Rp 650.000 telah berhasil didebit dari kart...",
+      "category": "Official Insurance Receipt",
+      "isScam": false,
+      "rawText": "Prudential Indonesia: Pembayaran premi asuransi polis nomor 09283741 sebesar Rp 650.000 telah berhasil didebit dari kartu kredit Mandiri Anda. Terima kasih atas perlindungan proteksi keluarga Anda. https://prudential.co.id."
+    },
+    {
+      "id": "report_104",
+      "label": "Report #105",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Merchant Settlement</b><br>QRIS Merchant BCA: Transaksi terima pembayaran QRIS dari pembeli sebesar Rp 85.000 telah masuk ke rekening usaha BCA 522...",
+      "category": "Official Merchant Settlement",
+      "isScam": false,
+      "rawText": "QRIS Merchant BCA: Transaksi terima pembayaran QRIS dari pembeli sebesar Rp 85.000 telah masuk ke rekening usaha BCA 5220394812 Anda. Settlement dana otomatis masuk pada pukul 23.00 WIB. Info: https://bca.co.id."
+    },
+    {
+      "id": "report_105",
+      "label": "Report #106",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Security Alert</b><br>myBCA Notifikasi Keamanan: Akun myBCA Anda baru saja diakses dari perangkat iPhone 14 di Jakarta pada 15/09 09:15 WIB. J...",
+      "category": "Official Security Alert",
+      "isScam": false,
+      "rawText": "myBCA Notifikasi Keamanan: Akun myBCA Anda baru saja diakses dari perangkat iPhone 14 di Jakarta pada 15/09 09:15 WIB. Jika ini adalah Anda, abaikan pesan ini. Jika mencurigakan segera hubungi Halo BCA 1500888."
+    },
+    {
+      "id": "report_106",
+      "label": "Report #107",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Security Alert</b><br>BRImo Security: Pendaftaran perangkat baru untuk username 'irwansyah' berhasil diaktivasi menggunakan verifikasi biometr...",
+      "category": "Official Security Alert",
+      "isScam": false,
+      "rawText": "BRImo Security: Pendaftaran perangkat baru untuk username 'irwansyah' berhasil diaktivasi menggunakan verifikasi biometrik wajah. Jangan bagikan SMS kode token kepada siapa pun. Contact BRI 1500017."
+    },
+    {
+      "id": "report_107",
+      "label": "Report #108",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Banking Cash Deposit</b><br>BCA CRM: Setoran tunai Rp 1.000.000 pada mesin CRM ATM BCA KCU Sudirman ke rekening 5220394812 telah berhasil. Saldo oto...",
+      "category": "Official Banking Cash Deposit",
+      "isScam": false,
+      "rawText": "BCA CRM: Setoran tunai Rp 1.000.000 pada mesin CRM ATM BCA KCU Sudirman ke rekening 5220394812 telah berhasil. Saldo otomatis bertambah. Simpan struk setoran tunai ini sebagai bukti sah. https://bca.co.id."
+    },
+    {
+      "id": "report_108",
+      "label": "Report #109",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Banking Cash Withdrawal</b><br>Mandiri SMS Banking: Penarikan uang tunai sebesar Rp 500.000 di ATM Mandiri pada 15/09 13:45 berhasil dari rekening 1230...",
+      "category": "Official Banking Cash Withdrawal",
+      "isScam": false,
+      "rawText": "Mandiri SMS Banking: Penarikan uang tunai sebesar Rp 500.000 di ATM Mandiri pada 15/09 13:45 berhasil dari rekening 1230009876543. Sisa saldo Rp 4.250.000. Mandiri Call 14000."
+    },
+    {
+      "id": "report_109",
+      "label": "Report #110",
+      "group": "legit",
+      "title": "<b>[LEGIT] Investasi Resmi OJK</b><br>Modalku: Pendanaan invoice financing PT Berkah Logistik sebesar Rp 2.000.000 telah berhasil disalurkan dengan proyeksi b...",
+      "category": "Investasi Resmi OJK",
+      "isScam": false,
+      "rawText": "Modalku: Pendanaan invoice financing PT Berkah Logistik sebesar Rp 2.000.000 telah berhasil disalurkan dengan proyeksi bunga 14% p.a. PT Mitrausaha Indonesia Grup berizin OJK. Cek portofolio Anda di https://modalku.co.id."
+    },
+    {
+      "id": "report_110",
+      "label": "Report #111",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Topup</b><br>BCA m-Banking: Top Up GoPay sebesar Rp 200.000 ke nomor 081234567890 an RYAN HIDAYAT berhasil pada 15/09 15:20. Biaya ad...",
+      "category": "Official Topup",
+      "isScam": false,
+      "rawText": "BCA m-Banking: Top Up GoPay sebesar Rp 200.000 ke nomor 081234567890 an RYAN HIDAYAT berhasil pada 15/09 15:20. Biaya admin Rp 1.000. No Ref: 20260915002910. https://bca.co.id."
+    },
+    {
+      "id": "report_111",
+      "label": "Report #112",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Topup</b><br>Mandiri Livin: Top Up OVO Rp 150.000 ke 081345678901 berhasil. Debit dari rekening 1230009876543. Simpan resi ini sebaga...",
+      "category": "Official Topup",
+      "isScam": false,
+      "rawText": "Mandiri Livin: Top Up OVO Rp 150.000 ke 081345678901 berhasil. Debit dari rekening 1230009876543. Simpan resi ini sebagai bukti transaksi yang sah. Mandiri Call 14000."
+    },
+    {
+      "id": "report_112",
+      "label": "Report #113",
+      "group": "legit",
+      "title": "<b>[LEGIT] Investasi Resmi OJK</b><br>Bareksa: Pembagian dividen tunai bulanan Reksa Dana Pendapatan Tetap Syariah sebesar Rp 87.500 telah ditransfer ke saldo...",
+      "category": "Investasi Resmi OJK",
+      "isScam": false,
+      "rawText": "Bareksa: Pembagian dividen tunai bulanan Reksa Dana Pendapatan Tetap Syariah sebesar Rp 87.500 telah ditransfer ke saldo dompet RDN Anda. Dana dapat dicairkan kapan saja ke rekening bank. Info: https://bareksa.com."
+    },
+    {
+      "id": "report_113",
+      "label": "Report #114",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official Telco Receipt</b><br>MyTelkomsel: Pembayaran paket internet Super Seru 50GB Rp 120.000 berhasil menggunakan BCA Virtual Account. Paket aktif ...",
+      "category": "Official Telco Receipt",
+      "isScam": false,
+      "rawText": "MyTelkomsel: Pembayaran paket internet Super Seru 50GB Rp 120.000 berhasil menggunakan BCA Virtual Account. Paket aktif s.d 15/10/2026. Cek kuota di aplikasi MyTelkomsel atau https://telkomsel.com."
+    },
+    {
+      "id": "report_114",
+      "label": "Report #115",
+      "group": "legit",
+      "title": "<b>[LEGIT] Official E-Commerce Refund</b><br>Tokopedia Care: Pengembalian dana pembatalan pesanan sebesar Rp 275.000 telah berhasil dikembalikan ke limit Kartu Kredi...",
+      "category": "Official E-Commerce Refund",
+      "isScam": false,
+      "rawText": "Tokopedia Care: Pengembalian dana pembatalan pesanan sebesar Rp 275.000 telah berhasil dikembalikan ke limit Kartu Kredit BNI Anda dalam 1x24 jam kerja. Detail transaksi di https://tokopedia.com."
+    },
+    {
+      "id": "report_115",
+      "label": "Report #116",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Bodong</b><br>Test investasi bodong bunga 50% transfer BCA 9911223344 hub 081288776655 web c-test.xyz...",
+      "category": "Investasi Bodong",
+      "isScam": true,
+      "rawText": "Test investasi bodong bunga 50% transfer BCA 9911223344 hub 081288776655 web c-test.xyz"
+    },
+    {
+      "id": "report_116",
+      "label": "Report #117",
+      "group": "legit",
+      "title": "<b>[LEGIT] Legal</b><br>Pengumuman rapat umum pemegang saham tahunan PT Astra International Tbk resmi OJK...",
+      "category": "Legal",
+      "isScam": false,
+      "rawText": "Pengumuman rapat umum pemegang saham tahunan PT Astra International Tbk resmi OJK"
+    },
+    {
+      "id": "report_117",
+      "label": "Report #118",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Bodong</b><br>Test investasi bodong bunga 50% transfer BCA 9911223344 hub 081288776655 web c-test.xyz...",
+      "category": "Investasi Bodong",
+      "isScam": true,
+      "rawText": "Test investasi bodong bunga 50% transfer BCA 9911223344 hub 081288776655 web c-test.xyz"
+    },
+    {
+      "id": "report_118",
+      "label": "Report #119",
+      "group": "legit",
+      "title": "<b>[LEGIT] Legal</b><br>Pengumuman rapat umum pemegang saham tahunan PT Astra International Tbk resmi OJK...",
+      "category": "Legal",
+      "isScam": false,
+      "rawText": "Pengumuman rapat umum pemegang saham tahunan PT Astra International Tbk resmi OJK"
+    },
+    {
+      "id": "report_119",
+      "label": "Report #120",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Bodong</b><br>Test investasi bodong bunga 50% transfer BCA 9911223344 hub 081288776655 web c-test.xyz...",
+      "category": "Investasi Bodong",
+      "isScam": true,
+      "rawText": "Test investasi bodong bunga 50% transfer BCA 9911223344 hub 081288776655 web c-test.xyz"
+    },
+    {
+      "id": "report_120",
+      "label": "Report #121",
+      "group": "legit",
+      "title": "<b>[LEGIT] Legal</b><br>Pengumuman rapat umum pemegang saham tahunan PT Astra International Tbk resmi OJK...",
+      "category": "Legal",
+      "isScam": false,
+      "rawText": "Pengumuman rapat umum pemegang saham tahunan PT Astra International Tbk resmi OJK"
+    },
+    {
+      "id": "report_121",
+      "label": "Report #122",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Bodong</b><br>Test investasi bodong bunga 50% transfer BCA 9911223344 hub 081288776655 web c-test.xyz...",
+      "category": "Investasi Bodong",
+      "isScam": true,
+      "rawText": "Test investasi bodong bunga 50% transfer BCA 9911223344 hub 081288776655 web c-test.xyz"
+    },
+    {
+      "id": "report_122",
+      "label": "Report #123",
+      "group": "legit",
+      "title": "<b>[LEGIT] Legal</b><br>Pengumuman rapat umum pemegang saham tahunan PT Astra International Tbk resmi OJK...",
+      "category": "Legal",
+      "isScam": false,
+      "rawText": "Pengumuman rapat umum pemegang saham tahunan PT Astra International Tbk resmi OJK"
+    },
+    {
+      "id": "report_123",
+      "label": "Report #124",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Bodong</b><br>Test investasi bodong bunga 50% transfer BCA 9911223344 hub 081288776655 web c-test.xyz...",
+      "category": "Investasi Bodong",
+      "isScam": true,
+      "rawText": "Test investasi bodong bunga 50% transfer BCA 9911223344 hub 081288776655 web c-test.xyz"
+    },
+    {
+      "id": "report_124",
+      "label": "Report #125",
+      "group": "legit",
+      "title": "<b>[LEGIT] Legal</b><br>Pengumuman rapat umum pemegang saham tahunan PT Astra International Tbk resmi OJK...",
+      "category": "Legal",
+      "isScam": false,
+      "rawText": "Pengumuman rapat umum pemegang saham tahunan PT Astra International Tbk resmi OJK"
+    },
+    {
+      "id": "report_125",
+      "label": "Report #126",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Bodong</b><br>Test investasi bodong bunga 50% transfer BCA 9911223344 hub 081288776655 web c-test.xyz...",
+      "category": "Investasi Bodong",
+      "isScam": true,
+      "rawText": "Test investasi bodong bunga 50% transfer BCA 9911223344 hub 081288776655 web c-test.xyz"
+    },
+    {
+      "id": "report_126",
+      "label": "Report #127",
+      "group": "legit",
+      "title": "<b>[LEGIT] Legal</b><br>Pengumuman rapat umum pemegang saham tahunan PT Astra International Tbk resmi OJK...",
+      "category": "Legal",
+      "isScam": false,
+      "rawText": "Pengumuman rapat umum pemegang saham tahunan PT Astra International Tbk resmi OJK"
+    },
+    {
+      "id": "report_127",
+      "label": "Report #128",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Bodong</b><br>Test investasi bodong bunga 50% transfer BCA 9911223344 hub 081288776655 web c-test.xyz...",
+      "category": "Investasi Bodong",
+      "isScam": true,
+      "rawText": "Test investasi bodong bunga 50% transfer BCA 9911223344 hub 081288776655 web c-test.xyz"
+    },
+    {
+      "id": "report_128",
+      "label": "Report #129",
+      "group": "legit",
+      "title": "<b>[LEGIT] Legal</b><br>Pengumuman rapat umum pemegang saham tahunan PT Astra International Tbk resmi OJK...",
+      "category": "Legal",
+      "isScam": false,
+      "rawText": "Pengumuman rapat umum pemegang saham tahunan PT Astra International Tbk resmi OJK"
+    },
+    {
+      "id": "report_129",
+      "label": "Report #130",
+      "group": "scam",
+      "title": "<b>[SCAM] Regulasi OJK</b><br>[Peringatan: Akses langsung ke website ini diblokir atau gagal (ConnectTimeout). Silakan gunakan riset web untuk mengana...",
+      "category": "Regulasi OJK",
+      "isScam": true,
+      "rawText": "[Peringatan: Akses langsung ke website ini diblokir atau gagal (ConnectTimeout). Silakan gunakan riset web untuk menganalisis URL ini.]"
+    },
+    {
+      "id": "report_130",
+      "label": "Report #131",
+      "group": "scam",
+      "title": "<b>[SCAM] Investasi Bodong</b><br>Test investasi bodong bunga 50% transfer BCA 9911223344 hub 081288776655 web c-test.xyz...",
+      "category": "Investasi Bodong",
+      "isScam": true,
+      "rawText": "Test investasi bodong bunga 50% transfer BCA 9911223344 hub 081288776655 web c-test.xyz"
+    },
+    {
+      "id": "report_131",
+      "label": "Report #132",
+      "group": "legit",
+      "title": "<b>[LEGIT] Legal</b><br>Pengumuman rapat umum pemegang saham tahunan PT Astra International Tbk resmi OJK...",
+      "category": "Legal",
+      "isScam": false,
+      "rawText": "Pengumuman rapat umum pemegang saham tahunan PT Astra International Tbk resmi OJK"
+    },
+    {
+      "id": "report_132",
+      "label": "Report #133",
+      "group": "scam",
+      "title": "<b>[SCAM] Legalitas & Pengawasan</b><br>16:14 OSG: NES all al\n<\u20ac IMG-20240907-WAOO.. & :\n_ Ya Ue\nMohon tunggu konfirmasi dari kami ya\npak\niMohon tunggu konfirma...",
+      "category": "Legalitas & Pengawasan",
+      "isScam": true,
+      "rawText": "16:14 OSG: NES all al\n<\u20ac IMG-20240907-WAOO.. & :\n_ Ya Ue\nMohon tunggu konfirmasi dari kami ya\npak\niMohon tunggu konfirmasi dari kami ya p...\nOk F\nAn\nPaket Investasi : 300.000 Bank/e-wallet :...\nUntuk deposit 300.000 sesuai yang\n_ anda ingin"
+    },
+    {
+      "id": "bank_0",
+      "label": "BCA:8830192841",
+      "group": "bank",
+      "title": "<b>Rekening Bank:</b> BCA:8830192841"
+    },
+    {
+      "id": "bank_1",
+      "label": "BNI:0451234567",
+      "group": "bank",
+      "title": "<b>Rekening Bank:</b> BNI:0451234567"
+    },
+    {
+      "id": "bank_2",
+      "label": "Mandiri:1370019284711",
+      "group": "bank",
+      "title": "<b>Rekening Bank:</b> Mandiri:1370019284711"
+    },
+    {
+      "id": "bank_3",
+      "label": "BSI:7192837465",
+      "group": "bank",
+      "title": "<b>Rekening Bank:</b> BSI:7192837465"
+    },
+    {
+      "id": "bank_4",
+      "label": "BNI:0819283746",
+      "group": "bank",
+      "title": "<b>Rekening Bank:</b> BNI:0819283746"
+    },
+    {
+      "id": "bank_5",
+      "label": "BCA:081388776655",
+      "group": "bank",
+      "title": "<b>Rekening Bank:</b> BCA:081388776655"
+    },
+    {
+      "id": "bank_6",
+      "label": "BSI:7012345678",
+      "group": "bank",
+      "title": "<b>Rekening Bank:</b> BSI:7012345678"
+    },
+    {
+      "id": "bank_7",
+      "label": "BRI:020601002948501",
+      "group": "bank",
+      "title": "<b>Rekening Bank:</b> BRI:020601002948501"
+    },
+    {
+      "id": "bank_8",
+      "label": "BCA:5220394812",
+      "group": "bank",
+      "title": "<b>Rekening Bank:</b> BCA:5220394812"
+    },
+    {
+      "id": "bank_9",
+      "label": "BRI:011101002345501",
+      "group": "bank",
+      "title": "<b>Rekening Bank:</b> BRI:011101002345501"
+    },
+    {
+      "id": "bank_10",
+      "label": "Mandiri:1230009876543",
+      "group": "bank",
+      "title": "<b>Rekening Bank:</b> Mandiri:1230009876543"
+    },
+    {
+      "id": "bank_11",
+      "label": "BCA:9911223344",
+      "group": "bank",
+      "title": "<b>Rekening Bank:</b> BCA:9911223344"
+    },
+    {
+      "id": "bank_12",
+      "label": "Jago:10928374619",
+      "group": "bank",
+      "title": "<b>Rekening Bank:</b> Jago:10928374619"
+    },
+    {
+      "id": "bank_13",
+      "label": "Jago:10123456789",
+      "group": "bank",
+      "title": "<b>Rekening Bank:</b> Jago:10123456789"
+    },
+    {
+      "id": "bank_14",
+      "label": "BRI:020601009876509",
+      "group": "bank",
+      "title": "<b>Rekening Bank:</b> BRI:020601009876509"
+    },
+    {
+      "id": "phone_0",
+      "label": "081298765432",
+      "group": "phone",
+      "title": "<b>Nomor Telepon:</b> 081298765432"
+    },
+    {
+      "id": "phone_1",
+      "label": "085712345678",
+      "group": "phone",
+      "title": "<b>Nomor Telepon:</b> 085712345678"
+    },
+    {
+      "id": "phone_2",
+      "label": "087899887766",
+      "group": "phone",
+      "title": "<b>Nomor Telepon:</b> 087899887766"
+    },
+    {
+      "id": "phone_3",
+      "label": "0819283746",
+      "group": "phone",
+      "title": "<b>Nomor Telepon:</b> 0819283746"
+    },
+    {
+      "id": "phone_4",
+      "label": "081388776655",
+      "group": "phone",
+      "title": "<b>Nomor Telepon:</b> 081388776655"
+    },
+    {
+      "id": "phone_5",
+      "label": "089655443322",
+      "group": "phone",
+      "title": "<b>Nomor Telepon:</b> 089655443322"
+    },
+    {
+      "id": "phone_6",
+      "label": "081288776655",
+      "group": "phone",
+      "title": "<b>Nomor Telepon:</b> 081288776655"
+    },
+    {
+      "id": "phone_7",
+      "label": "02150887200",
+      "group": "phone",
+      "title": "<b>Nomor Telepon:</b> 02150887200"
+    },
+    {
+      "id": "phone_8",
+      "label": "081157157157",
+      "group": "phone",
+      "title": "<b>Nomor Telepon:</b> 081157157157"
+    },
+    {
+      "id": "phone_9",
+      "label": "081234567890",
+      "group": "phone",
+      "title": "<b>Nomor Telepon:</b> 081234567890"
+    },
+    {
+      "id": "phone_10",
+      "label": "081345678901",
+      "group": "phone",
+      "title": "<b>Nomor Telepon:</b> 081345678901"
+    },
+    {
+      "id": "domain_0",
+      "label": "mba1995.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> mba1995."
+    },
+    {
+      "id": "domain_1",
+      "label": "cuan-autopilot.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> cuan-autopilot."
+    },
+    {
+      "id": "domain_2",
+      "label": "co.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> co."
+    },
+    {
+      "id": "domain_3",
+      "label": "profit-harian-vip.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> profit-harian-vip."
+    },
+    {
+      "id": "domain_4",
+      "label": "token-presale-cuan.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> token-presale-cuan."
+    },
+    {
+      "id": "domain_5",
+      "label": "shopee-freelance-task.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> shopee-freelance-task."
+    },
+    {
+      "id": "domain_6",
+      "label": "bca-tarif-baru.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> bca-tarif-baru."
+    },
+    {
+      "id": "domain_7",
+      "label": "apk-download.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> apk-download."
+    },
+    {
+      "id": "domain_8",
+      "label": "suratundangan.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> suratundangan."
+    },
+    {
+      "id": "domain_9",
+      "label": "lihatfotopaket.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> lihatfotopaket."
+    },
+    {
+      "id": "domain_10",
+      "label": "ojk-verifikasi-dana.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> ojk-verifikasi-dana."
+    },
+    {
+      "id": "domain_11",
+      "label": "brimo-update.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> brimo-update."
+    },
+    {
+      "id": "domain_12",
+      "label": "c-test.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> c-test."
+    },
+    {
+      "id": "domain_13",
+      "label": "surattugas.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> surattugas."
+    },
+    {
+      "id": "domain_14",
+      "label": "bibit.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> bibit."
+    },
+    {
+      "id": "domain_15",
+      "label": "bareksa.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> bareksa."
+    },
+    {
+      "id": "domain_16",
+      "label": "stockbit.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> stockbit."
+    },
+    {
+      "id": "domain_17",
+      "label": "indopremier.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> indopremier."
+    },
+    {
+      "id": "domain_18",
+      "label": "go.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> go."
+    },
+    {
+      "id": "domain_19",
+      "label": "surattilang.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> surattilang."
+    },
+    {
+      "id": "domain_20",
+      "label": "jago.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> jago."
+    },
+    {
+      "id": "domain_21",
+      "label": "tokopedia.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> tokopedia."
+    },
+    {
+      "id": "domain_22",
+      "label": "flip.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> flip."
+    },
+    {
+      "id": "domain_23",
+      "label": "oyindonesia.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> oyindonesia."
+    },
+    {
+      "id": "domain_24",
+      "label": "mypertamina.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> mypertamina."
+    },
+    {
+      "id": "domain_25",
+      "label": "telkomsel.",
+      "group": "domain",
+      "title": "<b>Domain/URL:</b> telkomsel."
+    }
+  ],
+  "edges": [
+    {
+      "from": "report_14",
+      "to": "bank_0",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_15",
+      "to": "bank_1",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_16",
+      "to": "bank_2",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_17",
+      "to": "bank_2",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_18",
+      "to": "bank_3",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_19",
+      "to": "bank_3",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_20",
+      "to": "bank_3",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_21",
+      "to": "bank_2",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_23",
+      "to": "bank_2",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_25",
+      "to": "bank_4",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_27",
+      "to": "bank_5",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_30",
+      "to": "bank_6",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_33",
+      "to": "bank_7",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_34",
+      "to": "bank_7",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_35",
+      "to": "bank_0",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_36",
+      "to": "bank_7",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_37",
+      "to": "bank_7",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_38",
+      "to": "bank_2",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_39",
+      "to": "bank_0",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_42",
+      "to": "bank_3",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_44",
+      "to": "bank_8",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_45",
+      "to": "bank_9",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_45",
+      "to": "bank_10",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_47",
+      "to": "bank_11",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_49",
+      "to": "bank_0",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_51",
+      "to": "bank_4",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_52",
+      "to": "bank_12",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_53",
+      "to": "bank_0",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_54",
+      "to": "bank_7",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_64",
+      "to": "bank_11",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_66",
+      "to": "bank_2",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_67",
+      "to": "bank_3",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_69",
+      "to": "bank_0",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_70",
+      "to": "bank_2",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_72",
+      "to": "bank_4",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_74",
+      "to": "bank_7",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_75",
+      "to": "bank_0",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_76",
+      "to": "bank_4",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_77",
+      "to": "bank_2",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_78",
+      "to": "bank_7",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_79",
+      "to": "bank_3",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_80",
+      "to": "bank_12",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_82",
+      "to": "bank_7",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_83",
+      "to": "bank_0",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_84",
+      "to": "bank_3",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_85",
+      "to": "bank_2",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_88",
+      "to": "bank_4",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_89",
+      "to": "bank_13",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_92",
+      "to": "bank_8",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_93",
+      "to": "bank_10",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_95",
+      "to": "bank_14",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_98",
+      "to": "bank_1",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_101",
+      "to": "bank_8",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_104",
+      "to": "bank_8",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_115",
+      "to": "bank_11",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_117",
+      "to": "bank_11",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_119",
+      "to": "bank_11",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_121",
+      "to": "bank_11",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_123",
+      "to": "bank_11",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_125",
+      "to": "bank_11",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_127",
+      "to": "bank_11",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_130",
+      "to": "bank_11",
+      "label": "mentions_account",
+      "color": {
+        "color": "#06B6D4"
+      }
+    },
+    {
+      "from": "report_14",
+      "to": "phone_0",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_16",
+      "to": "phone_1",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_17",
+      "to": "phone_2",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_18",
+      "to": "phone_2",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_19",
+      "to": "phone_2",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_21",
+      "to": "phone_2",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_23",
+      "to": "phone_2",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_24",
+      "to": "phone_1",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_25",
+      "to": "phone_3",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_25",
+      "to": "phone_1",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_26",
+      "to": "phone_1",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_27",
+      "to": "phone_4",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_28",
+      "to": "phone_4",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_29",
+      "to": "phone_4",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_31",
+      "to": "phone_4",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_32",
+      "to": "phone_5",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_33",
+      "to": "phone_5",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_34",
+      "to": "phone_5",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_35",
+      "to": "phone_0",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_36",
+      "to": "phone_5",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_37",
+      "to": "phone_5",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_38",
+      "to": "phone_2",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_39",
+      "to": "phone_0",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_40",
+      "to": "phone_1",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_41",
+      "to": "phone_4",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_42",
+      "to": "phone_2",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_43",
+      "to": "phone_4",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_47",
+      "to": "phone_6",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_49",
+      "to": "phone_0",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_50",
+      "to": "phone_0",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_51",
+      "to": "phone_3",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_51",
+      "to": "phone_1",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_52",
+      "to": "phone_4",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_53",
+      "to": "phone_0",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_54",
+      "to": "phone_5",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_58",
+      "to": "phone_7",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_61",
+      "to": "phone_8",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_64",
+      "to": "phone_6",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_66",
+      "to": "phone_2",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_67",
+      "to": "phone_2",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_68",
+      "to": "phone_4",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_69",
+      "to": "phone_0",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_71",
+      "to": "phone_1",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_72",
+      "to": "phone_3",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_72",
+      "to": "phone_1",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_73",
+      "to": "phone_4",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_74",
+      "to": "phone_5",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_75",
+      "to": "phone_0",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_76",
+      "to": "phone_3",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_76",
+      "to": "phone_1",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_77",
+      "to": "phone_2",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_78",
+      "to": "phone_5",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_79",
+      "to": "phone_2",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_80",
+      "to": "phone_4",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_81",
+      "to": "phone_4",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_82",
+      "to": "phone_5",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_83",
+      "to": "phone_0",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_84",
+      "to": "phone_2",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_85",
+      "to": "phone_2",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_86",
+      "to": "phone_0",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_87",
+      "to": "phone_5",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_88",
+      "to": "phone_3",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_88",
+      "to": "phone_1",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_110",
+      "to": "phone_9",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_111",
+      "to": "phone_10",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_115",
+      "to": "phone_6",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_117",
+      "to": "phone_6",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_119",
+      "to": "phone_6",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_121",
+      "to": "phone_6",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_123",
+      "to": "phone_6",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_125",
+      "to": "phone_6",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_127",
+      "to": "phone_6",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_130",
+      "to": "phone_6",
+      "label": "mentions_phone",
+      "color": {
+        "color": "#F59E0B"
+      }
+    },
+    {
+      "from": "report_2",
+      "to": "domain_0",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_4",
+      "to": "domain_0",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_5",
+      "to": "domain_0",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_14",
+      "to": "domain_1",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_15",
+      "to": "domain_2",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_16",
+      "to": "domain_3",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_20",
+      "to": "domain_3",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_21",
+      "to": "domain_4",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_22",
+      "to": "domain_4",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_24",
+      "to": "domain_5",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_26",
+      "to": "domain_5",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_27",
+      "to": "domain_6",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_28",
+      "to": "domain_6",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_29",
+      "to": "domain_7",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_29",
+      "to": "domain_8",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_30",
+      "to": "domain_2",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_31",
+      "to": "domain_7",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_31",
+      "to": "domain_9",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_35",
+      "to": "domain_10",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_36",
+      "to": "domain_10",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_38",
+      "to": "domain_3",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_40",
+      "to": "domain_5",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_41",
+      "to": "domain_11",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_41",
+      "to": "domain_6",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_43",
+      "to": "domain_6",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_47",
+      "to": "domain_12",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_49",
+      "to": "domain_1",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_50",
+      "to": "domain_3",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_52",
+      "to": "domain_7",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_52",
+      "to": "domain_13",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_55",
+      "to": "domain_14",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_56",
+      "to": "domain_15",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_57",
+      "to": "domain_16",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_58",
+      "to": "domain_17",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_59",
+      "to": "domain_2",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_61",
+      "to": "domain_18",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_62",
+      "to": "domain_2",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_63",
+      "to": "domain_2",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_64",
+      "to": "domain_12",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_67",
+      "to": "domain_10",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_68",
+      "to": "domain_7",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_68",
+      "to": "domain_19",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_70",
+      "to": "domain_3",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_71",
+      "to": "domain_5",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_72",
+      "to": "domain_4",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_73",
+      "to": "domain_6",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_76",
+      "to": "domain_5",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_81",
+      "to": "domain_6",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_86",
+      "to": "domain_1",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_87",
+      "to": "domain_6",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_89",
+      "to": "domain_20",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_90",
+      "to": "domain_21",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_91",
+      "to": "domain_2",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_92",
+      "to": "domain_2",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_94",
+      "to": "domain_2",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_96",
+      "to": "domain_15",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_97",
+      "to": "domain_14",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_98",
+      "to": "domain_2",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_99",
+      "to": "domain_2",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_100",
+      "to": "domain_22",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_101",
+      "to": "domain_23",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_102",
+      "to": "domain_24",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_103",
+      "to": "domain_2",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_104",
+      "to": "domain_2",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_107",
+      "to": "domain_2",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_109",
+      "to": "domain_2",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_110",
+      "to": "domain_2",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_112",
+      "to": "domain_15",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_113",
+      "to": "domain_25",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_114",
+      "to": "domain_21",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_115",
+      "to": "domain_12",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_117",
+      "to": "domain_12",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_119",
+      "to": "domain_12",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_121",
+      "to": "domain_12",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_123",
+      "to": "domain_12",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_125",
+      "to": "domain_12",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_127",
+      "to": "domain_12",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_130",
+      "to": "domain_12",
+      "label": "mentions_domain",
+      "color": {
+        "color": "#A855F7"
+      }
+    },
+    {
+      "from": "report_2",
+      "to": "report_4",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_4",
+      "to": "report_2",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_2",
+      "to": "report_5",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_5",
+      "to": "report_2",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_4",
+      "to": "report_5",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_5",
+      "to": "report_4",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_6",
+      "to": "report_7",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_7",
+      "to": "report_6",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_8",
+      "to": "report_9",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_9",
+      "to": "report_8",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_8",
+      "to": "report_10",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_10",
+      "to": "report_8",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_9",
+      "to": "report_10",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_10",
+      "to": "report_9",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_11",
+      "to": "report_12",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_12",
+      "to": "report_11",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_11",
+      "to": "report_13",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_13",
+      "to": "report_11",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_12",
+      "to": "report_13",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_13",
+      "to": "report_12",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_14",
+      "to": "report_83",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_83",
+      "to": "report_14",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_15",
+      "to": "report_30",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_30",
+      "to": "report_15",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_15",
+      "to": "report_92",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_92",
+      "to": "report_15",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_15",
+      "to": "report_94",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_94",
+      "to": "report_15",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_15",
+      "to": "report_98",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_98",
+      "to": "report_15",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_15",
+      "to": "report_102",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_102",
+      "to": "report_15",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_15",
+      "to": "report_103",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_103",
+      "to": "report_15",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_15",
+      "to": "report_110",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_110",
+      "to": "report_15",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_16",
+      "to": "report_38",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_38",
+      "to": "report_16",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_17",
+      "to": "report_23",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_23",
+      "to": "report_17",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_21",
+      "to": "report_86",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_86",
+      "to": "report_21",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_24",
+      "to": "report_71",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_71",
+      "to": "report_24",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_24",
+      "to": "report_76",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_76",
+      "to": "report_24",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_24",
+      "to": "report_88",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_88",
+      "to": "report_24",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_25",
+      "to": "report_33",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_33",
+      "to": "report_25",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_25",
+      "to": "report_54",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_54",
+      "to": "report_25",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_27",
+      "to": "report_41",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_41",
+      "to": "report_27",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_27",
+      "to": "report_43",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_43",
+      "to": "report_27",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_28",
+      "to": "report_43",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_43",
+      "to": "report_28",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_28",
+      "to": "report_73",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_73",
+      "to": "report_28",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_28",
+      "to": "report_81",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_81",
+      "to": "report_28",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_29",
+      "to": "report_31",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_31",
+      "to": "report_29",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_30",
+      "to": "report_63",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_63",
+      "to": "report_30",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_30",
+      "to": "report_98",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_98",
+      "to": "report_30",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_31",
+      "to": "report_68",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_68",
+      "to": "report_31",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_33",
+      "to": "report_37",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_37",
+      "to": "report_33",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_33",
+      "to": "report_54",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_54",
+      "to": "report_33",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_33",
+      "to": "report_82",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_82",
+      "to": "report_33",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_34",
+      "to": "report_74",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_74",
+      "to": "report_34",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_35",
+      "to": "report_49",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_49",
+      "to": "report_35",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_35",
+      "to": "report_96",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_96",
+      "to": "report_35",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_37",
+      "to": "report_46",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_46",
+      "to": "report_37",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_37",
+      "to": "report_54",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_54",
+      "to": "report_37",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_37",
+      "to": "report_95",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_95",
+      "to": "report_37",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_38",
+      "to": "report_70",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_70",
+      "to": "report_38",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_39",
+      "to": "report_49",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_49",
+      "to": "report_39",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_39",
+      "to": "report_53",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_53",
+      "to": "report_39",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_39",
+      "to": "report_83",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_83",
+      "to": "report_39",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_43",
+      "to": "report_81",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_81",
+      "to": "report_43",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_43",
+      "to": "report_87",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_87",
+      "to": "report_43",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_45",
+      "to": "report_108",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_108",
+      "to": "report_45",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_47",
+      "to": "report_64",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_64",
+      "to": "report_47",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_47",
+      "to": "report_115",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_115",
+      "to": "report_47",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_47",
+      "to": "report_117",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_117",
+      "to": "report_47",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_47",
+      "to": "report_119",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_119",
+      "to": "report_47",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_47",
+      "to": "report_121",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_121",
+      "to": "report_47",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_47",
+      "to": "report_123",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_123",
+      "to": "report_47",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_47",
+      "to": "report_125",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_125",
+      "to": "report_47",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_47",
+      "to": "report_127",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_127",
+      "to": "report_47",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_47",
+      "to": "report_130",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_130",
+      "to": "report_47",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_48",
+      "to": "report_61",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_61",
+      "to": "report_48",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_48",
+      "to": "report_65",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_65",
+      "to": "report_48",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_48",
+      "to": "report_116",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_116",
+      "to": "report_48",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_48",
+      "to": "report_118",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_118",
+      "to": "report_48",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_48",
+      "to": "report_120",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_120",
+      "to": "report_48",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_48",
+      "to": "report_122",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_122",
+      "to": "report_48",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_48",
+      "to": "report_124",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_124",
+      "to": "report_48",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_48",
+      "to": "report_126",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_126",
+      "to": "report_48",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_48",
+      "to": "report_128",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_128",
+      "to": "report_48",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_48",
+      "to": "report_131",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_131",
+      "to": "report_48",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_51",
+      "to": "report_66",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_66",
+      "to": "report_51",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_55",
+      "to": "report_98",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_98",
+      "to": "report_55",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_55",
+      "to": "report_109",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_109",
+      "to": "report_55",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_55",
+      "to": "report_114",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_114",
+      "to": "report_55",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_58",
+      "to": "report_93",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_93",
+      "to": "report_58",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_58",
+      "to": "report_112",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_112",
+      "to": "report_58",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_61",
+      "to": "report_65",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_65",
+      "to": "report_61",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_61",
+      "to": "report_116",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_116",
+      "to": "report_61",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_61",
+      "to": "report_118",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_118",
+      "to": "report_61",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_61",
+      "to": "report_120",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_120",
+      "to": "report_61",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_61",
+      "to": "report_122",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_122",
+      "to": "report_61",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_61",
+      "to": "report_124",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_124",
+      "to": "report_61",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_61",
+      "to": "report_126",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_126",
+      "to": "report_61",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_61",
+      "to": "report_128",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_128",
+      "to": "report_61",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_61",
+      "to": "report_131",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_131",
+      "to": "report_61",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_62",
+      "to": "report_104",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_104",
+      "to": "report_62",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_62",
+      "to": "report_107",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_107",
+      "to": "report_62",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_63",
+      "to": "report_91",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_91",
+      "to": "report_63",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_63",
+      "to": "report_98",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_98",
+      "to": "report_63",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_64",
+      "to": "report_115",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_115",
+      "to": "report_64",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_64",
+      "to": "report_117",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_117",
+      "to": "report_64",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_64",
+      "to": "report_119",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_119",
+      "to": "report_64",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_64",
+      "to": "report_121",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_121",
+      "to": "report_64",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_64",
+      "to": "report_123",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_123",
+      "to": "report_64",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_64",
+      "to": "report_125",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_125",
+      "to": "report_64",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_64",
+      "to": "report_127",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_127",
+      "to": "report_64",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_64",
+      "to": "report_130",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_130",
+      "to": "report_64",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_65",
+      "to": "report_116",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_116",
+      "to": "report_65",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_65",
+      "to": "report_118",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_118",
+      "to": "report_65",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_65",
+      "to": "report_120",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_120",
+      "to": "report_65",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_65",
+      "to": "report_122",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_122",
+      "to": "report_65",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_65",
+      "to": "report_124",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_124",
+      "to": "report_65",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_65",
+      "to": "report_126",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_126",
+      "to": "report_65",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_65",
+      "to": "report_128",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_128",
+      "to": "report_65",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_65",
+      "to": "report_131",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_131",
+      "to": "report_65",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_67",
+      "to": "report_87",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_87",
+      "to": "report_67",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_71",
+      "to": "report_76",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_76",
+      "to": "report_71",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_75",
+      "to": "report_83",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_83",
+      "to": "report_75",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_89",
+      "to": "report_112",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_112",
+      "to": "report_89",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_89",
+      "to": "report_114",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_114",
+      "to": "report_89",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_91",
+      "to": "report_94",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_94",
+      "to": "report_91",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_91",
+      "to": "report_98",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_98",
+      "to": "report_91",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_91",
+      "to": "report_103",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_103",
+      "to": "report_91",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_91",
+      "to": "report_109",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_109",
+      "to": "report_91",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_92",
+      "to": "report_98",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_98",
+      "to": "report_92",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_92",
+      "to": "report_103",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_103",
+      "to": "report_92",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_92",
+      "to": "report_104",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_104",
+      "to": "report_92",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_92",
+      "to": "report_107",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_107",
+      "to": "report_92",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_93",
+      "to": "report_108",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_108",
+      "to": "report_93",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_93",
+      "to": "report_111",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_111",
+      "to": "report_93",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_94",
+      "to": "report_98",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_98",
+      "to": "report_94",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_94",
+      "to": "report_102",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_102",
+      "to": "report_94",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_94",
+      "to": "report_103",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_103",
+      "to": "report_94",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_94",
+      "to": "report_104",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_104",
+      "to": "report_94",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_94",
+      "to": "report_109",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_109",
+      "to": "report_94",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_94",
+      "to": "report_110",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_110",
+      "to": "report_94",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_98",
+      "to": "report_103",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_103",
+      "to": "report_98",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_98",
+      "to": "report_109",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_109",
+      "to": "report_98",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_103",
+      "to": "report_104",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_104",
+      "to": "report_103",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_103",
+      "to": "report_109",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_109",
+      "to": "report_103",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_104",
+      "to": "report_107",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_107",
+      "to": "report_104",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_108",
+      "to": "report_111",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_111",
+      "to": "report_108",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_112",
+      "to": "report_114",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_114",
+      "to": "report_112",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_115",
+      "to": "report_117",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_117",
+      "to": "report_115",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_115",
+      "to": "report_119",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_119",
+      "to": "report_115",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_115",
+      "to": "report_121",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_121",
+      "to": "report_115",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_115",
+      "to": "report_123",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_123",
+      "to": "report_115",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_115",
+      "to": "report_125",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_125",
+      "to": "report_115",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_115",
+      "to": "report_127",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_127",
+      "to": "report_115",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_115",
+      "to": "report_130",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_130",
+      "to": "report_115",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_116",
+      "to": "report_118",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_118",
+      "to": "report_116",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_116",
+      "to": "report_120",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_120",
+      "to": "report_116",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_116",
+      "to": "report_122",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_122",
+      "to": "report_116",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_116",
+      "to": "report_124",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_124",
+      "to": "report_116",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_116",
+      "to": "report_126",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_126",
+      "to": "report_116",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_116",
+      "to": "report_128",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_128",
+      "to": "report_116",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_116",
+      "to": "report_131",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_131",
+      "to": "report_116",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_117",
+      "to": "report_119",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_119",
+      "to": "report_117",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_117",
+      "to": "report_121",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_121",
+      "to": "report_117",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_117",
+      "to": "report_123",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_123",
+      "to": "report_117",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_117",
+      "to": "report_125",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_125",
+      "to": "report_117",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_117",
+      "to": "report_127",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_127",
+      "to": "report_117",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_117",
+      "to": "report_130",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_130",
+      "to": "report_117",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_118",
+      "to": "report_120",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_120",
+      "to": "report_118",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_118",
+      "to": "report_122",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_122",
+      "to": "report_118",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_118",
+      "to": "report_124",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_124",
+      "to": "report_118",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_118",
+      "to": "report_126",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_126",
+      "to": "report_118",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_118",
+      "to": "report_128",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_128",
+      "to": "report_118",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_118",
+      "to": "report_131",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_131",
+      "to": "report_118",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_119",
+      "to": "report_121",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_121",
+      "to": "report_119",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_119",
+      "to": "report_123",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_123",
+      "to": "report_119",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_119",
+      "to": "report_125",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_125",
+      "to": "report_119",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_119",
+      "to": "report_127",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_127",
+      "to": "report_119",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_119",
+      "to": "report_130",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_130",
+      "to": "report_119",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_120",
+      "to": "report_122",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_122",
+      "to": "report_120",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_120",
+      "to": "report_124",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_124",
+      "to": "report_120",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_120",
+      "to": "report_126",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_126",
+      "to": "report_120",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_120",
+      "to": "report_128",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_128",
+      "to": "report_120",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_120",
+      "to": "report_131",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_131",
+      "to": "report_120",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_121",
+      "to": "report_123",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_123",
+      "to": "report_121",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_121",
+      "to": "report_125",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_125",
+      "to": "report_121",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_121",
+      "to": "report_127",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_127",
+      "to": "report_121",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_121",
+      "to": "report_130",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_130",
+      "to": "report_121",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_122",
+      "to": "report_124",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_124",
+      "to": "report_122",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_122",
+      "to": "report_126",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_126",
+      "to": "report_122",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_122",
+      "to": "report_128",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_128",
+      "to": "report_122",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_122",
+      "to": "report_131",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_131",
+      "to": "report_122",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_123",
+      "to": "report_125",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_125",
+      "to": "report_123",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_123",
+      "to": "report_127",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_127",
+      "to": "report_123",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_123",
+      "to": "report_130",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_130",
+      "to": "report_123",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_124",
+      "to": "report_126",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_126",
+      "to": "report_124",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_124",
+      "to": "report_128",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_128",
+      "to": "report_124",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_124",
+      "to": "report_131",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_131",
+      "to": "report_124",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_125",
+      "to": "report_127",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_127",
+      "to": "report_125",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_125",
+      "to": "report_130",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_130",
+      "to": "report_125",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_126",
+      "to": "report_128",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_128",
+      "to": "report_126",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_126",
+      "to": "report_131",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_131",
+      "to": "report_126",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_127",
+      "to": "report_130",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_130",
+      "to": "report_127",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_128",
+      "to": "report_131",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    },
+    {
+      "from": "report_131",
+      "to": "report_128",
+      "label": "similar_text",
+      "color": {
+        "color": "#64748B",
+        "opacity": 0.4
+      }
+    }
+  ],
+  "stats": {
+    "total_nodes": 185,
+    "reports": 133,
+    "scam_reports": 83,
+    "legit_reports": 50,
+    "banks": 15,
+    "phones": 11,
+    "domains": 26,
+    "total_edges": 591
+  }
+}

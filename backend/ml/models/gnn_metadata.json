@@ -1,0 +1,50 @@
+{
+  "node_types": [
+    "Report",
+    "BankAccount",
+    "Phone",
+    "Domain"
+  ],
+  "edge_types": [
+    [
+      "Report",
+      "mentions_account",
+      "BankAccount"
+    ],
+    [
+      "Report",
+      "mentions_phone",
+      "Phone"
+    ],
+    [
+      "Report",
+      "mentions_domain",
+      "Domain"
+    ],
+    [
+      "BankAccount",
+      "mentioned_in",
+      "Report"
+    ],
+    [
+      "Phone",
+      "mentioned_in",
+      "Report"
+    ],
+    [
+      "Domain",
+      "mentioned_in",
+      "Report"
+    ],
+    [
+      "Report",
+      "similar_content",
+      "Report"
+    ],
+    [
+      "Report",
+      "self_loop",
+      "Report"
+    ]
+  ]
+}

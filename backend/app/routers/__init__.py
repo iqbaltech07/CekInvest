@@ -5,6 +5,7 @@ from app.routers.intelligence import router as intelligence_router
 from app.routers.share import router as share_router
 from app.routers.chat import router as chat_router
 from app.routers.clustering import router as clustering_router
+from app.routers.ml_router import ml_router
 
 __all__ = [
     "analysis_router",
@@ -13,4 +14,6 @@ __all__ = [
     "share_router",
     "chat_router",
     "clustering_router",
+    "ml_router",
 ]
+

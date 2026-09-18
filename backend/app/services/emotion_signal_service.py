@@ -40,8 +40,22 @@ _KEYWORD_RULES = [
             "jangan sampai terlambat",
             "closing malam ini",
             "waktu terbatas",
+            "slot tipis",
+            "gercep",
+            "sebelum ganti harga",
+            "gaspoll",
+            "langsung tf",
+            "keburu hangus",
+            "mumpung promo",
+            "mumpung belum viral",
+            "terakhir hari ini",
+            "kesempatan terakhir",
+            "segera transfer",
+            "jangan tunda",
+            "segera amankan",
+            "limited time",
         ),
-        description="Terdapat bahasa yang mendorong keputusan cepat tanpa waktu berpikir.",
+        description="Terdapat bahasa yang mendorong keputusan cepat dan tergesa-gesa tanpa waktu berpikir rasional.",
     ),
     _Rule(
         signal_type=EmotionSignalType.FAKE_SCARCITY,
@@ -50,10 +64,26 @@ _KEYWORD_RULES = [
             "kuota terbatas",
             "tinggal sedikit",
             "sisa slot",
+            "slot tipis",
+            "kuota lagi",
             "hanya untuk",
             "batch terakhir",
+            "sisa 2 seat",
+            "sisa 3 seat",
+            "sisa 1 seat",
+            "khusus member",
+            "khusus orang tercepat",
+            "kloter 1",
+            "kloter terakhir",
+            "kuota menipis",
+            "slot terakhir",
+            "pendaftaran ditutup",
+            "hanya untuk 5 orang",
+            "hanya untuk 10 orang",
+            "hanya tersisa",
+            "sisa kuota",
         ),
-        description="Terdapat klaim kelangkaan yang dapat menekan pengguna agar segera masuk.",
+        description="Terdapat klaim kelangkaan atau kuota terbatas buatan untuk memicu kepanikan takut kehabisan (FOMO).",
     ),
     _Rule(
         signal_type=EmotionSignalType.FAKE_AUTHORITY,
@@ -64,8 +94,22 @@ _KEYWORD_RULES = [
             "izin ojk",
             "terdaftar ojk",
             "legalitas lengkap",
+            "sk kemenkumham",
+            "berbadan hukum pt",
+            "amanah no tipu-tipu",
+            "sertifikat resmi",
+            "bappebti terpercaya",
+            "garansi 100%",
+            "badan hukum resmi",
+            "legalitas komplit",
+            "anti scam",
+            "dijamin amanah",
+            "pasti cair",
+            "resmi bappebti",
+            "notaris resmi",
+            "legalitas jelas",
         ),
-        description="Terdapat klaim otoritas/regulasi yang perlu diverifikasi langsung.",
+        description="Terdapat klaim otoritas, perizinan regulator, atau jaminan keabsahan hukum yang perlu diverifikasi kebenarannya.",
     ),
     _Rule(
         signal_type=EmotionSignalType.EMOTIONAL_PRESSURE,
@@ -76,8 +120,20 @@ _KEYWORD_RULES = [
             "kamu akan menyesal",
             "jangan ragu",
             "percaya saja",
+            "mau sampai kapan jadi penonton",
+            "jangan mau miskin",
+            "gaji umr kebeli",
+            "tiduran dapat duit",
+            "modal rebahan",
+            "sukses cepat",
+            "bebas finansial instan",
+            "ubah nasibmu sekarang",
+            "jangan sia-siakan",
+            "modal receh hasil sultan",
+            "rezeki nomplok",
+            "cara cepat kaya",
         ),
-        description="Terdapat tekanan emosional yang dapat mengurangi kewaspadaan pengguna.",
+        description="Terdapat tekanan emosional, manipulasi keserakahan, atau sindiran psikologis untuk menurunkan kewaspadaan pengguna.",
     ),
     _Rule(
         signal_type=EmotionSignalType.SOCIAL_PROOF_MANIPULATION,
@@ -89,10 +145,61 @@ _KEYWORD_RULES = [
             "artis",
             "influencer",
             "grup vip",
+            "alhamdulillah cair",
+            "sudah wd",
+            "bukti mutasi",
+            "testimoni nyata",
+            "leader kami",
+            "mentor hebat",
+            "nyata hasilnya",
+            "cek grup sebelah",
+            "bukti transferan",
+            "member vip",
+            "sukses wd",
+            "cair lagi hari ini",
+            "bukti nyata member",
         ),
-        description="Terdapat social proof yang perlu diverifikasi karena mudah direkayasa.",
+        description="Terdapat testimoni, bukti transfer, atau klaim dukungan tokoh yang berpotensi direkayasa untuk meyakinkan calon korban.",
+    ),
+    _Rule(
+        signal_type=EmotionSignalType.UNREALISTIC_RETURN,
+        patterns=(
+            "titip dana",
+            "lipat gandakan modal",
+            "modal receh hasil",
+            "pasti profit",
+            "cuan harian",
+            "passive income nyata",
+            "anti boncos",
+            "anti rugi",
+            "garansi modal",
+            "untung pasti",
+            "profit harian",
+            "profit mingguan",
+            "balik modal cepat",
+            "gandakan modal",
+            "garansi uang kembali",
+            "pasti cuan",
+            "profit 100%",
+        ),
+        description="Terdapat janji keuntungan pasti tanpa risiko atau skema titip dana yang melanggar prinsip investasi yang sehat.",
     ),
 ]
+
+_NEGATION_PREFIXES = (
+    "bukan", "tidak", "tak", "jangan", "waspada", "hati-hati", "hoax", 
+    "modus", "penipuan", "korban", "edukasi", "hindari", "laporan", 
+    "waspadalah", "kenali", "membongkar", "hati hati", "larangan",
+    "palsu", "gadungan"
+)
+
+
+def _is_negated(content_lower: str, match_idx: int) -> bool:
+    """Check if the matched pattern is in a negated, warning, or educational context."""
+    window_start = max(0, match_idx - 50)
+    preceding_window = content_lower[window_start:match_idx]
+    return any(neg in preceding_window for neg in _NEGATION_PREFIXES)
+
 
 _FINANCIAL_CONTEXT_PATTERNS = (
     "investasi",
@@ -127,12 +234,12 @@ _NON_INVESTMENT_PERCENT_CONTEXT = (
 
 def normalize_emotion_signals(
     content: str,
-    ai_signals: list[SentraEmotionSignal],
+    ai_signals: list[SentraEmotionSignal] | None = None,
 ) -> list[SentraEmotionSignal]:
-    """Return all six emotion signals, enriched by deterministic text checks."""
+    """Return all six emotion signals, enriched by deterministic text checks and dynamic confidence."""
     by_type: dict[EmotionSignalType, SentraEmotionSignal] = {}
 
-    for signal in ai_signals:
+    for signal in (ai_signals or []):
         existing = by_type.get(signal.type)
         if existing is None or (signal.detected and not existing.detected):
             by_type[signal.type] = signal
@@ -142,7 +249,13 @@ def normalize_emotion_signals(
         for rule in _KEYWORD_RULES:
             examples = _find_keyword_examples(content, rule.patterns)
             if examples:
-                _mark_detected(by_type, rule.signal_type, rule.description, examples)
+                _mark_detected(
+                    by_type,
+                    rule.signal_type,
+                    rule.description,
+                    examples,
+                    rule_confidence=0.72,
+                )
 
     return_examples = _find_unrealistic_return_examples(content)
     if return_examples:
@@ -154,6 +267,7 @@ def normalize_emotion_signals(
                 f"({settings.UNREALISTIC_RETURN_THRESHOLD:g}% per bulan)."
             ),
             return_examples,
+            rule_confidence=0.88,
         )
 
     for signal_type in _SIGNAL_ORDER:
@@ -162,6 +276,7 @@ def normalize_emotion_signals(
             SentraEmotionSignal(
                 type=signal_type,
                 detected=False,
+                confidence=0.0,
                 description=None,
                 examples=[],
             ),
@@ -175,12 +290,18 @@ def _mark_detected(
     signal_type: EmotionSignalType,
     description: str,
     examples: list[str],
+    rule_confidence: float = 0.70,
 ) -> None:
     existing = signals.get(signal_type)
     merged_examples = list(dict.fromkeys((existing.examples if existing else []) + examples))[:5]
+    ai_conf = existing.confidence if existing and existing.detected else 0.0
+    evidence_boost = min(0.25, len(merged_examples) * 0.07)
+    final_conf = round(max(ai_conf, min(0.96, rule_confidence + evidence_boost)), 2)
+
     signals[signal_type] = SentraEmotionSignal(
         type=signal_type,
         detected=True,
+        confidence=final_conf,
         description=existing.description if existing and existing.description else description,
         examples=merged_examples,
     )
@@ -192,6 +313,8 @@ def _find_keyword_examples(content: str, patterns: tuple[str, ...]) -> list[str]
     for pattern in patterns:
         idx = lowered.find(pattern)
         if idx == -1:
+            continue
+        if _is_negated(lowered, idx):
             continue
         start = max(0, idx - 35)
         end = min(len(content), idx + len(pattern) + 35)

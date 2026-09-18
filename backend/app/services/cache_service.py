@@ -15,19 +15,22 @@ logger = logging.getLogger(__name__)
 
 # Lazy-init Redis client
 _redis_client = None
+_redis_disabled_until = 0.0
 
 # Local thread-safe in-memory fallback cache
 _memory_cache: dict[str, tuple[Any, float]] = {}
 
 
 def _get_client():
-    """Return the Upstash Redis async client singleton, or None if not configured."""
-    global _redis_client
+    """Return the Upstash Redis async client singleton, or None if not configured or circuit breaker open."""
+    global _redis_client, _redis_disabled_until
+    if time.time() < _redis_disabled_until:
+        return None
+
     if _redis_client is not None:
         return _redis_client
 
     if not settings.UPSTASH_REDIS_URL or not settings.UPSTASH_REDIS_TOKEN:
-        logger.warning("⚠️  Upstash Redis not configured — falling back to local In-Memory TTL Cache.")
         return None
 
     try:
@@ -40,13 +43,14 @@ def _get_client():
         return _redis_client
     except Exception as exc:
         logger.error("Failed to connect to Upstash Redis: %s", exc)
+        _redis_disabled_until = time.time() + 60.0
         return None
 
 
 # ── Public API ─────────────────────────────────────────────────────────────────
 
 async def cache_get(key: str) -> Any | None:
-    """Get a cached value. Falls back to local In-Memory TTL cache if Redis is not configured."""
+    """Get a cached value. Falls back to local In-Memory TTL cache if Redis is not configured or slow/unreachable."""
     client = _get_client()
     if client is None:
         now = time.time()
@@ -58,7 +62,8 @@ async def cache_get(key: str) -> Any | None:
             return val
         return None
     try:
-        value = await client.get(key)
+        # Protect against slow/broken DNS with a strict 1.5 second timeout
+        value = await asyncio.wait_for(client.get(key), timeout=1.5)
         if value is None:
             return None
         if isinstance(value, str):
@@ -68,14 +73,22 @@ async def cache_get(key: str) -> Any | None:
                 return value  # Return raw string if not valid JSON
         return value
     except Exception as exc:
-        logger.warning("Cache GET failed for key '%s': %s", key, exc)
+        logger.warning("Cache GET failed for key '%s': %s. Disabling Redis for 5 minutes.", key, exc)
+        global _redis_client, _redis_disabled_until
+        _redis_client = None
+        _redis_disabled_until = time.time() + 300.0
+        # Return fallback from memory cache if present
+        if key in _memory_cache:
+            val, expiry = _memory_cache[key]
+            if time.time() <= expiry:
+                return val
         return None
 
 
 async def cache_set(key: str, value: Any, ttl_seconds: int = 3600) -> bool:
-    """Set a cached value with TTL. Falls back to local In-Memory TTL cache if Redis is not configured."""
+    """Set a cached value with TTL. Falls back to local In-Memory TTL cache if Redis is not configured or slow/unreachable."""
     client = _get_client()
-    # Populate memory cache for fallback / speed
+    # Populate memory cache immediately for zero-latency local retrieval
     _memory_cache[key] = (value, time.time() + ttl_seconds)
 
     if client is None:
@@ -83,10 +96,13 @@ async def cache_set(key: str, value: Any, ttl_seconds: int = 3600) -> bool:
     try:
         # Always serialize to valid JSON string
         serialized = json.dumps(value)
-        await client.set(key, serialized, ex=ttl_seconds)
+        await asyncio.wait_for(client.set(key, serialized, ex=ttl_seconds), timeout=1.5)
         return True
     except Exception as exc:
-        logger.warning("Cache SET failed for key '%s': %s", key, exc)
+        logger.warning("Cache SET failed for key '%s': %s. Disabling Redis for 5 minutes.", key, exc)
+        global _redis_client, _redis_disabled_until
+        _redis_client = None
+        _redis_disabled_until = time.time() + 300.0
         return False
 
 
@@ -187,18 +203,65 @@ def make_whois_key(domain: str) -> str:
 
 # ── API Key Rotation State ───────────────────────────────────────────────────
 
-async def mark_primary_api_key_exhausted() -> None:
+def make_api_key_hash(api_key: str) -> str:
+    """Return a short non-reversible SHA-256 identifier for cache tracking."""
+    return hashlib.sha256(api_key.strip().encode()).hexdigest()[:12]
+
+
+async def mark_api_key_exhausted(api_key: str, cooldown_seconds: int = 1800) -> None:
     """
-    Mark the primary Gemini API key as exhausted (429 Rate Limit Reached).
-    It will be disabled for 24 hours (86400 seconds), forcing fallback to backup key.
+    Mark a specific Gemini API key as exhausted (429, Quota, or Auth limit).
+    Defaults to 30 minutes cooldown (1800s).
     """
-    logger.error("🚨 PRIMARY GEMINI API KEY EXHAUSTED. Switching to BACKUP for 24 hours.")
-    await cache_set("sentra:api_key_exhausted", True, ttl_seconds=86400)
+    if not api_key:
+        return
+    khash = make_api_key_hash(api_key)
+    masked = f"...{api_key[-6:]}" if len(api_key) >= 6 else "***"
+    logger.warning(
+        "🚨 Gemini API key [%s] marked EXHAUSTED for %d seconds. Switching to next fallback key.",
+        masked,
+        cooldown_seconds,
+    )
+    await cache_set(f"sentra:key_exhausted:{khash}", True, ttl_seconds=cooldown_seconds)
+
+    # Maintain backward compatibility with legacy primary flag
+    try:
+        from app.config import settings
+        if api_key.strip() == settings.GEMINI_API_KEY.strip():
+            await cache_set("sentra:api_key_exhausted", True, ttl_seconds=cooldown_seconds)
+    except Exception:
+        pass
+
+
+async def is_api_key_exhausted(api_key: str) -> bool:
+    """
+    Check if a specific Gemini API key is currently in cooldown.
+    """
+    if not api_key:
+        return False
+    khash = make_api_key_hash(api_key)
+    val = await cache_get(f"sentra:key_exhausted:{khash}")
+    if val:
+        return True
+
+    try:
+        from app.config import settings
+        if api_key.strip() == settings.GEMINI_API_KEY.strip():
+            legacy_val = await cache_get("sentra:api_key_exhausted")
+            return bool(legacy_val)
+    except Exception:
+        pass
+
+    return False
+
+
+async def mark_primary_api_key_exhausted(cooldown_seconds: int = 1800) -> None:
+    """Legacy alias: marks primary API key as exhausted."""
+    from app.config import settings
+    await mark_api_key_exhausted(settings.GEMINI_API_KEY, cooldown_seconds=cooldown_seconds)
 
 
 async def is_primary_api_key_exhausted() -> bool:
-    """
-    Check if the primary API key is currently in cooldown mode.
-    """
-    val = await cache_get("sentra:api_key_exhausted")
-    return bool(val)
+    """Legacy alias: checks if primary API key is currently exhausted."""
+    from app.config import settings
+    return await is_api_key_exhausted(settings.GEMINI_API_KEY)

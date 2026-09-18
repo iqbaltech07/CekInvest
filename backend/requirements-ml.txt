@@ -1,0 +1,8 @@
+# GNN Training & Inference Dependencies
+# Install separately: pip install -r requirements-ml.txt
+# Or via uv: uv sync --extra ml
+
+torch>=2.0.0
+torch-geometric>=2.5.0
+scikit-learn>=1.4.0
+numpy>=1.26.0

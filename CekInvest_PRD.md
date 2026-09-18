@@ -262,6 +262,19 @@ Fitur ini memungkinkan satu pengguna mencegah puluhan orang lain menjadi korban 
 
 ---
 
+## 5.6 Non-AI Scam Clustering & Regional Monitoring Engine
+
+Untuk memperkuat crowdsourced intelligence tanpa meningkatkan konsumsi token LLM secara berlebihan, sistem menyertakan mesin clustering berbasis aturan (rule-based engine) 100% Non-AI yang berjalan di latar belakang setiap kali laporan komunitas dikirimkan:
+
+- **Scam Clustering**: Mengelompokkan laporan baru ke dalam klaster yang sudah ada atau membuat klaster baru berdasarkan kecocokan sinyal eksak (nomor rekening bank yang sama, nomor telepon yang sama, atau domain yang sama) serta tingkat kemiripan teks menggunakan algoritma TF-IDF + Cosine Similarity (atau SequenceMatcher sebagai fallback).
+- **Risk Level Classification**: Klasifikasi tingkat risiko klaster secara dinamis (LOW | MEDIUM | HIGH | CRITICAL) berdasarkan kombinasi bobot sinyal eksak dan kemiripan teks yang terakumulasi.
+- **Regional Monitoring & Trend Radar**: Memetakan persebaran laporan berdasarkan wilayah administratif (kota dan provinsi) secara real-time:
+  - Mengukur persentase pertumbuhan mingguan untuk menentukan status tren wilayah (*STABLE*, *RISING*, *SPIKING*, atau *VIRAL*).
+  - Menilai tingkat penyebaran geografis (*LOW*, *MEDIUM*, *HIGH*, atau *NATIONAL*).
+  - Menampilkan dashboard visual "Scam Radar" berisi wilayah ter-viral beserta modus penipuan dominan di wilayah tersebut.
+
+---
+
 # 6. User Flow
 
 ```mermaid
@@ -307,7 +320,7 @@ N --> O[Selesai — Keputusan Lebih Aman]
 flowchart LR
 
 A[Frontend - Next.js]
---> B[Backend API - Python / Node.js]
+--> B[Backend API - FastAPI (Python)]
 
 B --> C[OCR Engine]
 B --> D[AI Analysis Engine]
@@ -315,12 +328,12 @@ B --> E[Scam Intelligence Database]
 B --> F[Risk Scoring System]
 B --> P[Parallel API Orchestrator]
 
-P --> Q[OJK Scraper - ojk.go.id]
+P --> Q[OJK Validator - legalkah.id]
 P --> R[WHOIS - python-whois + RDAP]
 P --> S[Media Search - RSS Feeds]
 P --> T[Community DB]
 
-D --> G[Gemini 1.5 Flash API - Free Tier]
+D --> G[Gemini 2.5 Flash API - Free Tier]
 
 E --> H[(PostgreSQL)]
 E --> U[(Redis Cache - TTL 1hr)]
@@ -347,14 +360,16 @@ Seluruh API call (OJK, WHOIS, media search, community DB) berjalan **paralel**, 
 
 ## Backend
 
-- Python
-- Node.js
+- Python (FastAPI framework)
+- Prisma Client Python
+- Uvicorn (ASGI server)
 
 ## AI Layer 
 
-- **Gemini gemini-2.5-flash** 
+- **Gemini 2.5 Flash (`gemini-2.5-flash`)** 
   - Primary LLM: behavioral analysis, linguistic pattern detection, explainable output
   - Google Search Grounding built-in: verifikasi real-time via Google tanpa API tambahan
+  - Backup model: `gemini-2.5-flash-lite` dengan logika rotasi API key otomatis saat batas rate limit tercapai
   - Free tier: 1.500 request/hari, 15 request/menit
 - **OCR Engine** → Tesseract 
 - **Prompt Engineering** menggantikan Custom NLP Model di tahap MVP
@@ -364,9 +379,9 @@ Seluruh API call (OJK, WHOIS, media search, community DB) berjalan **paralel**, 
 
 ## Data Sources 
 
-- **OJK Data** → Scraper otomatis dari `ojk.go.id` (data publik, tidak ada API berbayar)
-  - Library: `requests` + `BeautifulSoup` (Python, free)
-  - Di-cache setiap 1 jam di database lokal agar tidak hit website OJK terus-menerus
+- **OJK Data** → Verifikasi status legalitas entitas investasi secara real-time.
+  - Metode: Whitelist lokal untuk platform populer + name formatting via Gemini + web scraping dari `legalkah.id/e/{formatted-name}` (menggunakan `httpx` + `BeautifulSoup`/`lxml`).
+  - Caching: Di-cache selama 1 jam di Redis dan PostgreSQL (Prisma) untuk mengurangi query eksternal.
 - **WHOIS / Domain Intel** → `python-whois` library (free, open source) + RDAP Protocol (`rdap.org` — free, standar ICANN)
 - **Media Search** → RSS Feed gratis dari media Indonesia: Detik, Kompas, Tempo, CNBC Indonesia
   - Library: `feedparser` (Python, free)
@@ -384,7 +399,7 @@ Seluruh API call (OJK, WHOIS, media search, community DB) berjalan **paralel**, 
 | -------------------- | ------------------- | -------------------------- |
 | Database & Auth      | Prisma              | 500 MB                     |
 | Cache & Rate Limit   | Upstash Redis       | 10.000 request / hari      |
-| Background Jobs      | Vercel Cron Jobs    | 1 job / hari (scraper OJK) |
+| Background Jobs      | Vercel Cron Jobs    | Tidak digunakan aktif untuk scraping (scraping berjalan real-time dengan fallback cache) |
 | Image & File Storage | Vercel Blob Storage | 1 GB                       |
 
 
@@ -413,7 +428,7 @@ Seluruh API call (OJK, WHOIS, media search, community DB) berjalan **paralel**, 
 ## Fase 1 — Web MVP (Bulan 1–4)
 
 - Paste teks / URL → Risk Score + breakdown 12 checks pertama
-- Integrasi OJK scraper (ojk.go.id) — diperbarui setiap jam, di-cache lokal
+- Integrasi OJK validator (via whitelist lokal & legalkah.id scraping) — di-cache di PostgreSQL & Redis
 - Shareable report link
 - Community report form
 - Launch di Product Hunt dan komunitas literasi keuangan Indonesia
@@ -426,9 +441,9 @@ Seluruh API call (OJK, WHOIS, media search, community DB) berjalan **paralel**, 
 - AI Scam Guardian Chat
 - iOS Share Extension (screenshot dari WA dianalisis via Gemini setelah di OCR Tesseract)
 - Notifikasi modus baru mingguan via email (Resend free tier: 3.000 email/bulan)
-- Community intelligence feed publik
+- Community intelligence feed publik (Regional Monitoring & Scam Radar Dashboard)
 - Onboarding mitra media pertama
-- **Scaling:** jika traffic melebihi free tier Gemini → migrate ke Gemini 1.5 Flash berbayar ($0.075 / 1M token) — saat ini sudah ada revenue B2B untuk menutup ini
+- **Scaling:** jika traffic melebihi free tier Gemini → migrate ke Gemini 2.5 Flash berbayar ($0.075 / 1M token) — saat ini sudah ada revenue B2B untuk menutup ini
 
 ## Fase 3 — Ekosistem (Bulan 10+)
 

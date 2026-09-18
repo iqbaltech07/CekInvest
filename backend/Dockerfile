@@ -41,7 +41,7 @@ ENV PATH="/app/.venv/bin:$PATH"
 RUN prisma generate
 
 # Expose backend port
-EXPOSE 8080
+EXPOSE 8000
 
 # Set entrypoint execution permissions
 RUN chmod +x /app/entrypoint.sh

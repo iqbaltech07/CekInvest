@@ -7,10 +7,12 @@ Additions:
   - New fields: explanation, trapQuestions, ojkStatus, shareSlug, domainAgeDays
 """
 import asyncio
+import hashlib
 import logging
 import re
 import secrets
 import socket
+from datetime import datetime, timedelta, timezone
 from ipaddress import ip_address, ip_network
 from urllib.parse import urlparse
 
@@ -34,7 +36,7 @@ logger = logging.getLogger(__name__)
 async def analyze_chat(text: str, sentra: SentraService, db: Prisma):
     """Analyze pasted chat/text through the full SENTRA intelligence pipeline."""
     # Deduplication check
-    cached = await _check_dedup_cache(text)
+    cached = await _check_dedup_cache(text, db=db)
     if cached:
         return cached
 
@@ -56,6 +58,8 @@ async def analyze_chat(text: str, sentra: SentraService, db: Prisma):
         intel=intel,
         db=db,
     )
+    # Auto-Ingestion Flywheel: HIGH/CRITICAL analyses feed the threat intelligence database
+    await _auto_feed_to_threat_intelligence(result, text, db)
     return result
 
 
@@ -75,7 +79,7 @@ async def analyze_screenshot(image_bytes: bytes, sentra: SentraService, db: Pris
         )
 
     # Deduplication on extracted text
-    cached = await _check_dedup_cache(extracted_text)
+    cached = await _check_dedup_cache(extracted_text, db=db)
     if cached:
         return cached
 
@@ -95,6 +99,8 @@ async def analyze_screenshot(image_bytes: bytes, sentra: SentraService, db: Pris
         intel=intel,
         db=db,
     )
+    # Auto-Ingestion Flywheel
+    await _auto_feed_to_threat_intelligence(result, extracted_text, db)
     return result
 
 
@@ -146,6 +152,8 @@ async def analyze_url(url: str, sentra: SentraService, db: Prisma):
     )
     # Cache URL → analysis ID
     await cache_set(cache_key, result.id, ttl_seconds=settings.ANALYSIS_CACHE_TTL_HOURS * 3600)
+    # Auto-Ingestion Flywheel
+    await _auto_feed_to_threat_intelligence(result, page_content, db)
     return result
 
 
@@ -173,19 +181,55 @@ async def get_analysis_by_slug(slug: str, db: Prisma):
 
 # ── Internal Pipeline ─────────────────────────────────────────────────────────
 
-async def _check_dedup_cache(text: str):
-    """Check Redis for a cached analysis of identical input. Returns None on miss."""
-    from app.database import prisma
+async def _check_dedup_cache(text: str, db: Prisma | None = None):
+    """
+    Check Multi-Layer Cache for identical analysis:
+    1. L1 RAM / L2 Redis Cache
+    2. L3 Database Cache (inputHash index within TTL)
+    Returns existing analysis and completely skips Gemini API call if found.
+    """
+    from app.config import settings
+    from app.database import prisma as default_prisma
+
+    active_db = db or default_prisma
+    if not active_db.is_connected():
+        try:
+            await active_db.connect()
+        except Exception:
+            pass
+
     cache_key = make_analysis_key(text)
     cached_id = await cache_get(cache_key)
     if cached_id and isinstance(cached_id, str):
-        analysis = await prisma.analysis.find_unique(
-            where={"id": cached_id},
+        try:
+            analysis = await active_db.analysis.find_unique(
+                where={"id": cached_id},
+                include={"redFlags": True, "emotionSignals": True},
+            )
+            if analysis:
+                logger.info("Analysis dedup cache HIT (L1/L2) — skipping Gemini API call")
+                return analysis
+        except Exception as exc:
+            logger.warning("Cache id lookup failed: %s", exc)
+
+    # L3: Fallback to PostgreSQL database cache via indexed inputHash
+    try:
+        input_hash = hashlib.sha256(text.strip().encode("utf-8")).hexdigest()
+        db_analysis = await active_db.analysis.find_first(
+            where={
+                "inputHash": input_hash,
+            },
+            order={"createdAt": "desc"},
             include={"redFlags": True, "emotionSignals": True},
         )
-        if analysis:
-            logger.info("Analysis dedup cache HIT — skipping Gemini call")
-            return analysis
+        if db_analysis:
+            logger.info("Analysis dedup cache HIT (L3 DB: %s) — skipping Gemini API call", input_hash[:8])
+            # Re-populate L1 cache for fast subsequent hits
+            await cache_set(cache_key, db_analysis.id, ttl_seconds=settings.ANALYSIS_CACHE_TTL_HOURS * 3600)
+            return db_analysis
+    except Exception as exc:
+        logger.warning("DB dedup check skipped: %s", exc)
+
     return None
 
 
@@ -200,8 +244,18 @@ async def _persist_analysis(
     """Persist SENTRA's analysis + intelligence findings via Prisma nested writes."""
     from app.config import settings
 
+    # Normalize emotion signals early so psychological manipulation can boost risk score
+    normalized_emotion_signals = normalize_emotion_signals(
+        extracted_text,
+        sentra_result.emotion_signals,
+    )
+
     boosted_score = await boost_score_from_patterns(
-        extracted_text, sentra_result.risk_score, db, intel
+        extracted_text,
+        sentra_result.risk_score,
+        db,
+        intel,
+        emotion_signals=normalized_emotion_signals,
     )
     final_score, final_level, safe_to_invest = compute_final_result(sentra_result, boosted_score)
 
@@ -228,10 +282,6 @@ async def _persist_analysis(
         }
         for flag in sentra_result.red_flags
     ]
-    normalized_emotion_signals = normalize_emotion_signals(
-        extracted_text,
-        sentra_result.emotion_signals,
-    )
     emotion_signals_data = [
         {
             "signalType": signal.type.value,
@@ -283,6 +333,104 @@ async def _persist_analysis(
         await cache_set(cache_key, analysis.id, ttl_seconds=settings.ANALYSIS_CACHE_TTL_HOURS * 3600)
 
     return analysis
+
+
+async def _auto_feed_to_threat_intelligence(analysis, content: str, db: Prisma) -> None:
+    """
+    Auto-Ingestion Flywheel (PRD 13):
+    Automatically feeds HIGH/CRITICAL risk analyses into the threat intelligence database.
+    - Creates a UserReport record as a validated data point
+    - Generates a 768-dim gemini-embedding-001 vector and stores it in report_embeddings
+    This ensures every real-world scam analysis strengthens SENTRA's future detection.
+    """
+    try:
+        # Only ingest truly high-risk analyses (threshold: score >= 70 AND HIGH/CRITICAL)
+        risk_level = getattr(analysis, "riskLevel", None)
+        risk_score = getattr(analysis, "riskScore", 0)
+        risk_level_str = risk_level.value if hasattr(risk_level, "value") else str(risk_level)
+
+        if risk_level_str not in ("HIGH", "CRITICAL") or risk_score < 70:
+            return
+
+        input_type = getattr(analysis, "inputType", None)
+        input_type_str = input_type.value if hasattr(input_type, "value") else str(input_type)
+
+        logger.info(
+            "🔄 Auto-Ingestion Flywheel triggered: analysis=%s risk=%s score=%d",
+            analysis.id, risk_level_str, risk_score,
+        )
+
+        # ── Extract structured entities from the content ────────────────────
+        from ml.utils import extract_phone_numbers, extract_bank_accounts, extract_domains
+
+        phones = list(extract_phone_numbers(content))[:1]
+        banks = list(extract_bank_accounts(content))[:1]
+        domains = list(extract_domains(content))[:1]
+
+        bank_name = banks[0][0] if banks else None
+        bank_account = banks[0][1] if banks else None
+        phone_number = phones[0] if phones else None
+        domain = domains[0] if domains else None
+
+        # ── Determine scam category from red flags (best-effort) ───────────
+        scam_category = "Investasi Bodong"  # default
+        if hasattr(analysis, "redFlags") and analysis.redFlags:
+            # Use the category of the highest-severity red flag
+            category_candidates = [f.category for f in analysis.redFlags if f.category]
+            if category_candidates:
+                scam_category = category_candidates[0]
+
+        # ── Create UserReport (if not already exists via inputHash dedup) ──
+        existing = await db.userreport.find_first(
+            where={
+                "rawInput": content[:500],
+                "isScam": True,
+            }
+        )
+
+        if existing:
+            report_id = existing.id
+            logger.debug("Auto-ingestion: UserReport already exists, reusing id=%s", report_id)
+        else:
+            new_report = await db.userreport.create(
+                data={
+                    "inputType": input_type_str,
+                    "rawInput": content[:10_000],
+                    "isScam": True,
+                    "notes": f"Auto-ingested from Analysis {analysis.id} (SENTRA score={risk_score})",
+                    "scamCategory": scam_category,
+                    "bankName": bank_name,
+                    "bankAccount": bank_account,
+                    "phoneNumber": phone_number,
+                    "domain": domain,
+                }
+            )
+            report_id = new_report.id
+            logger.info("Auto-ingestion: Created UserReport id=%s category=%s", report_id, scam_category)
+
+        # ── Generate embedding and upsert to pgvector ───────────────────────
+        from app.services.embedding_service import embedding_service
+        from app.services.vector_store import vector_store
+
+        embed_text = f"{scam_category}. {content[:2000]}"
+        vec = await embedding_service.embed_text(embed_text)
+        await vector_store.upsert_report_embedding(
+            db=db,
+            report_id=report_id,
+            raw_input=content[:500],
+            is_scam=True,
+            scam_category=scam_category,
+            embedding=vec,
+        )
+
+        logger.info(
+            "✅ Auto-Ingestion Flywheel complete: report_id=%s embedded into pgvector",
+            report_id,
+        )
+
+    except Exception as exc:
+        # Non-fatal: never let flywheel block the main analysis response
+        logger.warning("Auto-ingestion flywheel failed (non-fatal): %s", exc)
 
 
 _BLOCKED_NETWORKS = [

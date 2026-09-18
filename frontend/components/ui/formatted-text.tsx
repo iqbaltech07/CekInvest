@@ -47,10 +47,20 @@ interface FormattedTextProps {
   className?: string;
 }
 
+function cleanLaymanText(raw: string): string {
+  if (!raw) return "";
+  return raw
+    .replace(/\[cite:[^\]]*\]/gi, "")
+    .replace(/\[\d+\]/g, "")
+    .replace(/[ \t]{2,}/g, " ")
+    .replace(/\s+([,\.\?!])/g, "$1");
+}
+
 export function FormattedText({ text, className = "" }: FormattedTextProps) {
   if (!text) return null;
 
-  const rawLines = text.split(/\r?\n/);
+  const cleanedText = cleanLaymanText(text);
+  const rawLines = cleanedText.split(/\r?\n/);
   const blocks: Block[] = [];
   let currentBlock: Block | null = null;
 

@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CekInvest GNN — Live Training & Graph Visualizer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <!-- Vis.js Network -->
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+
+  <style>
+    :root {
+      --bg-dark: #090D16;
+      --card-bg: #111827;
+      --card-border: #1E293B;
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --accent-red: #EF4444;
+      --accent-green: #10B981;
+      --accent-cyan: #06B6D4;
+      --accent-amber: #F59E0B;
+      --accent-purple: #A855F7;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(180deg, #0F172A 0%, rgba(15, 23, 42, 0.7) 100%);
+      border-bottom: 1px solid var(--card-border);
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-badge {
+      background: linear-gradient(135deg, #06B6D4 0%, #3B82F6 100%);
+      color: #FFF;
+      font-weight: 800;
+      font-size: 13px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 0 16px rgba(6, 182, 212, 0.4);
+    }
+
+    .brand-title {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .status-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #1E293B;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid #334155;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-green);
+      box-shadow: 0 0 8px var(--accent-green);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    /* Controls Bar */
+    .controls-bar {
+      background: #0E1524;
+      border-bottom: 1px solid var(--card-border);
+      padding: 12px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .controls-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .control-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    select, input {
+      background: #1A2234;
+      border: 1px solid #334155;
+      color: #FFF;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 13px;
+      outline: none;
+    }
+
+    select:focus, input:focus {
+      border-color: var(--accent-cyan);
+    }
+
+    .btn-train {
+      background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+    }
+
+    .btn-train:hover:not(:disabled) {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+    }
+
+    .btn-train:disabled {
+      background: #334155;
+      cursor: not-allowed;
+      box-shadow: none;
+      opacity: 0.7;
+    }
+
+    .btn-secondary {
+      background: #1E293B;
+      border: 1px solid #334155;
+      color: #F8FAFC;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background: #283548;
+      border-color: var(--accent-cyan);
+      transform: translateY(-1px);
+    }
+
+    /* Modal Styles */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(4, 7, 13, 0.82);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 20px;
+    }
+
+    .modal-backdrop.active {
+      display: flex;
+    }
+
+    .modal-card {
+      background: #111827;
+      border: 1px solid #1E293B;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 540px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+      overflow: hidden;
+      animation: modalFadeIn 0.2s ease-out;
+    }
+
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: scale(0.96) translateY(10px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .modal-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid #1E293B;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #141C2E;
+    }
+
+    .modal-title {
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .modal-close {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 20px;
+      cursor: pointer;
+      line-height: 1;
+      padding: 4px;
+    }
+
+    .modal-close:hover {
+      color: #FFF;
+    }
+
+    .modal-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .dropzone {
+      border: 2px dashed #334155;
+      border-radius: 12px;
+      padding: 32px 20px;
+      text-align: center;
+      cursor: pointer;
+      background: #0A0E1A;
+      transition: all 0.2s ease;
+    }
+
+    .dropzone:hover, .dropzone.dragover {
+      border-color: var(--accent-cyan);
+      background: rgba(6, 182, 212, 0.05);
+    }
+
+    .dropzone-icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .dropzone-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #F8FAFC;
+    }
+
+    .dropzone-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .file-preview {
+      background: #1E293B;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .modal-footer {
+      padding: 16px 24px;
+      border-top: 1px solid #1E293B;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #0D1424;
+    }
+
+    /* Metrics Grid */
+    .metrics-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      padding: 20px 28px 10px;
+    }
+
+    .metric-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .metric-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: #334155;
+    }
+
+    .metric-card.red::before { background: var(--accent-red); }
+    .metric-card.cyan::before { background: var(--accent-cyan); }
+    .metric-card.green::before { background: var(--accent-green); }
+    .metric-card.purple::before { background: var(--accent-purple); }
+
+    .metric-title {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .metric-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 24px;
+      font-weight: 700;
+      color: #FFF;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .metric-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Progress bar */
+    .progress-bar-container {
+      margin: 0 28px;
+      background: #161F30;
+      height: 6px;
+      border-radius: 9999px;
+      overflow: hidden;
+      border: 1px solid #1E293B;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3B82F6 0%, #10B981 100%);
+      transition: width 0.15s ease;
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+    }
+
+    /* Main Dashboard Grid */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 20px;
+      padding: 20px 28px 28px;
+      flex: 1;
+    }
+
+    @media (max-width: 1100px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .panel {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .panel-header {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #141C2E;
+    }
+
+    .panel-title {
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .panel-body {
+      padding: 16px;
+      flex: 1;
+      position: relative;
+    }
+
+    /* Chart Canvas */
+    .chart-wrapper {
+      position: relative;
+      height: 280px;
+      width: 100%;
+    }
+
+    /* Console Log */
+    .console-box {
+      margin-top: 14px;
+      background: #090D16;
+      border: 1px solid #1E293B;
+      border-radius: 8px;
+      padding: 12px;
+      height: 140px;
+      overflow-y: auto;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      line-height: 1.6;
+      color: #CBD5E1;
+    }
+
+    .console-box::-webkit-scrollbar {
+      width: 6px;
+    }
+    .console-box::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 3px;
+    }
+
+    .log-epoch { color: #38BDF8; }
+    .log-best { color: #10B981; font-weight: 600; }
+    .log-loss { color: #EF4444; }
+
+    /* Graph Network */
+    #graph-network {
+      width: 100%;
+      height: 440px;
+      background: #0A0E1A;
+      border-radius: 10px;
+    }
+
+    .graph-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .legend-color {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    /* Node details drawer */
+    .node-details-card {
+      margin-top: 12px;
+      padding: 12px 16px;
+      background: #0E1626;
+      border: 1px solid #1E293B;
+      border-radius: 8px;
+      font-size: 12px;
+      display: none;
+    }
+
+    .node-details-card.active {
+      display: block;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-right: 6px;
+    }
+    .badge-scam { background: rgba(239, 68, 68, 0.2); color: #EF4444; border: 1px solid rgba(239, 68, 68, 0.4); }
+    .badge-legit { background: rgba(16, 185, 129, 0.2); color: #10B981; border: 1px solid rgba(16, 185, 129, 0.4); }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header -->
+  <header>
+    <div class="brand">
+      <span class="brand-badge">GNN ENGINE</span>
+      <div>
+        <div class="brand-title">CekInvest — HeteroGraphSAGE Training Visualizer</div>
+        <div class="brand-subtitle">Visualisasi Real-Time Model GNN & Topologi Jaringan Penipuan Finansial</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <div class="status-pill">
+        <span class="status-dot" id="status-dot"></span>
+        <span id="status-text">Siap (Idle)</span>
+      </div>
+      <a href="/docs" target="_blank" style="color: var(--text-muted); font-size: 12px; text-decoration: none;">API Docs ↗</a>
+    </div>
+  </header>
+
+  <!-- Controls Bar -->
+  <div class="controls-bar">
+    <div class="controls-left">
+      <button class="btn-train" id="btn-train" onclick="startLiveTraining()">
+        <span>▶ Mulai Training Live</span>
+      </button>
+
+      <button class="btn-secondary" id="btn-upload" onclick="openUploadModal()">
+        <span>📁 Upload Dataset</span>
+      </button>
+
+      <a href="/api/v1/ml/export-dataset?format=csv" download class="btn-secondary" id="btn-export" style="text-decoration: none;">
+        <span>📥 Export Dataset CSV</span>
+      </a>
+
+      <button class="btn-secondary" id="btn-sync-db" onclick="syncDatabaseGraph()">
+        <span>🔄 Sync Graf dari DB</span>
+      </button>
+
+
+
+      <div class="control-group">
+        <label for="select-epochs">Epochs:</label>
+        <select id="select-epochs">
+          <option value="50">50 Epochs (Cepat)</option>
+          <option value="100" selected>100 Epochs (Rekomendasi)</option>
+          <option value="150">150 Epochs (Presisi)</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="select-lr">Learning Rate:</label>
+        <select id="select-lr">
+          <option value="0.01" selected>0.01 (Default)</option>
+          <option value="0.005">0.005</option>
+          <option value="0.001">0.001</option>
+        </select>
+      </div>
+    </div>
+
+    <div style="font-size: 12px; color: var(--text-muted);">
+      Dataset: <strong style="color: #FFF;" id="dataset-info">111 Laporan</strong> (71 Scam / 40 Legal)
+    </div>
+  </div>
+
+  <!-- Realtime Metrics Row -->
+  <div class="metrics-container">
+    <div class="metric-card purple">
+      <div class="metric-title">Epoch Saat Ini</div>
+      <div class="metric-value" id="val-epoch">0 <span style="font-size: 14px; color: var(--text-muted);">/ 100</span></div>
+      <div class="metric-sub" id="sub-epoch">Menunggu mulai</div>
+    </div>
+
+    <div class="metric-card red">
+      <div class="metric-title">Train BCE Loss</div>
+      <div class="metric-value" id="val-train-loss">--</div>
+      <div class="metric-sub" id="sub-train-acc">Akurasi Train: --</div>
+    </div>
+
+    <div class="metric-card cyan">
+      <div class="metric-title">Validation BCE Loss</div>
+      <div class="metric-value" id="val-val-loss">--</div>
+      <div class="metric-sub" id="sub-val-loss">Best: --</div>
+    </div>
+
+    <div class="metric-card green">
+      <div class="metric-title">Test Split Accuracy</div>
+      <div class="metric-value" id="val-test-acc">--</div>
+      <div class="metric-sub" id="sub-test-status">Evaluasi akhir model</div>
+    </div>
+  </div>
+
+  <!-- Dynamic Progress Bar -->
+  <div class="progress-bar-container">
+    <div class="progress-bar-fill" id="progress-bar"></div>
+  </div>
+
+  <!-- Main Grid: Charts & Graph Topology -->
+  <div class="main-grid">
+    
+    <!-- Panel Kiri: Live Loss Convergence Chart -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">
+          <span>📈 Kurva Konvergensi Model (Real-time)</span>
+        </div>
+        <div style="font-size: 11px; color: var(--text-muted);" id="chart-epoch-indicator">Epoch: 0</div>
+      </div>
+      <div class="panel-body">
+        <div class="chart-wrapper">
+          <canvas id="lossChart"></canvas>
+        </div>
+
+        <div class="console-box" id="console-log">
+          <div style="color: #64748B;">[SYSTEM] Selamat datang di Visualizer GNN CekInvest. Klik "Mulai Training Live" untuk mengamati proses training model secara langsung.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel Kanan: Heterogeneous Graph Network Topology -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">
+          <span>🕸️ Topologi Graf Finansial Heterogen</span>
+        </div>
+        <button onclick="resetGraphPhysics()" style="background: #1E293B; border: 1px solid #334155; color: #FFF; font-size: 11px; padding: 4px 10px; border-radius: 6px; cursor: pointer;">
+          Reset Fisika Graf
+        </button>
+      </div>
+      <div class="panel-body">
+        <div id="graph-network"></div>
+
+        <div class="graph-legend">
+          <div class="legend-item"><span class="legend-color" style="background: #EF4444;"></span> Laporan Scam (71)</div>
+          <div class="legend-item"><span class="legend-color" style="background: #10B981;"></span> Laporan Legal (40)</div>
+          <div class="legend-item"><span class="legend-color" style="background: #06B6D4;"></span> Rekening Bank</div>
+          <div class="legend-item"><span class="legend-color" style="background: #F59E0B;"></span> Nomor Telepon</div>
+          <div class="legend-item"><span class="legend-color" style="background: #A855F7;"></span> Domain / URL</div>
+        </div>
+
+        <div class="node-details-card" id="node-details">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <strong id="detail-title" style="color: #FFF;">Detail Node</strong>
+            <span id="detail-badge" class="badge-pill badge-scam">SCAM</span>
+          </div>
+          <div id="detail-text" style="color: var(--text-muted); font-size: 11px; margin-top: 4px;">Pilih node pada graf untuk melihat informasi entitas terkait.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // ── Chart.js Initialization ──────────────────────────────────────────────
+    const ctx = document.getElementById('lossChart').getContext('2d');
+    const lossChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [],
+        datasets: [
+          {
+            label: 'Train Loss',
+            data: [],
+            borderColor: '#EF4444',
+            backgroundColor: 'rgba(239, 68, 68, 0.1)',
+            borderWidth: 2,
+            tension: 0.25,
+            pointRadius: 0,
+          },
+          {
+            label: 'Val Loss',
+            data: [],
+            borderColor: '#06B6D4',
+            borderDash: [5, 5],
+            borderWidth: 2,
+            tension: 0.25,
+            pointRadius: 0,
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: {
+          duration: 100
+        },
+        interaction: {
+          intersect: false,
+          mode: 'index',
+        },
+        scales: {
+          x: {
+            grid: { color: 'rgba(255,255,255,0.05)' },
+            ticks: { color: '#94A3B8', font: { family: 'Outfit', size: 10 } },
+            title: { display: true, text: 'Epoch', color: '#64748B', font: { size: 11 } }
+          },
+          y: {
+            grid: { color: 'rgba(255,255,255,0.05)' },
+            ticks: { color: '#94A3B8', font: { family: 'Outfit', size: 10 } },
+            title: { display: true, text: 'BCE Loss', color: '#64748B', font: { size: 11 } }
+          }
+        },
+        plugins: {
+          legend: {
+            labels: { color: '#E2E8F0', font: { family: 'Outfit', size: 11 } }
+          }
+        }
+      }
+    });
+
+    // ── Vis.js Network Initialization ────────────────────────────────────────
+    let network = null;
+    let networkData = null;
+
+    async function loadGraphTopology() {
+      try {
+        const res = await fetch('/api/v1/ml/graph-topology');
+        const data = await res.json();
+        
+        const container = document.getElementById('graph-network');
+        
+        // Format nodes for Vis.js
+        const visNodes = data.nodes.map(n => {
+          let color = '#94A3B8';
+          let size = 14;
+          let shape = 'dot';
+
+          if (n.group === 'scam') {
+            color = '#EF4444';
+            size = 18;
+          } else if (n.group === 'legit') {
+            color = '#10B981';
+            size = 18;
+          } else if (n.group === 'bank') {
+            color = '#06B6D4';
+            shape = 'diamond';
+            size = 12;
+          } else if (n.group === 'phone') {
+            color = '#F59E0B';
+            shape = 'triangle';
+            size = 12;
+          } else if (n.group === 'domain') {
+            color = '#A855F7';
+            shape = 'square';
+            size = 12;
+          }
+
+          return {
+            id: n.id,
+            label: n.label,
+            color: { background: color, border: '#0F172A', highlight: { background: '#FFF', border: color } },
+            shape: shape,
+            size: size,
+            font: { color: '#CBD5E1', size: 10, face: 'Outfit' },
+            meta: n
+          };
+        });
+
+        const visEdges = data.edges.map(e => ({
+          from: e.from,
+          to: e.to,
+          color: e.color || { color: '#334155', opacity: 0.5 },
+          width: 1,
+          smooth: { type: 'continuous' }
+        }));
+
+        networkData = {
+          nodes: new vis.DataSet(visNodes),
+          edges: new vis.DataSet(visEdges)
+        };
+
+        const options = {
+          physics: {
+            solver: 'forceAtlas2Based',
+            forceAtlas2Based: {
+              gravitationalConstant: -26,
+              centralGravity: 0.005,
+              springLength: 60,
+              springConstant: 0.18,
+              damping: 0.4
+            },
+            stabilization: { iterations: 120 }
+          },
+          interaction: {
+            hover: true,
+            tooltipDelay: 100,
+            zoomView: true
+          }
+        };
+
+        network = new vis.Network(container, networkData, options);
+
+        // Click node listener
+        network.on('click', function(params) {
+          if (params.nodes.length > 0) {
+            const nodeId = params.nodes[0];
+            const node = visNodes.find(n => n.id === nodeId);
+            if (node && node.meta) {
+              showNodeDetails(node.meta);
+            }
+          }
+        });
+
+        if (data.stats) {
+          document.getElementById('dataset-info').innerText = 
+            `${data.stats.reports} Laporan (${data.stats.scam_reports} Scam / ${data.stats.legit_reports} Legal) + ${data.stats.banks} Bank + ${data.stats.phones} Telepon`;
+        }
+
+      } catch (err) {
+        console.error("Gagal memuat topologi graf:", err);
+      }
+    }
+
+    function showNodeDetails(meta) {
+      const card = document.getElementById('node-details');
+      const title = document.getElementById('detail-title');
+      const badge = document.getElementById('detail-badge');
+      const text = document.getElementById('detail-text');
+
+      card.classList.add('active');
+      title.innerText = meta.label;
+
+      if (meta.group === 'scam') {
+        badge.className = 'badge-pill badge-scam';
+        badge.innerText = 'PENIPUAN (SCAM)';
+        text.innerText = `Kategori: ${meta.category || 'Investasi Bodong'}\nIsi Teks: ${meta.rawText || '-'}`;
+      } else if (meta.group === 'legit') {
+        badge.className = 'badge-pill badge-legit';
+        badge.innerText = 'LEGAL (NON-SCAM)';
+        text.innerText = `Kategori: Legal / Resmi\nIsi Teks: ${meta.rawText || '-'}`;
+      } else {
+        badge.className = 'badge-pill';
+        badge.style.background = '#334155';
+        badge.style.color = '#FFF';
+        badge.innerText = meta.group.toUpperCase();
+        text.innerText = `ID Entitas Terhubung: ${meta.id}`;
+      }
+    }
+
+    function resetGraphPhysics() {
+      if (network) {
+        network.fit({ animation: true });
+      }
+    }
+
+    // ── Live Server-Sent Events (SSE) Training ──────────────────────────────
+    let eventSource = null;
+
+    function startLiveTraining() {
+      const btn = document.getElementById('btn-train');
+      const epochs = document.getElementById('select-epochs').value;
+      const lr = document.getElementById('select-lr').value;
+      const statusText = document.getElementById('status-text');
+      const statusDot = document.getElementById('status-dot');
+
+      btn.disabled = true;
+      btn.innerHTML = '<span>⚡ Training Berjalan...</span>';
+      statusText.innerText = 'Training Model...';
+      statusDot.style.background = '#F59E0B';
+      statusDot.style.boxShadow = '0 0 10px #F59E0B';
+
+      // Reset UI & Chart
+      lossChart.data.labels = [];
+      lossChart.data.datasets[0].data = [];
+      lossChart.data.datasets[1].data = [];
+      lossChart.update();
+
+      const logBox = document.getElementById('console-log');
+      logBox.innerHTML = '';
+      appendLog(`[START] Menginisialisasi HeteroGraphSAGE (Epochs: ${epochs}, LR: ${lr})...`);
+
+      // Pulse graph animation during training
+      pulseGraphNetwork();
+
+      if (eventSource) {
+        eventSource.close();
+      }
+
+      eventSource = new EventSource(`/api/v1/ml/train-stream?epochs=${epochs}&lr=${lr}`);
+
+      eventSource.onmessage = function(event) {
+        const data = JSON.parse(event.data);
+
+        if (data.event === 'start') {
+          appendLog(`[DATA] ${data.num_reports} node laporan termuat (Train: ${data.train_size}, Val: ${data.val_size}, Test: ${data.test_size})`);
+          document.getElementById('val-epoch').innerHTML = `1 <span style="font-size: 14px; color: var(--text-muted);">/ ${data.total_epochs}</span>`;
+        }
+        else if (data.event === 'epoch') {
+          const ep = data.epoch;
+          const total = data.total_epochs;
+          const pct = Math.round((ep / total) * 100);
+
+          // Update Progress Bar
+          document.getElementById('progress-bar').style.width = `${pct}%`;
+
+          // Update Metrics
+          document.getElementById('val-epoch').innerHTML = `${ep} <span style="font-size: 14px; color: var(--text-muted);">/ ${total}</span>`;
+          document.getElementById('sub-epoch').innerText = `Progress: ${pct}%`;
+          document.getElementById('val-train-loss').innerText = data.train_loss.toFixed(4);
+          document.getElementById('sub-train-acc').innerText = `Akurasi Train: ${(data.train_acc * 100).toFixed(1)}%`;
+          document.getElementById('val-val-loss').innerText = data.val_loss.toFixed(4);
+          document.getElementById('sub-val-loss').innerText = `Best: ${data.best_val.toFixed(4)}${data.is_best ? ' 🌟' : ''}`;
+          document.getElementById('chart-epoch-indicator').innerText = `Epoch: ${ep} / ${total}`;
+
+          // Update Chart
+          lossChart.data.labels.push(ep);
+          lossChart.data.datasets[0].data.push(data.train_loss);
+          lossChart.data.datasets[1].data.push(data.val_loss);
+          lossChart.update('none');
+
+          // Log
+          const star = data.is_best ? ' <span class="log-best">[BEST CHECKPOINT]</span>' : '';
+          appendLog(`<span class="log-epoch">Epoch [${ep.toString().padStart(3, '0')}/${total}]</span> Loss: <span class="log-loss">${data.train_loss.toFixed(4)}</span> | Val: ${data.val_loss.toFixed(4)} | Acc: ${(data.val_acc*100).toFixed(0)}%${star}`);
+        }
+        else if (data.event === 'done') {
+          eventSource.close();
+          btn.disabled = false;
+          btn.innerHTML = '<span>▶ Mulai Training Ulang</span>';
+          statusText.innerText = 'Selesai (Model Saved)';
+          statusDot.style.background = '#10B981';
+          statusDot.style.boxShadow = '0 0 10px #10B981';
+
+          document.getElementById('val-test-acc').innerText = `${(data.test_acc * 100).toFixed(1)}%`;
+          document.getElementById('sub-test-status').innerText = `Test Split Evaluasi Sempurna`;
+          document.getElementById('progress-bar').style.width = `100%`;
+
+          appendLog(`\n<span class="log-best">[SELESAI] Training tuntas dengan Test Accuracy: ${(data.test_acc * 100).toFixed(2)}%! Model tersimpan di gnn_model.pt.</span>`);
+        }
+        else if (data.event === 'error') {
+          eventSource.close();
+          btn.disabled = false;
+          btn.innerHTML = '<span>▶ Coba Lagi</span>';
+          statusText.innerText = 'Error';
+          statusDot.style.background = '#EF4444';
+          appendLog(`<span style="color: #EF4444;">[ERROR] ${data.message}</span>`);
+        }
+      };
+
+      eventSource.onerror = function() {
+        if (eventSource) eventSource.close();
+        btn.disabled = false;
+        btn.innerHTML = '<span>▶ Mulai Training Live</span>';
+        statusText.innerText = 'Koneksi Terputus';
+      };
+    }
+
+    function appendLog(html) {
+      const box = document.getElementById('console-log');
+      const div = document.createElement('div');
+      div.innerHTML = html;
+      box.appendChild(div);
+      box.scrollTop = box.scrollHeight;
+    }
+
+    function pulseGraphNetwork() {
+      if (!network || !networkData) return;
+      // Animate node colors briefly
+      const scamNodes = networkData.nodes.get({ filter: n => n.meta && n.meta.group === 'scam' });
+      scamNodes.forEach(node => {
+        networkData.nodes.update({ id: node.id, color: { background: '#FF6B6B' } });
+      });
+      setTimeout(() => {
+        scamNodes.forEach(node => {
+          networkData.nodes.update({ id: node.id, color: { background: '#EF4444' } });
+        });
+      }, 500);
+    }
+
+    let selectedUploadFile = null;
+
+    function openUploadModal() {
+      document.getElementById('upload-modal').classList.add('active');
+    }
+
+    function closeUploadModal() {
+      document.getElementById('upload-modal').classList.remove('active');
+      clearSelectedFile();
+    }
+
+    function handleDragOver(e) {
+      e.preventDefault();
+      document.getElementById('dropzone').classList.add('dragover');
+    }
+
+    function handleDragLeave(e) {
+      e.preventDefault();
+      document.getElementById('dropzone').classList.remove('dragover');
+    }
+
+    function handleDrop(e) {
+      e.preventDefault();
+      document.getElementById('dropzone').classList.remove('dragover');
+      if (e.dataTransfer.files.length > 0) {
+        setSelectedFile(e.dataTransfer.files[0]);
+      }
+    }
+
+    function handleFileSelected(e) {
+      if (e.target.files.length > 0) {
+        setSelectedFile(e.target.files[0]);
+      }
+    }
+
+    function setSelectedFile(file) {
+      selectedUploadFile = file;
+      document.getElementById('file-preview').style.display = 'flex';
+      document.getElementById('preview-filename').innerText = file.name;
+      document.getElementById('preview-filesize').innerText = `${(file.size / 1024).toFixed(1)} KB`;
+      document.getElementById('btn-submit-upload').disabled = false;
+      hideUploadAlert();
+    }
+
+    function clearSelectedFile() {
+      selectedUploadFile = null;
+      document.getElementById('dataset-file-input').value = '';
+      document.getElementById('file-preview').style.display = 'none';
+      document.getElementById('btn-submit-upload').disabled = true;
+      hideUploadAlert();
+    }
+
+    function showUploadAlert(msg, isError = false) {
+      const alert = document.getElementById('upload-alert');
+      alert.style.display = 'block';
+      if (isError) {
+        alert.style.background = 'rgba(239, 68, 68, 0.15)';
+        alert.style.color = '#EF4444';
+        alert.style.border = '1px solid rgba(239, 68, 68, 0.3)';
+      } else {
+        alert.style.background = 'rgba(16, 185, 129, 0.15)';
+        alert.style.color = '#10B981';
+        alert.style.border = '1px solid rgba(16, 185, 129, 0.3)';
+      }
+      alert.innerText = msg;
+    }
+
+    function hideUploadAlert() {
+      document.getElementById('upload-alert').style.display = 'none';
+    }
+
+    async function submitUpload() {
+      if (!selectedUploadFile) return;
+
+      const btn = document.getElementById('btn-submit-upload');
+      btn.disabled = true;
+      btn.innerHTML = '<span>⚡ Mengimpor & Menyinkronkan Graf...</span>';
+      hideUploadAlert();
+
+      const formData = new FormData();
+      formData.append('file', selectedUploadFile);
+
+      try {
+        const res = await fetch('/api/v1/ml/upload-dataset', {
+          method: 'POST',
+          body: formData
+        });
+        const result = await res.json();
+
+        if (res.ok && result.success) {
+          showUploadAlert(result.message, false);
+          appendLog(`<span class="log-best">[UPLOAD SUCCESS] ${result.message} Total data di database: ${result.data.total_reports}</span>`);
+          
+          // Reload graph topology
+          await loadGraphTopology();
+
+          setTimeout(() => {
+            closeUploadModal();
+          }, 1500);
+        } else {
+          showUploadAlert(result.error || 'Gagal mengunggah file dataset', true);
+        }
+      } catch (err) {
+        showUploadAlert(`Koneksi error: ${err.message}`, true);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<span>🚀 Proses & Sinkronkan Graf</span>';
+      }
+    }
+
+    async function syncDatabaseGraph() {
+      const btn = document.getElementById('btn-sync-db');
+      btn.disabled = true;
+      btn.innerHTML = '<span>⚡ Menyinkronkan...</span>';
+      try {
+        const res = await fetch('/api/v1/ml/sync-database-graph', { method: 'POST' });
+        const result = await res.json();
+        if (res.ok && result.success) {
+          appendLog(`<span class="log-best">[SYNC SUCCESS] ${result.message}</span>`);
+          await loadGraphTopology();
+          alert(result.message);
+        } else {
+          alert('Gagal menyinkronkan: ' + (result.error || 'Unknown error'));
+        }
+      } catch (err) {
+        alert('Koneksi error: ' + err.message);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<span>🔄 Sync Graf dari DB</span>';
+      }
+    }
+
+
+    // Load initial graph on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      loadGraphTopology();
+    });
+  </script>
+
+  <!-- Upload Dataset Modal -->
+  <div class="modal-backdrop" id="upload-modal" onclick="if(event.target===this) closeUploadModal()">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title">
+          <span>📁 Upload Dataset Training Baru</span>
+        </div>
+        <button class="modal-close" onclick="closeUploadModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+          Unggah file dataset <strong>.CSV</strong> atau <strong>.JSON</strong> untuk menambahkan komunikasi finansial baru ke dalam database dan graf GNN.
+        </div>
+
+        <div class="dropzone" id="dropzone" onclick="document.getElementById('dataset-file-input').click()" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
+          <div class="dropzone-icon">📤</div>
+          <div class="dropzone-title">Klik atau seret file CSV/JSON ke sini</div>
+          <div class="dropzone-sub">Maksimal 10MB per file (Format: UTF-8)</div>
+          <input type="file" id="dataset-file-input" accept=".csv,.json" style="display:none;" onchange="handleFileSelected(event)">
+        </div>
+
+        <div class="file-preview" id="file-preview" style="display: none;">
+          <div>
+            <strong id="preview-filename" style="color: #FFF;">data.csv</strong>
+            <div id="preview-filesize" style="font-size: 11px; color: var(--text-muted);">0 KB</div>
+          </div>
+          <button onclick="clearSelectedFile()" style="background: transparent; border: none; color: #EF4444; font-size: 12px; cursor: pointer;">Hapus</button>
+        </div>
+
+        <div id="upload-alert" style="display: none; padding: 10px 14px; border-radius: 8px; font-size: 12px;"></div>
+
+        <div style="background: #0A0E1A; border: 1px solid #1E293B; border-radius: 8px; padding: 12px; font-size: 11px; color: var(--text-muted);">
+          <strong style="color: #CBD5E1;">💡 Kolom yang Dikenali:</strong><br>
+          • <code>text</code> / <code>rawInput</code>: Isi teks laporan (Wajib)<br>
+          • <code>is_scam</code> / <code>isScam</code>: <code>1</code> (Scam) / <code>0</code> (Legal) (Wajib)<br>
+          • <code>category</code>, <code>bank_name</code>, <code>bank_account</code>, <code>phone</code>, <code>domain</code> (Opsional)
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="/api/v1/ml/download-template" download class="btn-secondary" style="font-size: 11px; text-decoration: none;">
+          <span>📥 Download Template CSV</span>
+        </a>
+        <button class="btn-train" id="btn-submit-upload" onclick="submitUpload()" disabled>
+          <span>🚀 Proses & Sinkronkan Graf</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

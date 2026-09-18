@@ -62,7 +62,7 @@ const EMOTION_SHORT_LABELS: Record<string, string> = {
 
 const CONFIDENCE_CONFIG = {
   NONE: {
-    label: "Bersih",
+    label: "Tidak Terdeteksi",
     cls: "bg-zinc-500/10 border-zinc-500/20 text-zinc-500",
     bar: "bg-zinc-300",
   },
@@ -195,6 +195,15 @@ function EmotionSignalsPanel({ signals }: { signals: EmotionSignal[] }) {
         </div>
       </div>
 
+      {detectedCount === 0 && (
+        <div className="mb-5 p-3.5 rounded-2xl bg-zinc-500/5 border border-zinc-500/10 text-xs text-muted-foreground flex items-start gap-3">
+          <span className="text-sm shrink-0">ℹ️</span>
+          <p className="leading-relaxed text-[11px]">
+            <strong className="text-foreground/80">Catatan Analisis Bahasa:</strong> Radar ini khusus menganalisis pola kalimat bujukan/rayuan dari teks promosi atau chat. Jika yang diperiksa adalah website yang tidak memuat teks penawaran terbuka atau situs sedang offline, indikator bahasa bernilai nihil. Risiko penipuan diukur dari status legalitas dan riwayat kasus di atas.
+          </p>
+        </div>
+      )}
+
       <div className="grid grid-cols-1 lg:grid-cols-[0.95fr_1.25fr] gap-5 items-start">
         <div className="rounded-2xl bg-white/60 border border-black/5 p-3">
           <EmotionRadar signals={signals} />
@@ -223,7 +232,7 @@ function EmotionSignalCard({ signal }: { signal: EmotionSignal }) {
             {EMOTION_LABELS[signal.signalType] ?? signal.signalType}
           </p>
           <p className="text-[10px] text-muted-foreground mt-0.5">
-            {signal.detected ? `${score}% confidence` : "Tidak ada bukti kuat"}
+            {signal.detected ? `${score}% confidence` : "Nihil bukti kalimat"}
           </p>
         </div>
         <Badge variant="outline" className={`text-[9px] border shrink-0 ${cfg.cls}`}>
@@ -241,7 +250,7 @@ function EmotionSignalCard({ signal }: { signal: EmotionSignal }) {
         </p>
       ) : (
         <p className="text-[11px] text-muted-foreground/70 leading-relaxed">
-          Sistem tidak menemukan bukti yang cukup untuk sinyal ini.
+          Tidak ditemukan kalimat yang menunjukkan taktik manipulasi ini.
         </p>
       )}
 
@@ -259,7 +268,10 @@ function EmotionSignalCard({ signal }: { signal: EmotionSignal }) {
 
 function getEmotionScore(signal: EmotionSignal): number {
   if (!signal.detected) return 0;
-  return Math.max(35, Math.round((signal.confidenceScore ?? 0.65) * 100));
+  if (typeof signal.confidenceScore === "number" && signal.confidenceScore > 0) {
+    return Math.round(signal.confidenceScore * 100);
+  }
+  return 65;
 }
 
 /* ─── AI Guardian Chat panel ─────────────────────────────────────────── */

@@ -12,9 +12,15 @@ from app.database import prisma
 @pytest_asyncio.fixture(scope="session", autouse=True)
 async def setup_db():
     """Connect to the Prisma database for the test session."""
-    await prisma.connect()
+    if not prisma.is_connected():
+        await prisma.connect()
     yield
-    await prisma.disconnect()
+    try:
+        if prisma.is_connected():
+            await prisma.disconnect()
+    except Exception:
+        pass
+
 
 
 @pytest_asyncio.fixture
@@ -25,3 +31,10 @@ async def client() -> AsyncClient:
         base_url="http://test",
     ) as ac:
         yield ac
+
+
+@pytest_asyncio.fixture
+async def db():
+    """Provide the connected Prisma database client."""
+    return prisma
+

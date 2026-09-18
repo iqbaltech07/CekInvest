@@ -81,6 +81,7 @@ class SentraRedFlag(BaseModel):
 class SentraEmotionSignal(BaseModel):
     type: EmotionSignalType
     detected: bool
+    confidence: float = Field(default=0.0, ge=0.0, le=1.0)
     description: str | None = None
     examples: list[str] = Field(default_factory=list)
 
@@ -132,18 +133,20 @@ class EmotionSignalResponse(BaseModel):
             self.confidenceLevel = "NONE"
             return self
 
-        score = 0.45
+        # Use incoming confidenceScore if already present, otherwise calculate baseline
+        base_score = self.confidenceScore if self.confidenceScore > 0 else 0.45
+        score = base_score
         if self.evidenceCount:
-            score += min(0.30, self.evidenceCount * 0.10)
-        if self.description:
+            score += min(0.30, self.evidenceCount * 0.08)
+        if self.description and not (self.confidenceScore > 0):
             score += 0.10
         if self.signalType == EmotionSignalType.UNREALISTIC_RETURN and self.examples:
             score = max(score, _unrealistic_return_confidence(self.examples))
 
-        self.confidenceScore = round(min(score, 0.95), 2)
+        self.confidenceScore = round(min(score, 0.98), 2)
         if self.confidenceScore >= 0.75:
             self.confidenceLevel = "HIGH"
-        elif self.confidenceScore >= 0.55:
+        elif self.confidenceScore >= 0.50:
             self.confidenceLevel = "MEDIUM"
         else:
             self.confidenceLevel = "LOW"

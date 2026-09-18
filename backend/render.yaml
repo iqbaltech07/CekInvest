@@ -1,0 +1,56 @@
+# ==============================================================================
+# Render Blueprint Specification — CekInvest Backend (Free Tier Optimized)
+# ==============================================================================
+# Docs: https://render.com/docs/blueprint-spec
+# Free Tier Constraints: 512 MB RAM, Shared CPU.
+# Strategy: PyTorch GNN disabled in production container (ENABLE_GNN=false)
+# to keep memory usage under 150 MB and prevent Out-Of-Memory (OOM) crashes.
+# ==============================================================================
+
+services:
+  - type: web
+    name: cekinvest-backend
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    region: singapore # Recommended low-latency region for Indonesian users
+    branch: main
+    healthCheckPath: /api/v1/health
+    autoDeploy: true
+
+    envVars:
+      - key: APP_NAME
+        value: "CekInvest API"
+      - key: APP_VERSION
+        value: "2.1.0"
+      - key: DEBUG
+        value: "false"
+
+      # ── Memory Optimization Flag (Critical for 512MB RAM) ─────────────────
+      - key: ENABLE_GNN
+        value: "false"
+
+      # ── PostgreSQL Connection (Supabase / Neon / Render Postgres) ─────────
+      - key: DATABASE_URL
+        sync: false # Set manually in Render Dashboard
+
+      # ── Google Gemini AI Key ──────────────────────────────────────────────
+      - key: GEMINI_API_KEY
+        sync: false # Set manually in Render Dashboard
+      - key: GEMINI_API_KEY_BACKUP_1
+        sync: false
+      - key: SENTRA_MODEL
+        value: "gemini-2.5-flash"
+
+      # ── Upstash Redis (Optional for caching) ──────────────────────────────
+      - key: UPSTASH_REDIS_URL
+        sync: false
+      - key: UPSTASH_REDIS_TOKEN
+        sync: false
+
+      # ── CORS & Frontend Domain ────────────────────────────────────────────
+      - key: FRONTEND_URL
+        value: "https://cekinvest.vercel.app"
+      - key: CORS_ORIGINS
+        value: '["http://localhost:3000","https://cekinvest.vercel.app"]'

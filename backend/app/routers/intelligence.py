@@ -107,3 +107,42 @@ async def _gather_stats(db, today_start: datetime) -> tuple[int, int, int, int, 
     bank_reports = await db.bankaccountreport.count()
 
     return total_analyses, total_reports, total_patterns, high_risk_today, ojk_cached, phone_reports, bank_reports
+
+
+@router.get("/rag-search", summary="Search dense semantic RAG for similar cases and OJK rules")
+async def rag_search(
+    db: DbDep,
+    q: str = Query(..., min_length=3, description="Query text to search semantically"),
+    limit: int = Query(3, ge=1, le=10),
+):
+    """
+    Search historical scam reports and OJK regulatory articles using dense
+    semantic embeddings (gemini-embedding-001) and PostgreSQL pgvector cosine similarity.
+    """
+    from app.services.rag_service import rag_service
+    rag_res = await rag_service.query_rag(q, db=db, report_limit=limit)
+    return {
+        "success": True,
+        "data": {
+            "query": q,
+            "top_similarity": rag_res.top_similarity,
+            "similar_reports": rag_res.similar_reports,
+            "regulatory_articles": rag_res.regulatory_articles,
+            "matched_scam_count": rag_res.matched_scam_count,
+            "matched_legit_count": rag_res.matched_legit_count,
+        }
+    }
+
+
+@router.post("/rag-sync", summary="Synchronize all user reports to pgvector store")
+async def rag_sync(db: DbDep):
+    """
+    Re-indexes all user reports into PostgreSQL pgvector table using gemini-embedding-001.
+    """
+    from app.services.rag_service import rag_service
+    synced_count = await rag_service.sync_all_reports_to_vector_store(db)
+    return {
+        "success": True,
+        "message": f"Berhasil menyinkronkan {synced_count} laporan ke database vektor pgvector!",
+        "data": {"synced_count": synced_count}
+    }
