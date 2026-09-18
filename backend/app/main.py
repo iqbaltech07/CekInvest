@@ -47,6 +47,14 @@ async def lifespan(app: FastAPI):
     await connect()
     logger.info("✅ Prisma connected to database")
 
+    # pgvector tables initialization (RAG & report_embeddings)
+    try:
+        from app.database import prisma
+        from app.services.vector_store import vector_store
+        await vector_store.init_vector_tables(prisma)
+    except Exception as exc:
+        logger.warning("pgvector tables initialization notice (non-fatal): %s", exc)
+
     # SENTRA AI engine
     get_sentra()
     logger.info("✅ SENTRA AI engine ready (Gemini 2.5 Flash + Google Search Grounding)")
