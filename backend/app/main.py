@@ -158,6 +158,7 @@ def create_app() -> FastAPI:
         )
 
     # ── Health Check ──────────────────────────────────────────────────────────
+    @app.get("/health", include_in_schema=False)
     @app.get(f"{API_PREFIX}/health", tags=["Health"], summary="Service health check")
     async def health_check():
         from app.services.cache_service import _get_client
