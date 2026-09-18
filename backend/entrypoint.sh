@@ -1,6 +1,10 @@
 #!/bin/sh
 set -e
 
+# Generate Prisma Python client
+echo "🔄 Generating Prisma Client..."
+prisma generate
+
 # Run Prisma database schema pushes before starting the API
 echo "🔄 Synchronizing database schema with Prisma db push..."
 prisma db push --accept-data-loss || echo "⚠️ Prisma db push skipped or failed, continuing..."
